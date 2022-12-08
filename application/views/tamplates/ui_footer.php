@@ -73,6 +73,22 @@
 <!-- Footer Section End -->
 
 <!-- script untuk menampilkan nama file saat memasukkan file  -->
+
+
+
+<!-- Js Plugins -->
+<script src="<?= base_url('ui_assets/'); ?>js/jquery-3.3.1.min.js"></script>
+<script src="<?= base_url('ui_assets/'); ?>js/bootstrap.min.js"></script>
+<script src="<?= base_url('ui_assets/'); ?>js/jquery.nice-select.min.js"></script>
+<script src="<?= base_url('ui_assets/'); ?>js/jquery-ui.min.js"></script>
+<script src="<?= base_url('ui_assets/'); ?>js/jquery.slicknav.js"></script>
+<script src="<?= base_url('ui_assets/'); ?>js/mixitup.min.js"></script>
+<script src="<?= base_url('ui_assets/'); ?>js/owl.carousel.min.js"></script>
+<script src="<?= base_url('ui_assets/'); ?>js/main.js"></script>
+
+
+
+</body>
 <script>
   $('.custom-file-input').on('change', function() {
     let fileName = $(this).val().split('\\').pop();
@@ -99,20 +115,5 @@
 
   });
 </script>
-
-
-<!-- Js Plugins -->
-<script src="<?= base_url('ui_assets/'); ?>js/jquery-3.3.1.min.js"></script>
-<script src="<?= base_url('ui_assets/'); ?>js/bootstrap.min.js"></script>
-<script src="<?= base_url('ui_assets/'); ?>js/jquery.nice-select.min.js"></script>
-<script src="<?= base_url('ui_assets/'); ?>js/jquery-ui.min.js"></script>
-<script src="<?= base_url('ui_assets/'); ?>js/jquery.slicknav.js"></script>
-<script src="<?= base_url('ui_assets/'); ?>js/mixitup.min.js"></script>
-<script src="<?= base_url('ui_assets/'); ?>js/owl.carousel.min.js"></script>
-<script src="<?= base_url('ui_assets/'); ?>js/main.js"></script>
-
-
-
-</body>
 
 </html>
