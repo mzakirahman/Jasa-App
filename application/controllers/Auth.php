@@ -78,7 +78,7 @@ class Auth extends CI_Controller
     }
     $this->form_validation->set_rules('name', 'Name', 'required|trim');
     $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|is_unique[user.email]', ['is_unique' => 'Email ini sudah terdaftar!']);
-    $this->form_validation->set_rules('password1', 'Password', 'required|trim|min_length[3]|matches[password2]', [
+    $this->form_validation->set_rules('password1', 'Password', 'required|trim|min_length[8]|matches[password2]', [
       'matches' => 'Kata sandi tidak cocok!',
       'min_length' => 'Kata sandi terlalu pendek!'
     ]);
@@ -140,6 +140,9 @@ class Auth extends CI_Controller
     if ($type == 'verify') {
       $this->email->subject('Account Verification');
       $this->email->message('Click this link to verify you account : <a href="' . base_url() . 'auth/verify?email=' . $this->input->post('email') . '&token=' . urlencode($token) . '">Activate</a>');
+    } else if ($type == 'forgot') {
+      $this->email->subject('Reset Password');
+      $this->email->message('Click this link to reset your password : <a href="' . base_url() . 'auth/resetpassword?email=' . $this->input->post('email') . '&token=' . urlencode($token) . '">Reset Password</a>');
     }
 
     if ($this->email->send()) {
@@ -198,5 +201,91 @@ class Auth extends CI_Controller
   {
     echo 'access block ';
     // $this->load->view('auth/try');
+  }
+  // forgot password
+  public function forgotPassword()
+  {
+    $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
+    if ($this->form_validation->run() == false) {
+      $data['title'] = 'Jasa App | Forgot Password';
+      $this->load->view('guest/guest_header.php', $data);
+      $this->load->view('auth/forgot-password.php', $data);
+      $this->load->view('guest/guest_footer.php');
+    } else {
+      $email = $this->input->post('email');
+      $user = $this->db->get_where('user', ['email' => $email, 'is_active' => 1])->row_array();
+      if ($user) {
+        $token = base64_encode(random_bytes(32));
+        $user_token = [
+          'email' => $email,
+          'token' => $token,
+          'date_created' => time()
+        ];
+
+        $this->db->insert('user_token', $user_token);
+        $this->_sendEmail($token, 'forgot');
+
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Please cek email untuk reset password!</div>');
+        redirect('auth/forgotpassword');
+      } else {
+        $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Email tidak di temukan atau belum active</div>');
+        redirect('auth/forgotpassword');
+      }
+    }
+  }
+  // RESET PASSWORD
+  public function resetPassword()
+  {
+    $email = $this->input->get('email');
+    $token = $this->input->get('token');
+
+    // cek email
+    $user = $this->db->get_where('user', ['email' => $email])->row_array();
+
+    if ($user) {
+      $user_token = $this->db->get_where('user_token', ['token' => $token])->row_array();
+
+      if ($user_token) {
+        $this->session->set_userdata('reset_email', $email);
+        $this->changePassword();
+      } else {
+        $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Reset password failed! Wrong token.</div>');
+        redirect('auth');
+      }
+    } else {
+      $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Reset password gagal!.</div>');
+      redirect('auth');
+    }
+  }
+  // CHANGE PASSWORD BARU || RESED PASSWORD BARU
+  public function changePassword()
+  {
+
+    if (!$this->session->userdata('reset_email')) {
+      redirect('auth');
+    }
+
+    $this->form_validation->set_rules('password1', 'Password', 'trim|required|min_length[8]|matches[password2]');
+    $this->form_validation->set_rules('password2', 'Repeat Password', 'trim|required|min_length[8]|matches[password1]');
+    if ($this->form_validation->run() == false) {
+      $data['title'] = 'Jasa App | Change Password';
+      $this->load->view('guest/guest_header.php', $data);
+      $this->load->view('auth/change-password.php', $data);
+      $this->load->view('guest/guest_footer.php');
+    } else {
+      $password = password_hash($this->input->post('password1'), PASSWORD_DEFAULT);
+      $email = $this->session->userdata('reset_email');
+
+      $this->db->set('password', $password);
+      $this->db->where('email', $email);
+      $this->db->update('user');
+
+      $this->session->unset_userdata('reset_email');
+
+
+
+      $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Reset password berhasil! Please login.</div>');
+      redirect('auth');
+    }
   }
 }
