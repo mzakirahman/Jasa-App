@@ -227,8 +227,9 @@
           Yakin Untuk Logout
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary"><a href="<?= base_url('auth/logout') ?>"><span>Logout</span></a></button>
+
+          <a class="primary-btn" href="<?= base_url('auth/logout') ?>">Logout</a>
+
         </div>
       </div>
     </div>

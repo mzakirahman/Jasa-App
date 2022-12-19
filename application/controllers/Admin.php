@@ -9,17 +9,20 @@ class Admin extends CI_Controller
   {
     parent::__construct();
     is_logged_in();
+    $this->load->model('M_datauser');
   }
 
   public function index()
   {
     $data['title'] = 'Admin | Data';
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+    // panggil models - nama table - nama models - nama function
+    $datauser['user'] = $this->M_datauser->getAlluser();
 
     $this->load->view('tamplates/admin_header.php', $data);
     $this->load->view('tamplates/admin_sidebar.php', $data);
     $this->load->view('tamplates/admin_topbar.php', $data);
-    $this->load->view('admin/index', $data);
+    $this->load->view('admin/index', $datauser);
     $this->load->view('tamplates/admin_footer.php');
   }
   public function role()

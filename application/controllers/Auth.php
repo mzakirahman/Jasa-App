@@ -98,6 +98,8 @@ class Auth extends CI_Controller
         'role_id' => 2,
         'is_active' => 0,
         'date_created' => time()
+        // 'date_created' => date('Y-m-d');
+
       ];
       // siap kan token 
       $token = base64_encode(random_bytes(32));

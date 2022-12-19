@@ -22,17 +22,14 @@
                     <input type="password" class="form-control form-control-user" id="password" name="password" placeholder="Password">
                     <?= form_error('password', '<small class="text-danger pl-3">', '</small>'); ?>
                   </div>
-                  <button type="submit" class="btn btn-primary btn-user btn-block">
+                  <button type="submit" class=" site-btn btn-user btn-block">
                     Login
                   </button>
                   <hr>
                 </form>
-                <div class="text-center">
-
-                  <a class="small" href="forgot-password.html">Forgot Password?</a>
-                </div>
-                <div class="text-center">
-                  <a class="small" href="<?= base_url('auth/registration') ?>">Create an Account!</a>
+                <div class="featured__item__text">
+                  <h6><a href="<?= base_url('auth/registration') ?>">Registration</a></h6>
+                  <h6><a href="#">Forgot Password?</a></h6>
                 </div>
               </div>
             </div>
