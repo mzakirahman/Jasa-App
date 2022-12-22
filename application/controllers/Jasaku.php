@@ -14,7 +14,7 @@ class Jasaku extends CI_Controller
 
     $this->load->view('tamplates/ui_header.php', $data);
     $this->load->view('tamplates/ui_sidebar.php', $data);
-    $this->load->view('Jasa/index', $data);
+    $this->load->view('Jasaku/index', $data);
     $this->load->view('tamplates/ui_footer.php', $data);
   }
 }
