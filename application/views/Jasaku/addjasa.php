@@ -6,6 +6,13 @@
         <h2 class="h3 text-gray-800"><?= $judul; ?></h2>
       </div>
       <div class="card-body">
+        <?php
+        if (validation_errors()) : ?>
+          <div class="alert alert-danger" role="alert">
+            <?= validation_errors(); ?>
+          </div>
+        <?php endif; ?>
+
         <div class="row">
           <div class="col">
             <div class="form-group">
@@ -16,7 +23,7 @@
           <div class="col">
             <div class="form-group">
               <label for="exampleInputEmail1">No Hp</label>
-              <input type="number" name="no-hp" class="form-control" placeholder="No Hp">
+              <input type="text" name="no-hp" class="form-control" placeholder="No Hp">
             </div>
           </div>
         </div>
@@ -56,8 +63,8 @@
 
         </div>
         <div class="form-group">
-          <label for="exampleFormControlFile1">Gambar Jasa Anda</label>
-          <input type="file" class="form-control-file" name="img_jasa" id="img_jasa">
+          <label for="img_jasa">Gambar Jasa Anda</label>
+          <input type="file" id="img_jasa" class="form-control-file" name="img_jasa" size="2048">
         </div>
 
         <button type="submit" name="tambahjasa" class="site-btn float-right">Tambah Jasa</button>
