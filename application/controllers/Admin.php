@@ -14,6 +14,7 @@ class Admin extends CI_Controller
 
   public function index()
   {
+
     $data['title'] = 'Admin | Data';
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
     // panggil models - nama table - nama models - nama function

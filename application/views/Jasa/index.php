@@ -2,22 +2,25 @@
 <div class="col-lg-9 col-md-7">
 
   <div class="row">
-    <div class="col-sm-4">
-      <div class="card">
-        <img src="https://4.bp.blogspot.com/-aFNmnv6CXlI/WwcPNu8o2jI/AAAAAAAACp4/j8-YK2ou49YcMvz0GP95JedViOfdrUg1QCLcBGAs/s1600/se4.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <button class="site-btn">Pesan Jasa</button>
+    <?php foreach ($jasa as $jasa) : ?>
+      <div class="col-sm-4">
+        <div class="card">
+          <img src="<?= base_url('assets/img/jasa/') . $jasa['img_jasa']; ?>" class="card-img-top" width="">
+          <div class="card-body">
+            <h4 class="card-title"><?= $jasa['nama_jasa']; ?></h4>
+            <h5 class="card-title">Rp. <?= $jasa['harga']; ?></h5>
+            <h6> <i class="fa fa-map-marker" aria-hidden="true"> <?= $jasa['alamat']; ?></i>
+            </h6>
+            <button class="site-btn mt-3">Pesan Jasa</button>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Update : <?= $jasa['time']; ?></small>
+          </div>
         </div>
       </div>
-    </div>
-
+    <?php endforeach; ?>
   </div>
-
 </div>
 <!-- CONTENT END -->
-</div>
-</div>
 </section>
 <!-- Product Section End -->
