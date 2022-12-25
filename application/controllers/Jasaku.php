@@ -10,6 +10,7 @@ class Jasaku extends CI_Controller
     $this->load->library('form_validation');
     // memanggil model
     $this->load->helper(array('form', 'url'));
+    $this->load->model('M_myjasa');
   }
   public function index()
   {
@@ -46,7 +47,6 @@ class Jasaku extends CI_Controller
       $this->load->view('Jasaku/addjasa', $data);
       $this->load->view('tamplates/ui_footer.php', $data);
     } else {
-
       $this->M_myjasa->tambahjasa();
       redirect('jasaku');
     }
