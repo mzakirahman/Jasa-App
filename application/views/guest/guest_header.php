@@ -32,13 +32,6 @@
     <div class="humberger__menu__logo">
       <a href="<?= base_url('home/index') ?>"><img src="<?= base_url('ui_assets/'); ?>img/logo.png"></a>
     </div>
-    <!-- <div class="humberger__menu__cart">
-      <ul>
-        <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-        <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
-      </ul>
-      <div class="header__cart__price">item: <span>$150.00</span></div>
-    </div> -->
     <div class="humberger__menu__widget">
       <div class="header__top__right__language">
         <div class="header__top__right__auth">
@@ -51,18 +44,10 @@
     </div>
     <nav class="humberger__menu__nav mobile-menu">
       <ul>
-        <li class="active"><a href="./index.html">Home</a></li>
-        <li><a href="./shop-grid.html">Jasa</a></li>
-        <li><a href="#">Pages</a>
-          <ul class="header__menu__dropdown">
-            <li><a href="./shop-details.html">Shop Details</a></li>
-            <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-            <li><a href="./checkout.html">Check Out</a></li>
-            <li><a href="./blog-details.html">Blog Details</a></li>
-          </ul>
-        </li>
-        <li><a href="./blog.html">Blog</a></li>
-        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="<?= base_url('home') ?>">Home</a></li>
+        <li><a href="<?= base_url('home/jasa') ?>">Jasa</a></li>
+        <li><a href="<?= base_url('home/help') ?>">Help</a></li>
+        <li><a href="<?= base_url('home/contact') ?>">Contact</a></li>
       </ul>
     </nav>
     <div id="mobile-menu-wrap"></div>
@@ -128,28 +113,13 @@
           <nav class="header__menu">
             <ul>
               <li><a href="<?= base_url('home') ?>">Home</a></li>
-              <li><a href="./shop-grid.html">Jasa</a></li>
-              <li><a href="#">Pages</a>
-                <ul class="header__menu__dropdown">
-                  <li><a href="./shop-details.html">Shop Details</a></li>
-                  <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                  <li><a href="./checkout.html">Check Out</a></li>
-                  <li><a href="./blog-details.html">Blog Details</a></li>
-                </ul>
-              </li>
-              <li><a href="./blog.html">Blog</a></li>
-              <li><a href=" ./contact.html">Contact</a></li>
+              <li><a href="<?= base_url('home/jasa') ?>">Jasa</a></li>
+              <li><a href="<?= base_url('home/help') ?>">Help</a></li>
+              <li><a href="<?= base_url('home/contact') ?>">Contact</a></li>
             </ul>
           </nav>
         </div>
         <div class="col-lg-3">
-          <div class="header__cart">
-            <ul>
-              <!-- <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li> -->
-              <li><a href="<?= base_url('auth') ?>"><i class="fa fa-shopping-bag"></i> <span></span></a></li>
-            </ul>
-            <!-- <div class="header__cart__price">item: <span>$150.00</span></div> -->
-          </div>
         </div>
       </div>
       <div class="humberger__open">
@@ -167,7 +137,7 @@
           <div class="hero__categories">
             <div class="hero__categories__all">
               <i class="fa fa-bars"></i>
-              <span>All departments</span>
+              <span>All Jasa elektronik</span>
             </div>
             <ul>
               <li><a href="#">Fresh Meat</a></li>
@@ -189,10 +159,10 @@
             <div class="hero__search__form">
               <form action="#">
                 <div class="hero__search__categories">
-                  All Categories
+                  All Jasa elektronik
                   <span class="arrow_carrot-down"></span>
                 </div>
-                <input type="text" placeholder="What do yo u need?">
+                <input type="text" placeholder="Jasa elektronik apa?">
                 <button type="submit" class="site-btn">SEARCH</button>
               </form>
             </div>
@@ -202,7 +172,7 @@
               </div>
               <div class="hero__search__phone__text">
                 <h5>+65 11.188.888</h5>
-                <span>support 24/7 time</span>
+                <span>Support 24/7 Admin</span>
               </div>
             </div>
           </div>

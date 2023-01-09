@@ -1,9 +1,12 @@
 <!-- CONTENT START -->
 <div class="col-lg-9 col-md-7">
-  <?= $this->session->flashdata('jasaberhasil'); ?>
-
+  <?php  if ( $this->session->flashdata('jasaberhasil','jasagagal')) : ?>
+  <?php endif; ?>
   <form action="<?= base_url() ?>Jasaku/insertdata" method="post" enctype="multipart/form-data">
     <div class="card">
+      <div class="card-header">
+        <h1 class="h3 text-gray-800"><?= $judul; ?></h1>
+      </div>
       <div class="card-body">
         <div class="row">
           <div class="col">

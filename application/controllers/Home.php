@@ -14,4 +14,37 @@ class Home extends CI_Controller
     $this->load->view('home/index', $data);
     $this->load->view('guest/guest_footer.php');
   }
+  public function jasa()
+  {
+    if ($this->session->userdata('email')) {
+      redirect('user');
+    }
+    $data['title'] = 'Jasa App | Jasa';
+
+    $this->load->view('guest/guest_header.php', $data);
+    $this->load->view('home/jasa', $data);
+    $this->load->view('guest/guest_footer.php');
+  }
+  public function help()
+  {
+    if ($this->session->userdata('email')) {
+      redirect('user');
+    }
+    $data['title'] = 'Jasa App | Blog';
+
+    $this->load->view('guest/guest_header.php', $data);
+    $this->load->view('home/help', $data);
+    $this->load->view('guest/guest_footer.php');
+  }
+  public function contact()
+  {
+    if ($this->session->userdata('email')) {
+      redirect('user');
+    }
+    $data['title'] = 'Jasa App | Contact';
+
+    $this->load->view('guest/guest_header.php', $data);
+    $this->load->view('home/contact', $data);
+    $this->load->view('guest/guest_footer.php');
+  }
 }
