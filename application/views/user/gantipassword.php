@@ -1,6 +1,6 @@
 <!-- CONTENT START -->
 <div class="col-lg-6">
-  <?= $this->session->flashdata('message'); ?>
+  <!-- <?= $this->session->flashdata('message'); ?> -->
 
   <h1 class="h3 mb-4 text-gray-800"><?= $judul; ?></h1>
   <div class="">
@@ -25,11 +25,7 @@
 
     </form>
   </div>
-
-
-
-
-
+  
 </div>
 <!-- CONTENT END -->
 </div>

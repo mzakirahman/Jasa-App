@@ -6,17 +6,17 @@ class Jasaku_model extends CI_Model
       $this->db->insert('jasa', $data);
       return TRUE;
   }
-  public function jasa_user()
+
+
+  public function getJasa()
   {
-    $query = "SELECT `jasa`.*, `user`.`email`
+    $query = "SELECT `jasa`.*, `user`.`id`
                   FROM `jasa` JOIN `user`
-                  ON `jasa`.`email` = `user`.`email`
+                  ON `jasa`.`user_id` = `user`.`id`
                 ";
+                
     return $this->db->query($query)->result_array();
   }
-  public function getjasa()
-  {
-    return $this->db->get('jasa')->result_array();
-  }
+
   
 }

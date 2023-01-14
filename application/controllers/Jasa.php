@@ -25,4 +25,11 @@ class Jasa extends CI_Controller
     $this->load->view('jasa/alljasa', $data);
     $this->load->view('tamplates/ui_footer.php', $data);
   }
+  
+  public function pesanjasa($role_id)
+  {
+    $data['pesanjasa'] = $this->db->get_where('jasa', ['id' => $role_id])->row_array();
+
+  }
+
 }

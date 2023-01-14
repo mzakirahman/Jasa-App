@@ -12,7 +12,7 @@
               <h5 class="card-text">Rp. <?= $j['harga']; ?></h5>
               <h6 class=" card-text fa fa-map-marker mb-2" > <?=  $j['alamat'] ; ?></h6><br>
               <td>
-                <button type="button" class="btn btn-success">Pesan</button>
+                <a href="<?= base_url('jasa/alljasa/') . $j['id']; ?>"><button type="button" class="btn btn-success">Pesan</button></a>
                 <button type="button" class="btn btn-warning">Detail</button>
               </td>  
             </div>

@@ -32,18 +32,10 @@ class Jasaku extends CI_Controller
     $data['judul'] = 'Jasa elektronik saya';
     // memanggil session user 
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-
-  
-    $data['jasa'] = $this->db->get_where('jasa', ['email' =>
-    $this->session->userdata('email')])->row_array();
-
-
-    $this->load->model('Jasaku_model', 'Jasaku_model');
-
-    $data['jasauser'] = $this->Jasaku_model->jasa_user();
-    $data['email'] = $this->db->get('jasa')->result_array();
-
-
+    // memanggil model jasaku 
+    $this->load->model('Jasaku_model', 'jasaku');
+    
+    $data['jasaSaya'] = $this->jasaku->getJasa();
 
 
     $this->load->view('tamplates/ui_header.php', $data);
@@ -51,7 +43,6 @@ class Jasaku extends CI_Controller
     $this->load->view('jasaku/jasasaya', $data);
     $this->load->view('tamplates/ui_footer.php', $data);
   }
-
 
   public function insertdata()
   {
