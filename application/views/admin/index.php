@@ -5,7 +5,47 @@
   <h1 class="h3 mb-4 text-gray-800"><?= $title; ?></h1>
   <div class="row">
     <div class="col-lg">
+<!-- card row -->
+        <!-- Content Row -->
+                    <div class="row">
+                        <!-- managemnt user -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                Managemnt User</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">3 User</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fa fa-users fa-2x text-success-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- managemnt jasa -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-warning shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                Managemnt Jasa</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">3 Jasa</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fa fa-wrench fa-2x text-success-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
+
+                    </div>
+<!-- end card row -->
       <table class="table table-hover">
         <thead>
           <tr>
