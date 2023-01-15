@@ -4,7 +4,6 @@
   <h1 class="h3 text-gray-800 mt-2 mb-2"><?= $judul; ?></h1>
   <!-- var_dump ($jasaSaya); -->
   <h3>id user yang login di table user <?= $user['id']; ?></h3>
-  <?php print_r($jasaSaya);?>
 
 
   <?php foreach ($jasaSaya as $sm) : ?>
@@ -25,6 +24,8 @@
     </div>
   </div>
   <?php endforeach; ?>
+
+
 
 
           

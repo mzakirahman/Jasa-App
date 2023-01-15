@@ -1,11 +1,12 @@
 <!-- CONTENT START -->
 <div class="col-lg-9 col-md-7">
-  <?php  if ( $this->session->flashdata('jasaberhasil','jasagagal')) : ?>
+  <?php  if ( $this->session->flashdata('jasa')) : ?>
   <?php endif; ?>
   <form action="<?= base_url() ?>Jasaku/insertdata" method="post" enctype="multipart/form-data">
     <div class="card">
       <div class="card-header">
         <h1 class="h3 text-gray-800"><?= $judul; ?></h1>
+        
       </div>
       <div class="card-body">
         <div class="row">
@@ -37,9 +38,6 @@
             </div>
           </div>
         </div>
-
-
-
         <div class="form-group">
           <label for="exampleFormControlInput1">Alamat</label>
           <input type="text" class="form-control" name="alamat" id="nama" placeholder="Alamat" required>
@@ -48,11 +46,6 @@
           <label for="exampleFormControlTextarea1">Deskripsi Jasa elektronik anda</label>
           <textarea class="form-control" name="deskripsi" id="deskripsi" rows="3" required></textarea>
         </div>
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Email</label>
-          <input type="email" class="form-control" name="email" id="email" value="<?= $user['email']; ?>" readonly>
-        </div>
-
         <div class="form-group">
           <label for="exampleFormControlFile1">Gambar Jasa elektronik</label>
           <input type="file" class="form-control-file" name="fotopost">

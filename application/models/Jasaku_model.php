@@ -7,16 +7,14 @@ class Jasaku_model extends CI_Model
       return TRUE;
   }
 
-
   public function getJasa()
   {
+    $id = $this->session->userdata('id');
     $query = "SELECT `jasa`.*, `user`.`id`
                   FROM `jasa` JOIN `user`
                   ON `jasa`.`user_id` = `user`.`id`
-                ";
-                
+                  WHERE `jasa`.`user_id` = $id
+                ";      
     return $this->db->query($query)->result_array();
   }
-
-  
 }
