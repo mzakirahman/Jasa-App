@@ -75,4 +75,16 @@ class Admin extends CI_Controller
 
     $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Access Changed!</div>');
   }
+  public function jasa()
+  {
+    $data['title'] = 'Data Transaksi';
+    $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+    $this->load->view('tamplates/admin_header.php', $data);
+    $this->load->view('tamplates/admin_sidebar.php', $data);
+    $this->load->view('tamplates/admin_topbar.php', $data);
+    $this->load->view('admin/jasa', $data);
+    $this->load->view('tamplates/admin_footer.php');
+  }
+  
 }

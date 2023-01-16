@@ -1,23 +1,26 @@
 <!-- CONTENT START -->
 <div class="col-lg-9 col-md-7">
-
-<?php foreach ($pesanjasa as $ps) : ?>
-
-<div class="card mb-3">
-  <img src="<?= base_url('assets/picture/') . $ps['foto']; ?>" class="card-img-top" >
-  <div class="card-body">
-    <h5 class="card-title"><?= $ps['nama']; ?></h5>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  <p><a href="#" class="text-dark">jasa elektronik > </a><a href="#" class="text-primary">Detail Jasa</a>
+  <div class="row row-cols-2">
+    <div class="col">
+      <img class="img-fluid" width="100%" height="80%" src="<?= base_url('assets/picture/') . $jasa['foto']; ?>">
+    </div>
+    <div class="col">
+      <h3><b><?= $jasa['juduljasa']; ?></b></h3>
+      <h5 class="mt-3">Rp. <?= $jasa['harga']; ?></h5>
+      <h5 class="mt-3"> <?= $jasa['nama']; ?></h5>
+      <h5 class="mt-3"> <i class="fa fa-whatsapp" aria-hidden="true"></i>
+        <?= $jasa['no']; ?></h5>
+      <h5 class="mt-3"> <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+        <?= $jasa['alamat']; ?></h5>
+      <p class="text-secondary"><?= $jasa['deskripsi']; ?></p>
+      <button class="site-btn mt-3">Pesan Jasa</button>
+    </div>
   </div>
-</div>
+  <!-- Product Details Section End -->
 
-<?php endforeach; ?>
-<style>
-    .card-img-top {
-      height: 250px;
-    }
-  </style>
+
+
 
 </div>
 <!-- CONTENT END -->

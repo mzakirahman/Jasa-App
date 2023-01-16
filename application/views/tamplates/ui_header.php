@@ -51,17 +51,9 @@
     <nav class="humberger__menu__nav mobile-menu">
       <ul>
         <li class="active"><a href="./index.html">Home</a></li>
-        <li><a href="./shop-grid.html">Shop</a></li>
-        <li><a href="#">Pages</a>
-          <ul class="header__menu__dropdown">
-            <li><a href="./shop-details.html">Shop Details</a></li>
-            <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-            <li><a href="./checkout.html">Check Out</a></li>
-            <li><a href="./blog-details.html">Blog Details</a></li>
-          </ul>
-        </li>
-        <li><a href="./blog.html">Blog</a></li>
-        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="<?= base_url('alljasa'); ?>">Jasa</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="./blog.html">Contact</a></li>
       </ul>
     </nav>
     <div id="mobile-menu-wrap"></div>
@@ -126,18 +118,10 @@
         <div class="col-lg-6">
           <nav class="header__menu">
             <ul>
-              <li class="active"><a href="./index.html">Home</a></li>
-              <li><a href="./shop-grid.html">Jasa</a></li>
-              <li><a href="#">Pages</a>
-                <ul class="header__menu__dropdown">
-                  <li><a href="./shop-details.html">Shop Details</a></li>
-                  <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                  <li><a href="./checkout.html">Check Out</a></li>
-                  <li><a href="./blog-details.html">Blog Details</a></li>
-                </ul>
-              </li>
-              <li><a href="./blog.html">Blog</a></li>
-              <li><a href="./contact.html">Contact</a></li>
+              <li class="active"><a href="<?= base_url('jasa/alljasa'); ?>">Home</a></li>
+              <li><a href="<?= base_url('jasa/alljasa'); ?>">Jasa</a></li>
+              <li><a href="<?= base_url('jasa/alljasa'); ?>">Help</a></li>
+              <li><a href="<?= base_url('jasa/alljasa'); ?>">Contact</a></li>
             </ul>
           </nav>
         </div>
@@ -167,7 +151,7 @@
           <div class="hero__categories">
             <div class="hero__categories__all">
               <i class="fa fa-bars"></i>
-              <span>All departments</span>
+              <span>All jasa</span>
             </div>
             <ul>
               <li><a href="#">Fresh Meat</a></li>
@@ -189,10 +173,10 @@
             <div class="hero__search__form">
               <form action="#">
                 <div class="hero__search__categories">
-                  All Categories
+                  All Jasa
                   <span class="arrow_carrot-down"></span>
                 </div>
-                <input type="text" placeholder="What do yo u need?">
+                <input type="text" placeholder="Jasa elektronik apa ?">
                 <button type="submit" class="site-btn">SEARCH</button>
               </form>
             </div>
@@ -202,7 +186,7 @@
               </div>
               <div class="hero__search__phone__text">
                 <h5>+65 11.188.888</h5>
-                <span>support 24/7 time</span>
+                <span>Admin 24/7 time</span>
               </div>
             </div>
           </div>
