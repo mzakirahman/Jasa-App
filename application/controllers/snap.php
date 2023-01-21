@@ -27,6 +27,10 @@ class Snap extends CI_Controller
     $this->load->library('midtrans');
     $this->midtrans->config($params);
     $this->load->helper('url');
+
+    // panggil model
+    
+
   }
 
   public function index()
@@ -36,62 +40,56 @@ class Snap extends CI_Controller
 
   public function token()
   {
+    $nama = $this->input->post('nama');
+    $harga = $this->input->post('harga');
 
     // Required
     $transaction_details = array(
       'order_id' => rand(),
-      'gross_amount' => 94000, // no decimal allowed for creditcard
+      'gross_amount' => $harga, // no decimal allowed for creditcard
     );
 
     // Optional
     $item1_details = array(
       'id' => 'a1',
-      'price' => 18000,
-      'quantity' => 3,
-      'name' => "Apple"
+      'price' => $harga,
+      'quantity' => 1,
+      'name' => "Pembayaran : " . $nama
     );
 
     // Optional
-    $item2_details = array(
-      'id' => 'a2',
-      'price' => 20000,
-      'quantity' => 2,
-      'name' => "Orange"
-    );
+    $item_details = array($item1_details);
 
     // Optional
-    $item_details = array($item1_details, $item2_details);
+    // $billing_address = array(
+    //   'first_name'    => "Andri",
+    //   'last_name'     => "Litani",
+    //   'address'       => "Mangga 20",
+    //   'city'          => "Jakarta",
+    //   'postal_code'   => "16602",
+    //   'phone'         => "081122334455",
+    //   'country_code'  => 'IDN'
+    // );
 
     // Optional
-    $billing_address = array(
-      'first_name'    => "Andri",
-      'last_name'     => "Litani",
-      'address'       => "Mangga 20",
-      'city'          => "Jakarta",
-      'postal_code'   => "16602",
-      'phone'         => "081122334455",
-      'country_code'  => 'IDN'
-    );
-
-    // Optional
-    $shipping_address = array(
-      'first_name'    => "Obet",
-      'last_name'     => "Supriadi",
-      'address'       => "Manggis 90",
-      'city'          => "Jakarta",
-      'postal_code'   => "16601",
-      'phone'         => "08113366345",
-      'country_code'  => 'IDN'
-    );
+    // $shipping_address = array(
+    //   'first_name'    => "Obet",
+    //   'last_name'     => "Supriadi",
+    //   'address'       => "Manggis 90",
+    //   'city'          => "Jakarta",
+    //   'postal_code'   => "16601",
+    //   'phone'         => "08113366345",
+    //   'country_code'  => 'IDN'
+    // );
 
     // Optional
     $customer_details = array(
-      'first_name'    => "Andri",
-      'last_name'     => "Litani",
+      'first_name'    => $nama,
+      // 'last_name'     => "Litani",
       'email'         => "andri@litani.com",
       'phone'         => "081122334455",
-      'billing_address'  => $billing_address,
-      'shipping_address' => $shipping_address
+      // 'billing_address'  => $billing_address,
+      // 'shipping_address' => $shipping_address
     );
 
     // Data yang akan dikirim untuk request redirect_url.
@@ -103,7 +101,8 @@ class Snap extends CI_Controller
     $custom_expiry = array(
       'start_time' => date("Y-m-d H:i:s O", $time),
       'unit' => 'minute',
-      'duration'  => 2
+      'duration'  => 1440
+      
     );
 
     $transaction_data = array(

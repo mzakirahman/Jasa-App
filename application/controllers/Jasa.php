@@ -127,7 +127,6 @@ class Jasa extends CI_Controller
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
     // model 
     $data['jasa'] = $this->Jasa_model->getJasaById($id);
-
     $this->load->view('tamplates/ui_header.php', $data);
     $this->load->view('tamplates/ui_sidebar.php', $data);
     $this->load->view('jasa/pesanjasa', $data);

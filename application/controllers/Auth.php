@@ -232,8 +232,11 @@ class Auth extends CI_Controller
   }
   public function blocked()
   {
-    echo 'access block ';
-    // $this->load->view('auth/try');
+    $data['title'] = 'Jasa App | blocked';
+    $this->load->view('guest/guest_header.php', $data);
+    $this->load->view('auth/blocked');
+    $this->load->view('guest/guest_footer.php');
+
   }
   // forgot password
   public function forgotPassword()

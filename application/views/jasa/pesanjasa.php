@@ -19,8 +19,13 @@
     </div>
     <div class="col">
       <h3><b><?= $jasa['juduljasa']; ?></b></h3>
-      <h5 class="mt-3">Rp. <?= $jasa['harga']; ?></h5>
-      <h5 class="mt-3"> <?= $jasa['nama']; ?></h5>
+      
+      <input type="hidden" name="harga" id="harga" value="<?= $jasa['harga']; ?>">
+      <input type="hidden" name="harga" id="nama" value="<?= $jasa['nama']; ?>">
+
+      <h5 class="mt-3" id="harga">Rp. <?= $jasa['harga']; ?></h5>
+      <h5 class="mt-3" id="nama"> <?= $jasa['nama']; ?></h5>
+
       <h5 class="mt-3"> <i class="fa fa-whatsapp" aria-hidden="true"></i>
         <?= $jasa['no']; ?></h5>
       <h5 class="mt-3"> <i class="fa fa-thumb-tack" aria-hidden="true"></i>
@@ -42,10 +47,14 @@
   $('#pay-button').click(function(event) {
     event.preventDefault();
     $(this).attr("disabled", "disabled");
-
+    // tangkap harga nama 
+    var nama = $("#nama").val();
+    var harga = $("#harga").val();
     $.ajax({
-      url: '<?= site_url() ?>/snap/token',
-      cache: false,
+      type  : 'post',
+      url   : '<?= site_url() ?>/snap/token',
+      data  : {nama:nama, harga:harga},
+      cache : false,
 
       success: function(data) {
         //location = data;
