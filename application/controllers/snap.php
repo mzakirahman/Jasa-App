@@ -29,7 +29,8 @@ class Snap extends CI_Controller
     $this->load->helper('url');
 
     // panggil model
-    
+    $this->load->model('Jasaku_model');
+
 
   }
 

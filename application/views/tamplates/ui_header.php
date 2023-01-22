@@ -10,10 +10,6 @@
   <title><?= $title; ?></title>
 
 
-
-  <!-- mitrans -->
-  <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="SB-Mid-client-zNogHI4yBCDTjR0x"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
 
@@ -33,7 +29,7 @@
   <div class="humberger__menu__overlay"></div>
   <div class="humberger__menu__wrapper">
     <div class="humberger__menu__logo">
-      <a href="<?= base_url('user') ?>"><img src="<?= base_url('ui_assets/'); ?>img/logo.png"></a>
+      <a href="<?= base_url('user') ?>"><img src="<?= base_url('assets/'); ?>logo.png"></a>
     </div>
     <div class="humberger__menu__cart">
       <ul>
