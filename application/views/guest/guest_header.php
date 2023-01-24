@@ -30,7 +30,7 @@
   <div class="humberger__menu__overlay"></div>
   <div class="humberger__menu__wrapper">
     <div class="humberger__menu__logo">
-      <a href="<?= base_url('home/index') ?>"><img src="<?= base_url('ui_assets/'); ?>img/logo.png"></a>
+      <a href="<?= base_url('home/index') ?>"><img src="<?= base_url('assets/'); ?>logo.png"></a>
     </div>
     <div class="humberger__menu__widget">
       <div class="header__top__right__language">
@@ -106,7 +106,7 @@
       <div class="row">
         <div class="col-lg-3">
           <div class="header__logo">
-            <a href="<?= base_url('home') ?>"><img src="<?= base_url('ui_assets/'); ?>img/logo.png" alt=""></a>
+            <a href="<?= base_url('home') ?>"><img src="<?= base_url('assets/'); ?>logo.png" alt=""></a>
           </div>
         </div>
         <div class="col-lg-6">
