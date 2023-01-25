@@ -18,7 +18,13 @@ class Jasaku_model extends CI_Model
     return $this->db->query($query)->result_array();
   }
   public function getAllTransaksi(){
-    return $this->db->get('transaksi_mitrans')->result_array();
+    $id = $this->session->userdata('id');
+    $query = "SELECT `transaksi_mitrans`.*, `user`.`id`
+                  FROM `transaksi_mitrans` JOIN `user`
+                  ON `transaksi_mitrans`.`user_id` = `user`.`id`
+                  WHERE `transaksi_mitrans`.`user_id` = $id
+                ";      
+    return $this->db->query($query)->result_array();
   }
 
 }

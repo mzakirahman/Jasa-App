@@ -129,7 +129,8 @@ class Jasa extends CI_Controller
     $id = $this->session->userdata('id');
 
     $result = json_decode($this->input->post('result_data'), true);
-    
+    // var_dump ($result );
+    // die;
       $data = [
         'user_id' => $id,
         'order_id' => $result['order_id'],
