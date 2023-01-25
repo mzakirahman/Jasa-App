@@ -45,28 +45,6 @@ class Snap extends CI_Controller
     $item_details = array($item1_details);
 
     // Optional
-    // $billing_address = array(
-    //   'first_name'    => "Andri",
-    //   'last_name'     => "Litani",
-    //   'address'       => "Mangga 20",
-    //   'city'          => "Jakarta",
-    //   'postal_code'   => "16602",
-    //   'phone'         => "081122334455",
-    //   'country_code'  => 'IDN'
-    // );
-
-    // Optional
-    // $shipping_address = array(
-    //   'first_name'    => "Obet",
-    //   'last_name'     => "Supriadi",
-    //   'address'       => "Manggis 90",
-    //   'city'          => "Jakarta",
-    //   'postal_code'   => "16601",
-    //   'phone'         => "08113366345",
-    //   'country_code'  => 'IDN'
-    // );
-
-    // Optional
     $customer_details = array(
       'first_name'    => $nama,
       // 'last_name'     => "Litani",
@@ -103,11 +81,12 @@ class Snap extends CI_Controller
     echo $snapToken;
   }
 
-  public function finish()
-  {
-    $result = json_decode($this->input->post('result_data'));
-    echo 'RESULT <br><pre>';
-    var_dump($result);
-    echo '</pre>';
-  }
+  // public function finish()
+  // {
+    
+  //   $result = json_decode($this->input->post('result_data'));
+  //   echo 'RESULT <br><pre>';
+  //   var_dump($result);
+  //   echo '</pre>';
+  // }
 }

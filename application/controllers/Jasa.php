@@ -125,14 +125,16 @@ class Jasa extends CI_Controller
   public function finish()
   // REDIRECT KE HALAMAN TRANSKASI
   {
-
+    
+    $nama = $this->input->post('nama');
     $id = $this->session->userdata('id');
 
     $result = json_decode($this->input->post('result_data'), true);
-    // var_dump ($result );
+    // var_dump ($nama );
     // die;
       $data = [
         'user_id' => $id,
+        'nama' => $nama,
         'order_id' => $result['order_id'],
         'gross_amount' => $result['gross_amount'],
         'payment_type' => $result['payment_type'],

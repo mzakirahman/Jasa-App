@@ -12,7 +12,7 @@
     <input type="hidden" name="result_data" id="result-data" value="">
     <!-- GET DARI API -->
     <input type="hidden" name="harga" id="harga" value="<?= $jasa['harga']; ?>">
-    <input type="hidden" name="harga" id="nama" value="<?= $jasa['nama']; ?>">
+    <input type="hidden" name="nama" id="nama" value="<?= $jasa['nama']; ?>">
   </form>
 
   <p><a href="#" class="text-dark">jasa elektronik > </a><a href="#" class="text-primary">Detail Jasa</a>
@@ -39,7 +39,6 @@
           var harga = $("#harga").val();
           $.ajax({
             type: 'post',
-            //url: '<?= site_url() ?>/snap/token',
             url: '<?= site_url() ?>/jasa/token',
             data: {
               nama: nama,
