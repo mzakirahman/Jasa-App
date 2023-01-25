@@ -17,4 +17,8 @@ class Jasaku_model extends CI_Model
                 ";      
     return $this->db->query($query)->result_array();
   }
+  public function getAllTransaksi(){
+    return $this->db->get('transaksi_mitrans')->result_array();
+  }
+
 }

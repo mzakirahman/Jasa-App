@@ -37,11 +37,26 @@ class Jasaku extends CI_Controller
     // memanggil model jasaku 
     $this->load->model('Jasaku_model', 'jasaku');
     $data['jasaSaya'] = $this->jasaku->getJasa();
-    
 
     $this->load->view('tamplates/ui_header.php', $data);
     $this->load->view('tamplates/ui_sidebar.php', $data);
     $this->load->view('jasaku/jasasaya', $data);
+    $this->load->view('tamplates/ui_footer.php', $data);
+  }
+  public function transaksi()
+  {
+    $data['title'] = 'Jasa App | Transaksi';
+    $data['judul'] = 'Jasa elektronik saya';
+    // memanggil session user 
+    $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+    // get all data Transaksi
+    $this->load->model('Jasaku_model', 'jasaku');
+    $data['transaksi'] = $this->jasaku->getAllTransaksi();
+
+
+    $this->load->view('tamplates/ui_header.php', $data);
+    $this->load->view('tamplates/ui_sidebar.php', $data);
+    $this->load->view('jasaku/transaksi', $data);
     $this->load->view('tamplates/ui_footer.php', $data);
   }
 
