@@ -86,6 +86,8 @@
 <script src="<?= base_url('ui_assets/'); ?>js/mixitup.min.js"></script>
 <script src="<?= base_url('ui_assets/'); ?>js/owl.carousel.min.js"></script>
 <script src="<?= base_url('ui_assets/'); ?>js/main.js"></script>
+<!-- mitrans -->
+<!-- <script src="<?= base_url('ui_assets/'); ?>js/jquery.fancybox.pack.js"></script> -->
 
 
 
