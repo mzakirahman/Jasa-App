@@ -1,9 +1,9 @@
-<!-- CONTENT START -->
-<div class="col-lg-9 col-md-7">
-  <?php  if ( $this->session->flashdata('bayar')) : ?>
-  <?php endif; ?>
+<!-- Begin Page Content -->
+<div class="container-fluid">
 
-  <table class="table table-hover">
+<h1 class="h3 mb-4 text-gray-800"><?= $title; ?></h1>
+
+<table class="table table-hover">
     <thead class="thead-light">
     
     <tr>
@@ -20,7 +20,7 @@
     </tr>
     </thead>
     <tbody>
-    <?php foreach ($transaksi as $ts) : ?>
+    <?php foreach ($alltransaksi as $ts) : ?>
         <?php $i = 1; ?>
       <tr>
         <th scope="row"><?= $i; ?></th>
@@ -50,11 +50,8 @@
 
 
 
-  
+
 
 </div>
-<!-- CONTENT END -->
 </div>
-</div>
-</section>
-<!-- Product Section End -->
+<!-- End of Main Content -->

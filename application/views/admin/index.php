@@ -16,7 +16,7 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                                 Managemnt User</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">3 User</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">User</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fa fa-users fa-2x text-success-300"></i>
@@ -31,12 +31,29 @@
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                                 Managemnt Jasa</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">3 Jasa</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">Jasa</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fa fa-wrench fa-2x text-success-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- managemnt jasa -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-danger shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
+                                                Managemnt Transaksi</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">Transaksi</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fa fa-money fa-2x text-success-300"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -46,53 +63,7 @@
 
                     </div>
 <!-- end card row -->
-      <table class="table table-hover">
-        <thead>
-          <tr>
-            <th scope="col">NO</th>
-            <th scope="col">Nama</th>
-            <th scope="col">Email</th>
-            <th scope="col">Profile</th>
-            <th scope="col">Role</th>
-            <th scope="col">Aktif | Non</th>
-            <th scope="col">Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <?php $i = 1; ?>
-          <?php foreach ($user as $user) : ?>
-            <tr>
-              <th scope="row"><?= $i; ?></th>
-              <td><?= $user['name']; ?></td>
-              <td><?= $user['email']; ?></td>
-              <td><img height="30" src="<?= base_url('assets/img/profile/') . $user['image']; ?>" alt=""></td>
-              <td>
-                <?php
-                if ($user['role_id'] == 1) {
-                  echo 'Admin';
-                } else {
-                  echo 'User';
-                }
-                ?>
-              </td>
-              <td>
-                <?php
-                if ($user['is_active'] == 1) {
-                  echo 'Aktif';
-                } else {
-                  echo 'Non Aktif';
-                }
-                ?>
-              </td>
-              <td>
-                <a href="" class="badge badge-success">edit</a>
-                <a href="" class="badge badge-danger">delete</a>
-              </td>
-            </tr>
-            <?php $i++; ?>
-          <?php endforeach; ?>
-        </tbody>
-      </table>
+
 
 
     </div>

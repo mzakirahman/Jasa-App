@@ -11,10 +11,14 @@
           <div class="card-body">
             <h5 class="card-title"><?= $sm['juduljasa']; ?></h5>
             <h5 class="card-title"><?= $sm['alamat']; ?></h5>
-            <h5 class="card-title"><?= $sm['harga']; ?></h5>
+            <h5 class="card-title">Rp. <?= $sm['harga']; ?></h5>
             <p class="card-text"><?= $sm['nama']; ?></p>
-            <a href="#" class="badge badge-warning">Edit</a>
+
+
+            <a href="<?= base_url('jasaku/jasasayaedit/') . $sm['juduljasa']; ?>" class="badge badge-warning">Edit</a>
             <a href="#" class="badge badge-danger" data-toggle="modal" data-target="#exampleModal">Hapus</a>
+
+
           </div>
         </div>
       </div>
@@ -41,7 +45,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Hapus</button>
+          <button type="button" class="btn btn-danger">Hapus</button>
         </div>
       </div>
     </div>

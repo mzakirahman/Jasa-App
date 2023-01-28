@@ -15,15 +15,14 @@ class Admin extends CI_Controller
   public function index()
   {
 
-    $data['title'] = 'Admin | Data';
+    $data['title'] = 'Data Jasa Kuy';
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-    // panggil models - nama table - nama models - nama function
-    $datauser['user'] = $this->M_datauser->getAlluser();
+    
 
     $this->load->view('tamplates/admin_header.php', $data);
     $this->load->view('tamplates/admin_sidebar.php', $data);
     $this->load->view('tamplates/admin_topbar.php', $data);
-    $this->load->view('admin/index', $datauser);
+    $this->load->view('admin/index', $data);
     $this->load->view('tamplates/admin_footer.php');
   }
   public function role()
@@ -77,7 +76,11 @@ class Admin extends CI_Controller
   }
   public function jasa()
   {
-    $data['title'] = 'Data Transaksi';
+
+    $this->load->model('M_datauser', 'jasa');
+    $data['alljasa'] = $this->jasa->getAllJasa();
+
+    $data['title'] = 'Data Jasa';
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
     $this->load->view('tamplates/admin_header.php', $data);
@@ -86,5 +89,34 @@ class Admin extends CI_Controller
     $this->load->view('admin/jasa', $data);
     $this->load->view('tamplates/admin_footer.php');
   }
+
+  public function transaksi()
+  {
+    $this->load->model('M_datauser', 'transaksi');
+    $data['alltransaksi'] = $this->transaksi->getAllMitrans();
+
+    $data['title'] = 'Data Transaksi';
+    $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+    $this->load->view('tamplates/admin_header.php', $data);
+    $this->load->view('tamplates/admin_sidebar.php', $data);
+    $this->load->view('tamplates/admin_topbar.php', $data);
+    $this->load->view('admin/transaksi', $data);
+    $this->load->view('tamplates/admin_footer.php');
+  }
+  public function user()
+  {
+    // panggil models - nama table - nama models - nama function
+    $datauser['user'] = $this->M_datauser->getAlluser();
+    $data['title'] = 'Data user';
+    $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+    $this->load->view('tamplates/admin_header.php', $data);
+    $this->load->view('tamplates/admin_sidebar.php', $data);
+    $this->load->view('tamplates/admin_topbar.php', $data);
+    $this->load->view('admin/user', $datauser);
+    $this->load->view('tamplates/admin_footer.php');
+  }
+
   
 }

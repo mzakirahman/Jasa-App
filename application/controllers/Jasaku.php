@@ -15,6 +15,23 @@ class Jasaku extends CI_Controller
     $this->load->library('session');
 
   }
+  public function jasasayaedit($juduljasa)
+  {
+    $data['title'] = 'Jasa App | Edit Jasa';
+    $data['judul'] = 'Edit Jasa';
+    // memanggil session user 
+    $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+    // memanggil model jasa
+    $this->load->model('Jasaku_model', 'jasaku');
+    $data['edit'] = $this->jasaku->jasasayaedit($juduljasa);
+
+    $this->load->view('tamplates/ui_header.php', $data);
+    $this->load->view('tamplates/ui_sidebar.php', $data);
+    $this->load->view('jasaku/jasasayaedit', $data);
+    $this->load->view('tamplates/ui_footer.php', $data);
+  }
+
+
   public function create()
   {
     $data['title'] = 'Jasa App | My Jasa';

@@ -6,6 +6,12 @@ class Jasaku_model extends CI_Model
       $this->db->insert('jasa', $data);
       return TRUE;
   }
+  public function jasasayaedit($juduljasa)
+  {
+    $this->db->get('jasa')->row_array();
+  }
+
+  
 
   public function getJasa()
   {
@@ -17,7 +23,10 @@ class Jasaku_model extends CI_Model
                 ";      
     return $this->db->query($query)->result_array();
   }
-  public function getAllTransaksi(){
+
+  
+  public function getAllTransaksi()
+  {
     $id = $this->session->userdata('id');
     $query = "SELECT `transaksi_mitrans`.*, `user`.`id`
                   FROM `transaksi_mitrans` JOIN `user`
