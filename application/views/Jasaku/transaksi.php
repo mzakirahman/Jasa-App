@@ -5,14 +5,13 @@
 
   <table class="table table-hover">
     <thead class="thead-light">
-    <?php foreach ($transaksi as $ts) : ?>
-        <?php $i = 1; ?>
+    
     <tr>
       <th scope="col">No</th>
       <th scope="col">Nama</th> 
-      <!-- <th scope="col">Order ID</th> -->
+      <th scope="col">Order ID</th>
       <th scope="col">Biaya</th>
-      <th scope="col">Via</th>
+      <!-- <th scope="col">Via</th> -->
       <!-- <th scope="col">Waktu</th> -->
       <th scope="col">Bank</th>
       <th scope="col">Number</th>
@@ -21,13 +20,14 @@
     </tr>
     </thead>
     <tbody>
-			
+    <?php foreach ($transaksi as $ts) : ?>
+        <?php $i = 1; ?>
       <tr>
         <th scope="row"><?= $i; ?></th>
         <td><?= $ts['nama']; ?></td>
-        <!-- <td><?= $ts['order_id']; ?></td> -->
+        <td><?= $ts['order_id']; ?></td>
         <td>Rp. <?= $ts['gross_amount']; ?></td>
-        <td><?= $ts['payment_type']; ?></td>
+        <!-- <td><?= $ts['payment_type']; ?></td> -->
         <!-- <td><?= $ts['transaction_time']; ?></td> -->
         <td><?= $ts['bank']; ?></td>
         <td><?= $ts['va_number']; ?></td>

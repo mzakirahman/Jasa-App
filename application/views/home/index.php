@@ -20,31 +20,15 @@
   <div class="container">
     <div class="row">
       <div class="categories__slider owl-carousel">
+      <?php foreach ($jasa  as $j) : ?>
+
         <div class="col-lg-3">
-          <div class="categories__item set-bg" data-setbg="https://4.bp.blogspot.com/-aFNmnv6CXlI/WwcPNu8o2jI/AAAAAAAACp4/j8-YK2ou49YcMvz0GP95JedViOfdrUg1QCLcBGAs/s1600/se4.jpg">
-            <h5><a href="#">Fresh Fruit1</a></h5>
+          <div class="categories__item set-bg" data-setbg="<?= base_url('assets/picture/') . $j['foto']; ?>">
+            <h5><a href="<?= base_url('auth');?>"><?= $j['juduljasa']; ?></a></h5>
           </div>
         </div>
-        <div class="col-lg-3">
-          <div class="categories__item set-bg" data-setbg="https://4.bp.blogspot.com/-aFNmnv6CXlI/WwcPNu8o2jI/AAAAAAAACp4/j8-YK2ou49YcMvz0GP95JedViOfdrUg1QCLcBGAs/s1600/se4.jpg">
-            <h5><a href="#">Dried Fruit2</a></h5>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="categories__item set-bg" data-setbg="https://4.bp.blogspot.com/-aFNmnv6CXlI/WwcPNu8o2jI/AAAAAAAACp4/j8-YK2ou49YcMvz0GP95JedViOfdrUg1QCLcBGAs/s1600/se4.jpg">
-            <h5><a href="#">Dried Fruit3</a></h5>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="categories__item set-bg" data-setbg="https://4.bp.blogspot.com/-aFNmnv6CXlI/WwcPNu8o2jI/AAAAAAAACp4/j8-YK2ou49YcMvz0GP95JedViOfdrUg1QCLcBGAs/s1600/se4.jpg">
-            <h5><a href="#">Dried Fruit4</a></h5>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="categories__item set-bg" data-setbg="https://4.bp.blogspot.com/-aFNmnv6CXlI/WwcPNu8o2jI/AAAAAAAACp4/j8-YK2ou49YcMvz0GP95JedViOfdrUg1QCLcBGAs/s1600/se4.jpg">
-            <h5><a href="#">Dried Fruit5</a></h5>
-          </div>
-        </div>
+        <?php endforeach; ?>
+
       </div>
     </div>
   </div>
