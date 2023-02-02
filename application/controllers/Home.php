@@ -3,16 +3,17 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Home extends CI_Controller
 {
-  function __construct(){
-		parent::__construct();		
-		$this->load->model('Home_model');
+  function __construct()
+  {
+    parent::__construct();
+    $this->load->model('Home_model');
     $this->load->helper('url');
     // Mitrans
     $params = array('server_key' => 'SB-Mid-server-ZAJ7F4rAEdZWQA4OUMyQaph9', 'production' => false);
-		$this->load->library('veritrans');
-		$this->veritrans->config($params);
-		$this->load->helper('url');
-	}
+    $this->load->library('veritrans');
+    $this->veritrans->config($params);
+    $this->load->helper('url');
+  }
   public function index()
   {
     $data['jasa'] = $this->Home_model->AllDataJasa();
@@ -27,6 +28,7 @@ class Home extends CI_Controller
       redirect('user');
     }
     $data['title'] = 'Jasa App | Jasa';
+    $data['jasa'] = $this->Home_model->AllDataJasa();
 
     $this->load->view('guest/guest_header.php', $data);
     $this->load->view('home/jasa', $data);
@@ -57,9 +59,9 @@ class Home extends CI_Controller
   public function notification()
   {
 
-		echo 'test notification handler1';
-		$json_result = file_get_contents('php://input');
-		$result = json_decode($json_result, "true");
+    echo 'test notification handler1';
+    $json_result = file_get_contents('php://input');
+    $result = json_decode($json_result, "true");
 
     $order_id = $result['order_id'];
 
@@ -67,14 +69,14 @@ class Home extends CI_Controller
       'status_code' => $result['status_code']
     ];
 
-		if($result['status_code'] == 200){
-      $this->db->update('transaksi_mitrans', $data,array('order_id'=>$order_id));
+    if ($result['status_code'] == 200) {
+      $this->db->update('transaksi_mitrans', $data, array('order_id' => $order_id));
     }
 
 
-		//notification handler sample
+    //notification handler sample
 
-		/*
+    /*
 		$transaction = $notif->transaction_status;
 		$type = $notif->payment_type;
 		$order_id = $notif->order_id;
@@ -106,6 +108,5 @@ class Home extends CI_Controller
 		  // TODO set payment status in merchant's database to 'Denied'
 		  echo "Payment using " . $type . " for transaction order_id: " . $order_id . " is denied.";
 		}*/
-
-	}
+  }
 }
