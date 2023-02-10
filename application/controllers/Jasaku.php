@@ -63,7 +63,7 @@ class Jasaku extends CI_Controller
   public function transaksi()
   {
     $data['title'] = 'Jasa App | Transaksi';
-    $data['judul'] = 'Jasa elektronik saya';
+    $data['judul'] = 'Data Pembayaran';
     // memanggil session user 
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
     // get all data Transaksi
@@ -122,5 +122,22 @@ class Jasaku extends CI_Controller
       $this->session->set_flashdata('jasa', '<div class="alert alert-danger" role="alert">Ops! Terjadi Kesalahan, Mohon cek kembali data anda</div>');
       redirect('jasaku/create');
     }
+  }
+
+  public function pemesanjasa()
+  {
+
+    // memanggil session user 
+    $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+    $data['title'] = 'Jasa App | Pemesan Jasa';
+    $data['judul'] = 'Pemesan Jasa elektronik saya';
+
+
+    $this->load->view('tamplates/ui_header.php', $data);
+    $this->load->view('tamplates/ui_sidebar.php', $data);
+    $this->load->view('jasaku/pemesanjasa', $data);
+    $this->load->view('tamplates/ui_footer.php', $data);
+
   }
 }

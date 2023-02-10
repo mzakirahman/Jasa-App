@@ -1,5 +1,7 @@
 <!-- CONTENT START -->
 <div class="col-lg-9 col-md-7">
+<h1 class="h3 text-gray-800"><?= $judul; ?></h1>
+
   <?php  if ( $this->session->flashdata('bayar')) : ?>
   <?php endif; ?>
 

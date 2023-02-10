@@ -105,7 +105,7 @@ class Jasa extends CI_Controller
       'start_time' => date("Y-m-d H:i:s O", $time),
       'unit' => 'minute',
       'duration'  => 1440
-      
+
     );
 
     $transaction_data = array(
@@ -125,32 +125,33 @@ class Jasa extends CI_Controller
   public function finish()
   // REDIRECT KE HALAMAN TRANSKASI
   {
-    
+
     $nama = $this->input->post('nama');
     $id = $this->session->userdata('id');
 
     $result = json_decode($this->input->post('result_data'), true);
     // var_dump ($nama );
     // die;
-      $data = [
-        'user_id' => $id,
-        'nama' => $nama,
-        'order_id' => $result['order_id'],
-        'gross_amount' => $result['gross_amount'],
-        'payment_type' => $result['payment_type'],
-        'transaction_time' => $result['transaction_time'],
-        'bank' => $result['va_numbers'][0]["bank"],
-        'va_number' => $result['va_numbers'][0]["va_number"],
-        'pdf_url' => $result['pdf_url'],
-        'status_code' => $result['status_code']
-      ];
-      $simpan =  $this->db->insert('transaksi_mitrans',$data);
-  
-    if($simpan){
-      $this->session->set_flashdata('bayar', '<div class="alert alert-success" role="alert">Selamat! Anda Berhasil Membuat Jasa elektronik</div>');redirect('jasaku/transaksi');
-    } else{
-      $this->session->set_flashdata('bayar', '<div class="alert alert-success" role="alert">Selamat! Anda Berhasil Membuat Jasa elektronik</div>');redirect('jasa/pesanjasa');
+    $data = [
+      'user_id' => $id,
+      'nama' => $nama,
+      'order_id' => $result['order_id'],
+      'gross_amount' => $result['gross_amount'],
+      'payment_type' => $result['payment_type'],
+      'transaction_time' => $result['transaction_time'],
+      'bank' => $result['va_numbers'][0]["bank"],
+      'va_number' => $result['va_numbers'][0]["va_number"],
+      'pdf_url' => $result['pdf_url'],
+      'status_code' => $result['status_code']
+    ];
+    $simpan =  $this->db->insert('transaksi_mitrans', $data);
+
+    if ($simpan) {
+      $this->session->set_flashdata('bayar', '<div class="alert alert-success" role="alert">Selamat! Anda Berhasil Membuat Jasa elektronik</div>');
+      redirect('jasaku/transaksi');
+    } else {
+      $this->session->set_flashdata('bayar', '<div class="alert alert-success" role="alert">Selamat! Anda Berhasil Membuat Jasa elektronik</div>');
+      redirect('jasa/pesanjasa');
     }
-    
   }
 }

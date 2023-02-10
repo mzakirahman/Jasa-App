@@ -24,70 +24,80 @@
       <h3><b><?= $jasa['juduljasa']; ?></b></h3>
       <h5 class="mt-3"> Rp. <?= $jasa['harga']; ?></h5>
       <h5 class="mt-3"> <?= $jasa['nama']; ?></h5>
-      <h5 class="mt-3"> <i class="fa fa-whatsapp" aria-hidden="true"></i> <?= $jasa['no']; ?></h5>
+      <a href="#" class="badge badge-success"><i class="fa fa-whatsapp" aria-hidden="true"> <?= $jasa['no']; ?></i></a>
       <h5 class="mt-3"> <i class="fa fa-thumb-tack" aria-hidden="true"></i> <?= $jasa['alamat']; ?></h5>
       <p class="text-secondary"><?= $jasa['deskripsi']; ?></p>
-      
-      <button id="pay-button" class="site-btn mt-3">Pesan Jasa</button>
-      <!-- SCRIPT MITRANS -->
-      <script type="text/javascript">
-        $('#pay-button').click(function(event) {
-          event.preventDefault();
-          $(this).attr("disabled", "disabled");
-          // tangkap harga nama 
-          var nama = $("#nama").val();
-          var harga = $("#harga").val();
-          $.ajax({
-            type: 'post',
-            url: '<?= site_url() ?>/jasa/token',
-            data: {
-              nama: nama,
-              harga: harga
-            },
-            cache: false,
 
-            success: function(data) {
-              //location = data;
-
-              console.log('token = ' + data);
-
-              var resultType = document.getElementById('result-type');
-              var resultData = document.getElementById('result-data');
-
-              function changeResult(type, data) {
-                $("#result-type").val(type);
-                $("#result-data").val(JSON.stringify(data));
-                //resultType.innerHTML = type;
-                //resultData.innerHTML = JSON.stringify(data);
-              }
-
-              snap.pay(data, {
-
-                onSuccess: function(result) {
-                  changeResult('success', result);
-                  console.log(result.status_message);
-                  console.log(result);
-                  $("#payment-form").submit();
-                },
-                onPending: function(result) {
-                  changeResult('pending', result);
-                  console.log(result.status_message);
-                  $("#payment-form").submit();
-                },
-                onError: function(result) {
-                  changeResult('error', result);
-                  console.log(result.status_message);
-                  $("#payment-form").submit();
-                }
-              });
-            }
-          });
-        });
-      </script>
       <!-- AKHIR SCRIPT MITRANS -->
     </div>
   </div>
+  <label class="mt-2" for="basic-url">Jenis Kerusakan</label>
+  <div class="input-group mb-3">
+    <input type="text" placeholder="Jenis Kerusakan" class="form-control" id="basic-url">
+  </div>
+  <label for="basic-url">Alamat</label>
+  <div class="input-group ">
+    <input type="text" placeholder="Alamat" class="form-control" id="basic-url">
+  </div>
+  <button id="pay-button" class="site-btn mt-3">Pesan Jasa</button>
+
   <!-- Product Details Section End -->
+
+  <!-- SCRIPT MITRANS -->
+  <script type="text/javascript">
+    $('#pay-button').click(function(event) {
+      event.preventDefault();
+      $(this).attr("disabled", "disabled");
+      // tangkap harga nama 
+      var nama = $("#nama").val();
+      var harga = $("#harga").val();
+      $.ajax({
+        type: 'post',
+        url: '<?= site_url() ?>/jasa/token',
+        data: {
+          nama: nama,
+          harga: harga
+        },
+        cache: false,
+
+        success: function(data) {
+          //location = data;
+
+          console.log('token = ' + data);
+
+          var resultType = document.getElementById('result-type');
+          var resultData = document.getElementById('result-data');
+
+          function changeResult(type, data) {
+            $("#result-type").val(type);
+            $("#result-data").val(JSON.stringify(data));
+            //resultType.innerHTML = type;
+            //resultData.innerHTML = JSON.stringify(data);
+          }
+
+          snap.pay(data, {
+
+            onSuccess: function(result) {
+              changeResult('success', result);
+              console.log(result.status_message);
+              console.log(result);
+              $("#payment-form").submit();
+            },
+            onPending: function(result) {
+              changeResult('pending', result);
+              console.log(result.status_message);
+              $("#payment-form").submit();
+            },
+            onError: function(result) {
+              changeResult('error', result);
+              console.log(result.status_message);
+              $("#payment-form").submit();
+            }
+          });
+        }
+      });
+    });
+  </script>
 
 
 </div>
