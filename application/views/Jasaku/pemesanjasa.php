@@ -9,10 +9,8 @@
       <th scope="col">No</th>
       <th scope="col">Nama Pemesan</th> 
       <th scope="col">Kontak Pemesan</th> 
+      <th scope="col">Jenis Kerusakan</th> 
       <th scope="col">Alamat Pemesan</th>
-      <!-- <th scope="col">Via</th> -->
-      <!-- <th scope="col">Waktu</th> -->
-      <th scope="col">Bank</th>
       <th scope="col">Status</th>
     </tr>
     </thead>
@@ -23,8 +21,8 @@
         <th scope="row"><?= $i; ?></th>
         <td><?= $ts['namapemesan']; ?></td>
         <td><?= $ts['nohp']; ?></td>
+        <td><?= $ts['jeniskerusakan']; ?></td>
         <td><?= $ts['alamat']; ?></td>
-        <td><?= $ts['bank']; ?></td>
         <td>
                 <?php
                   if ($ts['status_code'] == 200) {

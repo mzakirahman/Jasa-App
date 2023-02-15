@@ -14,7 +14,7 @@
     <!-- GET DARI API -->
     <input type="hidden" name="harga" id="harga" value="<?= $jasa['harga']; ?>">
     <input type="hidden" name="nama" id="nama" value="<?= $jasa['nama']; ?>">
-    <input type="text" name="jasa_id" id="jasa_id" value="<?= $jasa['user_id']; ?>">
+    <input type="hidden" name="jasa_id" id="jasa_id" value="<?= $jasa['user_id']; ?>">
 
 
   <p><a href="#" class="text-dark">jasa elektronik > </a><a href="#" class="text-primary">Detail Jasa</a>
