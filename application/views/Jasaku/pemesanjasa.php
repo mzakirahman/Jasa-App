@@ -2,6 +2,44 @@
 
 <h1 class="h3 text-gray-800"><?= $judul; ?></h1>
 
+<table class="table table-hover">
+    <thead class="thead-light">
+    
+    <tr>
+      <th scope="col">No</th>
+      <th scope="col">Nama Pemesan</th> 
+      <th scope="col">Kontak Pemesan</th> 
+      <th scope="col">Alamat Pemesan</th>
+      <!-- <th scope="col">Via</th> -->
+      <!-- <th scope="col">Waktu</th> -->
+      <th scope="col">Bank</th>
+      <th scope="col">Status</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php $i = 1; ?>
+    <?php foreach ($pesanjasa as $ts) : ?>
+      <tr>
+        <th scope="row"><?= $i; ?></th>
+        <td><?= $ts['namapemesan']; ?></td>
+        <td><?= $ts['nohp']; ?></td>
+        <td><?= $ts['alamat']; ?></td>
+        <td><?= $ts['bank']; ?></td>
+        <td>
+                <?php
+                  if ($ts['status_code'] == 200) {
+                    echo '<span class="badge badge-pill badge-success">Oke</span>';
+                  } else {
+                    echo '<span class="badge badge-pill badge-warning">Belum Bayar</span>';
+                  }
+                ?>
+        </td>
+
+      </tr>
+      <?php $i++; ?>
+      <?php endforeach; ?>
+    </tbody>
+  </table>
 
 </div>
 <!-- CONTENT END -->

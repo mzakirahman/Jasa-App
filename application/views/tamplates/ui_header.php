@@ -152,7 +152,7 @@
           <div class="hero__categories">
             <div class="hero__categories__all">
               <i class="fa fa-bars"></i>
-              <span>All jasa</span>
+              <span>All Jasa elektronik</span>
             </div>
             <ul>
               <li><a href="#">Fresh Meat</a></li>
@@ -174,7 +174,7 @@
             <div class="hero__search__form">
               <form action="#">
                 <div class="hero__search__categories">
-                  All Jasa
+                  All Jasa elektronik
                   <span class="arrow_carrot-down"></span>
                 </div>
                 <input type="text" placeholder="Jasa elektronik apa ?">

@@ -126,6 +126,13 @@ class Jasaku extends CI_Controller
 
   public function pemesanjasa()
   {
+    // model 
+    $this->load->model('Jasaku_model', 'jasaku');
+    $data['pesanjasa'] = $this->jasaku->pemesanjasa();
+
+
+    
+
 
     // memanggil session user 
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();

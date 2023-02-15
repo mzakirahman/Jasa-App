@@ -36,9 +36,9 @@
         <td>
                 <?php
                   if ($ts['status_code'] == 200) {
-                    echo '<span class="badge badge-pill badge-success">Warning</span>';
+                    echo '<span class="badge badge-pill badge-success">Oke</span>';
                   } else {
-                    echo '<span class="badge badge-pill badge-warning">Pending</span>';
+                    echo '<span class="badge badge-pill badge-warning">Belum Bayar</span>';
                   }
                 ?>
         </td>

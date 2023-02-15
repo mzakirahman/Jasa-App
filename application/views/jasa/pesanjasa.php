@@ -7,19 +7,25 @@
 <!-- AKHIR SCRIPT MITRANS -->
 <div class="col-lg-9 col-md-7">
   <!-- FORM BAWAAN DARI MITRANS YANG BERTYPE HIDDEN -->
+  <!-- <?= validation_errors(); ?> -->
   <form id="payment-form" method="post" action="<?= site_url() ?>/jasa/finish">
     <input type="hidden" name="result_type" id="result-type" value="">
     <input type="hidden" name="result_data" id="result-data" value="">
     <!-- GET DARI API -->
     <input type="hidden" name="harga" id="harga" value="<?= $jasa['harga']; ?>">
     <input type="hidden" name="nama" id="nama" value="<?= $jasa['nama']; ?>">
-  </form>
+    <input type="text" name="jasa_id" id="jasa_id" value="<?= $jasa['user_id']; ?>">
+
 
   <p><a href="#" class="text-dark">jasa elektronik > </a><a href="#" class="text-primary">Detail Jasa</a>
+
+
   <div class="row row-cols-2">
     <div class="col">
       <img class="img-fluid" width="100%" height="80%" src="<?= base_url('assets/picture/') . $jasa['foto']; ?>">
     </div>
+
+
     <div class="col">
       <h3><b><?= $jasa['juduljasa']; ?></b></h3>
       <h5 class="mt-3"> Rp. <?= $jasa['harga']; ?></h5>
@@ -27,24 +33,45 @@
       <a href="#" class="badge badge-success"><i class="fa fa-whatsapp" aria-hidden="true"> <?= $jasa['no']; ?></i></a>
       <h5 class="mt-3"> <i class="fa fa-thumb-tack" aria-hidden="true"></i> <?= $jasa['alamat']; ?></h5>
       <p class="text-secondary"><?= $jasa['deskripsi']; ?></p>
+      <!-- <p class="text-secondary">user_id <?= $jasa['user_id']; ?></p> -->
 
-      <!-- AKHIR SCRIPT MITRANS -->
     </div>
   </div>
-  <label class="mt-2" for="basic-url">Jenis Kerusakan</label>
-  <div class="input-group mb-3">
-    <input type="text" placeholder="Jenis Kerusakan" class="form-control" id="basic-url">
+  <div class="row">
+    <div class="col">
+        <label for="basic-url">Nama</label>
+        <div class="input-group ">
+          <input type="text" name="namapemesan" placeholder="Alamat detail" class="form-control" required >
+        </div>
+        <label for="basic-url">No Handphone</label>
+        <div class="input-group ">
+          <input type="number" name="nohp" placeholder="Alamat detail" class="form-control" required>
+        </div>
+    </div>
+    <div class="col ">
+      <label  for="basic-url">Jenis Kerusakan</label>
+      <div class="input-group">
+        <input type="text" name="jeniskerusakan" placeholder="Jenis Kerusakan" class="form-control" required>
+      </div>
+      <label for="basic-url">Alamat</label>
+      <div class="input-group ">
+        <input type="text" name="alamat" placeholder="Alamat detail" class="form-control" >
+      </div>
+    </div>
   </div>
-  <label for="basic-url">Alamat</label>
-  <div class="input-group ">
-    <input type="text" placeholder="Alamat" class="form-control" id="basic-url">
-  </div>
-  <button id="pay-button" class="site-btn mt-3">Pesan Jasa</button>
-
+  
+  
+  
+  
+  
   <!-- Product Details Section End -->
+  
+  <!-- end form -->
+  <button type="submit" id="pay-button" class="site-btn mt-3">Pesan Jasa</button>
+</form>
 
-  <!-- SCRIPT MITRANS -->
-  <script type="text/javascript">
+      <!-- AKHIR SCRIPT MITRANS -->
+      <script type="text/javascript">
     $('#pay-button').click(function(event) {
       event.preventDefault();
       $(this).attr("disabled", "disabled");

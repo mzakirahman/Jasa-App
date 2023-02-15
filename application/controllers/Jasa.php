@@ -14,6 +14,7 @@ class Jasa extends CI_Controller
     $this->load->library('midtrans');
     $this->midtrans->config($params);
     $this->load->helper('url');
+    $this->load->library('form_validation');
   }
 
   public function alljasa()
@@ -45,7 +46,9 @@ class Jasa extends CI_Controller
   {
     $nama = $this->input->post('nama');
     $harga = $this->input->post('harga');
-
+    // $jasa_id = $this->input->post('jasa_id');
+    // var_dump ($jasa_id);
+    // die;
     // Required
     $transaction_details = array(
       'order_id' => rand(),
@@ -62,28 +65,6 @@ class Jasa extends CI_Controller
 
     // Optional
     $item_details = array($item1_details);
-
-    // Optional
-    // $billing_address = array(
-    //   'first_name'    => "Andri",
-    //   'last_name'     => "Litani",
-    //   'address'       => "Mangga 20",
-    //   'city'          => "Jakarta",
-    //   'postal_code'   => "16602",
-    //   'phone'         => "081122334455",
-    //   'country_code'  => 'IDN'
-    // );
-
-    // Optional
-    // $shipping_address = array(
-    //   'first_name'    => "Obet",
-    //   'last_name'     => "Supriadi",
-    //   'address'       => "Manggis 90",
-    //   'city'          => "Jakarta",
-    //   'postal_code'   => "16601",
-    //   'phone'         => "08113366345",
-    //   'country_code'  => 'IDN'
-    // );
 
     // Optional
     $customer_details = array(
@@ -126,15 +107,26 @@ class Jasa extends CI_Controller
   // REDIRECT KE HALAMAN TRANSKASI
   {
 
+    $namapemesan = $this->input->post('namapemesan');
     $nama = $this->input->post('nama');
+    $nohp = $this->input->post('nohp');
+    $jeniskerusakan = $this->input->post('jeniskerusakan');
+    $alamat = $this->input->post('alamat');
     $id = $this->session->userdata('id');
+    $jasa_id = $this->input->post('jasa_id');
+  
 
     $result = json_decode($this->input->post('result_data'), true);
-    // var_dump ($nama );
+    // var_dump ($jasa_id );
     // die;
     $data = [
       'user_id' => $id,
+      'jasa_id' => $jasa_id,
       'nama' => $nama,
+      'namapemesan' => $namapemesan,
+      'nohp' => $nohp,
+      'jeniskerusakan' => $jeniskerusakan,
+      'alamat' => $alamat,
       'order_id' => $result['order_id'],
       'gross_amount' => $result['gross_amount'],
       'payment_type' => $result['payment_type'],
