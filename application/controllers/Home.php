@@ -13,6 +13,7 @@ class Home extends CI_Controller
     $this->load->library('veritrans');
     $this->veritrans->config($params);
     $this->load->helper('url');
+    $this->load->library('form_validation');
   }
   public function index()
   {
@@ -45,17 +46,33 @@ class Home extends CI_Controller
     $this->load->view('home/help', $data);
     $this->load->view('guest/guest_footer.php');
   }
+
   public function contact()
   {
-    if ($this->session->userdata('email')) {
-      redirect('user');
-    }
     $data['title'] = 'Jasa App | Contact';
+    $this->load->library('form_validation');
 
-    $this->load->view('guest/guest_header.php', $data);
-    $this->load->view('home/contact', $data);
-    $this->load->view('guest/guest_footer.php');
+    $this->form_validation->set_rules('nama', 'Nama', 'required');
+    $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+    $this->form_validation->set_rules('pesan', 'Pesan', 'required');
+
+    if ($this->form_validation->run() == FALSE)
+      {
+        $this->load->view('guest/guest_header.php', $data);
+        $this->load->view('home/contact', $data);
+        $this->load->view('guest/guest_footer.php');
+      }
+      else
+      {
+        $this->Home_model->Contact();
+        $this->session->set_flashdata('pesan','Dikirim');
+        redirect('home/contact');
+
+      } 
+
   }
+
+
   public function notification()
   {
 

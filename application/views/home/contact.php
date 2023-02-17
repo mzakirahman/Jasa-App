@@ -1,6 +1,21 @@
     <!-- Breadcrumb Section Begin -->
+    <div class="container">
+      <?php if( $this->session->flashdata('pesan')) :?>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          <strong>Berhasil </strong><?= $this->session->flashdata('pesan');?>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <?php endif; ?>
+      </div>
+
+    <!-- end flash data -->
     <section class="breadcrumb-section set-bg" data-setbg="https://4.bp.blogspot.com/-aFNmnv6CXlI/WwcPNu8o2jI/AAAAAAAACp4/j8-YK2ou49YcMvz0GP95JedViOfdrUg1QCLcBGAs/s1600/se4.jpg">
       <div class="container">
+
+        
+
         <div class="row">
           <div class="col-lg-12 text-center">
             <div class="breadcrumb__text">
@@ -14,38 +29,39 @@
         </div>
       </div>
     </section>
-
+    
     <!-- contact -->
     <!-- Contact Section Begin -->
     <section class="contact spad">
       <div class="container">
+      
         <div class="row">
           <div class="col-lg-3 col-md-3 col-sm-6 text-center">
             <div class="contact__widget">
               <span class="icon_phone"></span>
-              <h4>Phone</h4>
-              <p>+01-3-8888-6868</p>
+              <h4>Kontak</h4>
+              <p>+62822-8888-1111</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-3 col-sm-6 text-center">
             <div class="contact__widget">
               <span class="icon_pin_alt"></span>
-              <h4>Address</h4>
-              <p>60-49 Road 11378 New York</p>
+              <h4>Lokasi</h4>
+              <p>Bengkalis</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-3 col-sm-6 text-center">
             <div class="contact__widget">
               <span class="icon_clock_alt"></span>
-              <h4>Open time</h4>
-              <p>10:00 am to 23:00 pm</p>
+              <h4>Waktu</h4>
+              <p>24 Jam Support</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-3 col-sm-6 text-center">
             <div class="contact__widget">
               <span class="icon_mail_alt"></span>
               <h4>Email</h4>
-              <p>hello@colorlib.com</p>
+              <p>jasaelektronik407@gmail.com</p>
             </div>
           </div>
         </div>
@@ -61,8 +77,8 @@
         <div class="inside-widget">
           <h4>Bengkalis</h4>
           <ul>
-            <li>Phone: +12-345-6789</li>
-            <li>Add: 16 Creek Ave. Farmingdale, NY</li>
+            <li>Kontak: +62822-8888-1111</li>
+            <li>Lokasi: Bengkalis</li>
           </ul>
         </div>
       </div>
@@ -77,22 +93,26 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="contact__form__title">
-              <h2>Leave Message</h2>
+              <h2>Pesan</h2>
             </div>
           </div>
         </div>
-        <form action="#">
+        <form action="" method="post">
           <div class="row">
-            <div class="col-lg-6 col-md-6">
-              <input type="text" placeholder="Your name">
-            </div>
-            <div class="col-lg-6 col-md-6">
-              <input type="text" placeholder="Your Email">
-            </div>
-            <div class="col-lg-12 text-center">
-              <textarea placeholder="Your message"></textarea>
-              <button type="submit" class="site-btn">SEND MESSAGE</button>
-            </div>
+            
+              <div class="col-lg-6 col-md-6">
+              <?= form_error('nama', '<small class="text-danger ">', '</small>'); ?>
+                <input type="text" placeholder="Nama" name="nama">
+              </div>
+              <div class="col-lg-6 col-md-6">
+              <?= form_error('email', '<small class="text-danger ">', '</small>'); ?>
+                <input type="text" placeholder="Email" name="email">
+              </div>
+              <div class="col-lg-12 ">
+                <?= form_error('pesan', '<small class="text-danger mt-1 ">', '</small>'); ?>
+                <textarea placeholder="Pesan" name="pesan"></textarea>
+                <button type="simpan" class="site-btn float-right">Kirim</button>
+              </div>
           </div>
         </form>
       </div>
