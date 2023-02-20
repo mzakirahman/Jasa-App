@@ -8,6 +8,9 @@ class User extends CI_Controller
   {
     parent::__construct();
     is_logged_in();
+    $this->load->model('Jasa_model');
+    $this->load->helper('url');
+    $this->load->library('form_validation');
   }
 
   public function index()
@@ -19,6 +22,54 @@ class User extends CI_Controller
     $this->load->view('tamplates/ui_sidebar.php', $data);
     $this->load->view('user/index', $data);
     $this->load->view('tamplates/ui_footer.php', $data);
+  }
+
+  public function jasa()
+  {
+    $data['title'] = 'Jasa App';
+    $data['judul'] = 'Jasa App';
+    $data['user'] = $this->db->get_where('user', ['email' =>
+    $this->session->userdata('email')])->row_array();
+    $data['jasa'] = $this->Jasa_model->getAlljasa();
+    $this->load->view('tamplates/ui_header.php', $data);
+    $this->load->view('tamplates/ui_sidebar.php', $data);
+    $this->load->view('user/jasa', $data);
+    $this->load->view('tamplates/ui_footer.php', $data);
+  }
+
+  public function help()
+  {
+    $data['title'] = 'Jasa App';
+    $data['user'] = $this->db->get_where('user', ['email' =>
+    $this->session->userdata('email')])->row_array();
+    $this->load->view('tamplates/ui_header.php', $data);
+    $this->load->view('user/help', $data);
+    $this->load->view('tamplates/ui_footer.php', $data);
+  }
+
+  public function contact()
+  {
+    $data['user'] = $this->db->get_where('user', ['email' =>
+    $this->session->userdata('email')])->row_array();
+    $data['title'] = 'Jasa App | Contact';
+    $this->load->library('form_validation');
+
+    $this->form_validation->set_rules('nama', 'Nama', 'required');
+    $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+    $this->form_validation->set_rules('pesan', 'Pesan', 'required');
+
+    if ($this->form_validation->run() == FALSE)
+      {
+        $this->load->view('tamplates/ui_header.php', $data);
+        $this->load->view('user/contact', $data);
+        $this->load->view('tamplates/ui_footer.php');
+      }
+      else
+      {
+        $this->Home_model->Contact();
+        $this->session->set_flashdata('pesan','Dikirim');
+        redirect('user/contact');
+      }
   }
 
 

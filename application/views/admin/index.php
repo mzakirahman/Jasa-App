@@ -17,6 +17,10 @@
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                                 Managemnt User</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">User</div>
+                                            <a href="<?= base_url(); ?>admin/user" class="badge badge-primary">Managemnt User <i class="fa fa-hand-o-down" aria-hidden="true"></i></a>
+
+
+
                                         </div>
                                         <div class="col-auto">
                                             <i class="fa fa-users fa-2x text-success-300"></i>
@@ -34,6 +38,7 @@
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                                 Managemnt Jasa</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">Jasa</div>
+                                            <a href="<?= base_url(); ?>admin/jasa" class="badge badge-warning">Managemnt Jasa <i class="fa fa-hand-o-down" aria-hidden="true"></i></a>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fa fa-wrench fa-2x text-success-300"></i>
@@ -51,9 +56,28 @@
                                             <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
                                                 Managemnt Transaksi</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">Transaksi</div>
+                                            <a href="<?= base_url(); ?>admin/transaksi" class="badge badge-danger">Managemnt Transaksi <i class="fa fa-hand-o-down" aria-hidden="true"></i></a>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fa fa-money fa-2x text-success-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- managemnt pesan saran -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                Managemnt Pesan Saran</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">Saran</div>
+                                            <a href="<?= base_url(); ?>admin/pesan" class="badge badge-success">Managemnt Saran <i class="fa fa-hand-o-down" aria-hidden="true"></i></a>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fa fa-commenting fa-2x text-success-300"></i>
                                         </div>
                                     </div>
                                 </div>

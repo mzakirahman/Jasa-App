@@ -4,15 +4,17 @@
 <h1 class="h3 mb-4 text-gray-800"><?= $title; ?></h1>
 
 <div class="row">
-<?php foreach ($alljasa as $jasa) : ?>
-<div class="card m-3" style="width: 18rem;">
-  <img height="200" src="<?= base_url('assets/picture/') . $jasa['foto']; ?>" class="card-img-top" alt="...">
-  <div class="card-body">
-    <p class="card-text"><?= $jasa['juduljasa']; ?></p>
-    <a href="#" class="badge badge-danger" data-toggle="modal" data-target="#exampleModal">Hapus</a>
-  </div>
-</div>
-<?php endforeach; ?>
+    <?php foreach ($alljasa as $jasa) : ?>
+    <div class="card m-3" style="width: 18rem;">
+      <img height="200" src="<?= base_url('assets/picture/') . $jasa['foto']; ?>" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text"><?= $jasa['juduljasa']; ?></p>
+        <p class="card-text"> Pemilik  : <?= $jasa['nama']; ?></p>
+        <p class="card-text"> Kontak  : <?= $jasa['no']; ?></p>
+        <p class="card-text"> Lokasi  : <?= $jasa['alamat']; ?></p>
+      </div>
+    </div>
+    <?php endforeach; ?>
 </div>
 
 <!-- Modal -->

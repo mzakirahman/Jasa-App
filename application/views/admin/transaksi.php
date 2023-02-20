@@ -27,18 +27,16 @@
         <td><?= $ts['nama']; ?></td>
         <td><?= $ts['order_id']; ?></td>
         <td>Rp. <?= $ts['gross_amount']; ?></td>
-        <!-- <td><?= $ts['payment_type']; ?></td> -->
-        <!-- <td><?= $ts['transaction_time']; ?></td> -->
         <td><?= $ts['bank']; ?></td>
         <td><?= $ts['va_number']; ?></td>
         <td>
-                <?php
-                  if ($ts['status_code'] == 200) {
-                    echo '<span class="badge badge-pill badge-success">Warning</span>';
-                  } else {
-                    echo '<span class="badge badge-pill badge-warning">Pending</span>';
-                  }
-                ?>
+        <?php
+          if ($ts['status_code'] == 200) {
+            echo '<span class="badge badge-pill badge-success">Ok</span>';
+          } else {
+            echo '<span class="badge badge-pill badge-warning">Pending</span>';
+            }
+          ?>       
         </td>
         <td><a href="<?= $ts['pdf_url'];  ?>" target="_blank"class="badge badge-success">Download</a></td>
 

@@ -1,7 +1,11 @@
+
 <!-- CONTENT START -->
 <div class="col-lg-9 col-md-7">
-  <h1 class="h3 mb-4 text-gray-800"><?= $judul; ?></h1>
-		
+
+<!-- header link -->
+<p><a href="#" class="text-dark">jasa elektronik > </a><a href="#" class="text-primary">Jasa</a>
+
+
   <div class="row row-cols-1 row-cols-md-3">
       <?php foreach ($jasa as $j) : ?>
         <div class="col mb-4" >

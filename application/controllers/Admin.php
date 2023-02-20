@@ -15,7 +15,7 @@ class Admin extends CI_Controller
   public function index()
   {
 
-    $data['title'] = 'Data Jasa Kuy';
+    $data['title'] = 'Managament data Jasa Kuy';
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
     
 
@@ -80,7 +80,7 @@ class Admin extends CI_Controller
     $this->load->model('M_datauser', 'jasa');
     $data['alljasa'] = $this->jasa->getAllJasa();
 
-    $data['title'] = 'Data Jasa';
+    $data['title'] = 'Data Jasa Elektronik';
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
     $this->load->view('tamplates/admin_header.php', $data);
@@ -115,6 +115,25 @@ class Admin extends CI_Controller
     $this->load->view('tamplates/admin_sidebar.php', $data);
     $this->load->view('tamplates/admin_topbar.php', $data);
     $this->load->view('admin/user', $datauser);
+    $this->load->view('tamplates/admin_footer.php');
+  }
+  public function pesan()
+  {
+    $data['title'] = 'Data Pesan Saran';
+
+    // session
+    $data['title'] = 'Admin | Pesan Saran';
+    $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+    // model 
+    $this->load->model('Admin_model', 'admin');
+    $data['pesan'] = $this->admin->getallpesan();
+
+
+    $this->load->view('tamplates/admin_header.php', $data);
+    $this->load->view('tamplates/admin_sidebar.php', $data);
+    $this->load->view('tamplates/admin_topbar.php', $data);
+    $this->load->view('admin/pesan', $data);
     $this->load->view('tamplates/admin_footer.php');
   }
 

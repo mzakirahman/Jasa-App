@@ -7,7 +7,6 @@ class Home extends CI_Controller
   {
     parent::__construct();
     $this->load->model('Home_model');
-    $this->load->helper('url');
     // Mitrans
     $params = array('server_key' => 'SB-Mid-server-ZAJ7F4rAEdZWQA4OUMyQaph9', 'production' => false);
     $this->load->library('veritrans');
@@ -67,9 +66,7 @@ class Home extends CI_Controller
         $this->Home_model->Contact();
         $this->session->set_flashdata('pesan','Dikirim');
         redirect('home/contact');
-
       } 
-
   }
 
 

@@ -32,11 +32,6 @@
       <a href="<?= base_url('user') ?>"><img src="<?= base_url('assets/'); ?>logo.png"></a>
     </div>
     <div class="humberger__menu__cart">
-      <ul>
-        <!-- <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li> -->
-        <li><a href="#"><i class="fa fa-shopping-bag"></i> <span></span></a></li>
-      </ul>
-      <!-- <div class="header__cart__price">item: <span>$150.00</span></div> -->
     </div>
     <div class="humberger__menu__widget">
       <div class="header__top__right__language">
@@ -51,10 +46,10 @@
     </div>
     <nav class="humberger__menu__nav mobile-menu">
       <ul>
-        <li class="active"><a href="./index.html">Home</a></li>
-        <li><a href="<?= base_url('alljasa'); ?>">Jasa</a></li>
-        <li><a href="#">Help</a></li>
-        <li><a href="./blog.html">Contact</a></li>
+        <li><a href="<?= base_url('alljasa'); ?>">Home</a></li>
+        <li><a href="<?= base_url('user/jasa'); ?>">Jasa</a></li>
+        <li><a href="<?= base_url('user/help'); ?>">Help</a></li>
+        <li><a href="<?= base_url('user/contact'); ?>">Contact</a></li>
       </ul>
     </nav>
     <div id="mobile-menu-wrap"></div>
@@ -119,21 +114,14 @@
         <div class="col-lg-6">
           <nav class="header__menu">
             <ul>
-              <li class="active"><a href="<?= base_url('jasa/alljasa'); ?>">Home</a></li>
-              <li><a href="<?= base_url('jasa/alljasa'); ?>">Jasa</a></li>
-              <li><a href="<?= base_url('jasa/alljasa'); ?>">Help</a></li>
-              <li><a href="<?= base_url('jasa/alljasa'); ?>">Contact</a></li>
+              <li><a href="<?= base_url('jasa/alljasa'); ?>">Home</a></li>
+              <li><a href="<?= base_url('user/jasa'); ?>">Jasa</a></li>
+              <li><a href="<?= base_url('user/help'); ?>">Help</a></li>
+              <li><a href="<?= base_url('user/contact'); ?>">Contact</a></li>
             </ul>
           </nav>
         </div>
         <div class="col-lg-3">
-          <div class="header__cart">
-            <ul>
-              <!-- <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li> -->
-              <li><a href="#"><i class="fa fa-shopping-bag"></i> <span></span></a></li>
-            </ul>
-            <!-- <div class="header__cart__price">item: <span>$150.00</span></div> -->
-          </div>
         </div>
       </div>
       <div class="humberger__open">
