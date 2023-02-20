@@ -5,14 +5,14 @@
 	<h1 class="h3 mb-4 text-gray-800"><?= $title; ?></h1>
 
 
-	<a href="" class="btn btn-primary mb-3" data-toggle="modal" data-target="#newMenuModal">Add New Menu</a>
+	<!-- <a href="" class="btn btn-primary mb-3" data-toggle="modal" data-target="#newMenuModal">Add New Menu</a> -->
 
 	<div class="row">
 		<div class=" col-lg-6">
 			<table class="table table-hover">
 				<thead>
 					<tr>
-						<th scope="col">#</th>
+						<th scope="col">No</th>
 						<th scope="col">Menu</th>
 						<th scope="col">Action</th>
 					</tr>

@@ -15,7 +15,7 @@ class Admin extends CI_Controller
   public function index()
   {
 
-    $data['title'] = 'Managament data Jasa Kuy';
+    $data['title'] = 'Dashboard Jasa Elektronik Kuy';
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
     
 
@@ -25,9 +25,25 @@ class Admin extends CI_Controller
     $this->load->view('admin/index', $data);
     $this->load->view('tamplates/admin_footer.php');
   }
+  public function pemesan()
+  {
+
+    $this->load->model('M_datauser', 'transaksi');
+    $data['alltransaksi'] = $this->transaksi->getAllMitrans();
+
+    $data['title'] = 'Data Pesanan Jasa';
+    $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+    
+
+    $this->load->view('tamplates/admin_header.php', $data);
+    $this->load->view('tamplates/admin_sidebar.php', $data);
+    $this->load->view('tamplates/admin_topbar.php', $data);
+    $this->load->view('admin/pemesan', $data);
+    $this->load->view('tamplates/admin_footer.php');
+  }
   public function role()
   {
-    $data['title'] = 'Admin | Role';
+    $data['title'] = 'Managament Access Menu';
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
     $data['role'] = $this->db->get('user_role')->result_array();
@@ -119,10 +135,9 @@ class Admin extends CI_Controller
   }
   public function pesan()
   {
-    $data['title'] = 'Data Pesan Saran';
 
     // session
-    $data['title'] = 'Admin | Pesan Saran';
+    $data['title'] = 'Managament Pesan Saran';
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
     // model 

@@ -10,12 +10,12 @@
       <?= form_error('menu', '<div class="alert alert-danger" role="alert">', '</div>'); ?>
 
 
-      <a href="" class="btn btn-primary mb-3" data-toggle="modal" data-target="#newRoleModal">Add New Role</a>
+      <!-- <a href="" class="btn btn-primary mb-3" data-toggle="modal" data-target="#newRoleModal">Add New Role</a> -->
 
       <table class="table table-hover">
         <thead>
           <tr>
-            <th scope="col">#</th>
+            <th scope="col">No</th>
             <th scope="col">Role</th>
             <th scope="col">Action</th>
           </tr>

@@ -5,12 +5,13 @@
 <table class="table table-hover">
         <thead>
           <tr>
-            <th scope="col">NO</th>
+            <th scope="col">No</th>
             <th scope="col">Nama</th>
             <th scope="col">Email</th>
             <th scope="col">Profile</th>
             <th scope="col">Role</th>
-            <th scope="col">Aktif | Non</th>
+            <th scope="col">Password</th>
+            <!-- <th scope="col">Aktif | Non</th> -->
             <th scope="col">Action</th>
           </tr>
         </thead>
@@ -31,7 +32,7 @@
                 }
                 ?>
               </td>
-              <td>
+              <!-- <td>
                 <?php
                 if ($user['is_active'] == 1) {
                   echo 'Aktif';
@@ -39,7 +40,11 @@
                   echo 'Non Aktif';
                 }
                 ?>
-              </td>
+              </td> -->
+              <td>
+                <span class="d-inline-block text-truncate" style="max-width: 150px;">
+                  <?= $user['password']; ?>
+                </span>
               <td>
                 <a href="" class="badge badge-success">edit</a>
                 <a href="" class="badge badge-danger">delete</a>
