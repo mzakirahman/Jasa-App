@@ -1,8 +1,6 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
-
 <h1 class="h3 mb-4 text-gray-800"><?= $title; ?></h1>
-
 <div class="row">
     <?php foreach ($alljasa as $jasa) : ?>
     <div class="card m-3" style="width: 18rem;">
@@ -16,7 +14,6 @@
     </div>
     <?php endforeach; ?>
 </div>
-
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -37,10 +34,6 @@
     </div>
   </div>
 </div>
-
-
-
-
 </div>
 </div>
 <!-- End of Main Content -->

@@ -12,6 +12,7 @@ class Users extends REST_Controller
     parent::__construct();
     $this->load->model('Users_model');
   }
+  //GET 
   public function index_get()
   {
     $id = $this->get('id');
@@ -34,7 +35,7 @@ class Users extends REST_Controller
     }
   }
 
-  // MENGHAPUS
+  // DELETE
   public function index_delete()
   {
     $id = $this->delete('id');
@@ -85,7 +86,7 @@ class Users extends REST_Controller
       ], REST_Controller::HTTP_OK);
     }
   }
-  // MENGUBAH DATA 
+  // PUT
   public function index_put()
   {
     $id = $this->put('id');

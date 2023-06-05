@@ -29,16 +29,12 @@ class Auth extends CI_Controller
     }
   }
 
-
   private function _login()
   {
     // jika email dan passwordnya benar 
     $email = $this->input->post('email');
     $password = $this->input->post('password');
-
     $user = $this->db->get_where('user', ['email' => $email])->row_array();
-
-
     // jika usernya ada
     if ($user) {
       // jika usernya aktif

@@ -1,47 +1,38 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
-
   <!-- Page Heading -->
   <h1 class="h3 mb-4 text-gray-800"><?= $title; ?></h1>
-
   <div class="row">
-      <div class="col-lg-6">
+    <div class="col-lg-6">
       <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th scope="col">No</th>
-        <th scope="col">Nama</th>
-        <th scope="col">Email</th>
-        <th scope="col">Pesan</th>
-      </tr>
-    </thead>
-    <tbody>
-      <?php $i = 1; ?>
-        <?php foreach ($pesan as $r) : ?>
+        <thead>
           <tr>
-            <th scope="row"><?= $i; ?></th>
-            <td><?= $r['nama']; ?></td>
-            <td><?= $r['email']; ?></td>
-            <td><?= $r['pesan']; ?></td>
-                
+            <th scope="col">No</th>
+            <th scope="col">Nama</th>
+            <th scope="col">Email</th>
+            <th scope="col">Pesan</th>
           </tr>
-        <?php $i++; ?>
-      <?php endforeach; ?>     
-    </tbody>
-  </table>
+        </thead>
+        <tbody>
+          <?php $i = 1; ?>
+          <?php foreach ($pesan as $r) : ?>
+            <tr>
+              <th scope="row"><?= $i; ?></th>
+              <td><?= $r['nama']; ?></td>
+              <td><?= $r['email']; ?></td>
+              <td><?= $r['pesan']; ?></td>
+            </tr>
+            <?php $i++; ?>
+          <?php endforeach; ?>
+        </tbody>
+      </table>
     </div>
   </div>
-
-
-
 </div>
 <!-- /.container-fluid -->
-
 </div>
 <!-- End of Main Content -->
-
 <!-- Modal -->
-
 <!-- Modal -->
 <div class="modal fade" id="newRoleModal" tabindex="-1" role="dialog" aria-labelledby="newRoleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">

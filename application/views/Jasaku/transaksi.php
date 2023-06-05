@@ -1,20 +1,15 @@
 <!-- CONTENT START -->
 <div class="col-lg-9 col-md-7">
 <h1 class="h3 text-gray-800"><?= $judul; ?></h1>
-
   <?php  if ( $this->session->flashdata('bayar')) : ?>
   <?php endif; ?>
-
   <table class="table table-hover">
     <thead class="thead-light">
-    
     <tr>
       <th scope="col">No</th>
       <th scope="col">Nama</th> 
       <th scope="col">Order ID</th>
       <th scope="col">Biaya</th>
-      <!-- <th scope="col">Via</th> -->
-      <!-- <th scope="col">Waktu</th> -->
       <th scope="col">Bank</th>
       <th scope="col">Number</th>
       <th scope="col">Status</th>
@@ -43,17 +38,11 @@
                 ?>
         </td>
         <td><a href="<?= $ts['pdf_url'];  ?>" target="_blank"class="badge badge-success">Download</a></td>
-
       </tr>
       <?php $i++; ?>
       <?php endforeach; ?>
     </tbody>
   </table>
-
-
-
-  
-
 </div>
 <!-- CONTENT END -->
 </div>

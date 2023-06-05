@@ -46,16 +46,11 @@ class Jasa extends CI_Controller
   {
     $nama = $this->input->post('nama');
     $harga = $this->input->post('harga');
-    // $jasa_id = $this->input->post('jasa_id');
-    // var_dump ($jasa_id);
-    // die;
-    // Required
     $transaction_details = array(
       'order_id' => rand(),
-      'gross_amount' => $harga, // no decimal allowed for creditcard
+      'gross_amount' => $harga, 
     );
 
-    // Optional
     $item1_details = array(
       'id' => 'a1',
       'price' => $harga,
@@ -72,14 +67,9 @@ class Jasa extends CI_Controller
       // 'last_name'     => "Litani",
       'email'         => "andri@litani.com",
       'phone'         => "081122334455",
-      // 'billing_address'  => $billing_address,
-      // 'shipping_address' => $shipping_address
     );
 
-    // Data yang akan dikirim untuk request redirect_url.
     $credit_card['secure'] = true;
-    //ser save_card true to enable oneclick or 2click
-    //$credit_card['save_card'] = true;
 
     $time = time();
     $custom_expiry = array(
@@ -106,7 +96,6 @@ class Jasa extends CI_Controller
   public function finish()
   // REDIRECT KE HALAMAN TRANSKASI
   {
-
     $namapemesan = $this->input->post('namapemesan');
     $nama = $this->input->post('nama');
     $nohp = $this->input->post('nohp');
@@ -115,7 +104,6 @@ class Jasa extends CI_Controller
     $id = $this->session->userdata('id');
     $jasa_id = $this->input->post('jasa_id');
   
-
     $result = json_decode($this->input->post('result_data'), true);
     // var_dump ($jasa_id );
     // die;

@@ -8,8 +8,6 @@ class Jasaku extends CI_Controller
     parent::__construct();
     is_logged_in();
     $this->load->library('form_validation');
-    // $this->load->library('upload');
-    // memanggil model
     $this->load->helper(array('form', 'url'));
     $this->load->model('Jasaku_model');
     $this->load->library('session');
@@ -69,8 +67,6 @@ class Jasaku extends CI_Controller
     // get all data Transaksi
     $this->load->model('Jasaku_model', 'jasaku');
     $data['transaksi'] = $this->jasaku->getAllTransaksi();
-
-
     $this->load->view('tamplates/ui_header.php', $data);
     $this->load->view('tamplates/ui_sidebar.php', $data);
     $this->load->view('jasaku/transaksi', $data);
@@ -129,11 +125,6 @@ class Jasaku extends CI_Controller
     // model 
     $this->load->model('Jasaku_model', 'jasaku');
     $data['pesanjasa'] = $this->jasaku->pemesanjasa();
-
-
-    
-
-
     // memanggil session user 
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 

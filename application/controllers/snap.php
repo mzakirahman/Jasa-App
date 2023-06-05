@@ -47,7 +47,6 @@ class Snap extends CI_Controller
     // Optional
     $customer_details = array(
       'first_name'    => $nama,
-      // 'last_name'     => "Litani",
       'email'         => "andri@litani.com",
       'phone'         => "081122334455",
       // 'billing_address'  => $billing_address,
