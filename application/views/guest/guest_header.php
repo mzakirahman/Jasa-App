@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="description" content="Ogani Template">
-  <meta name="keywords" content="Ogani, unica, creative, html">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title><?= $title; ?></title>
-
+  <!-- icon -->
+  <link href="<?= base_url('assets/'); ?>icon/favicon.ico" rel="icon">
+  <link href="<?= base_url('assets/'); ?>icon/apple-touch-icon.png" rel="apple-touch-icon">
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
 
@@ -51,12 +50,10 @@
       </ul>
     </nav>
     <div id="mobile-menu-wrap"></div>
-    <div class="header__top__right__social">
+    <!-- <div class="header__top__right__social">
       <a href="#"><i class="fa fa-facebook"></i></a>
-      <a href="#"><i class="fa fa-twitter"></i></a>
-      <a href="#"><i class="fa fa-linkedin"></i></a>
-      <a href="#"><i class="fa fa-pinterest-p"></i></a>
-    </div>
+      <a href="#"><i class="fa fa-gmail"></i></a>
+    </div> -->
     <div class="humberger__menu__contact">
       <ul>
         <li><i class="fa fa-envelope"></i> jasaelektronik407@gmail.com</li>
@@ -81,12 +78,12 @@
           </div>
           <div class="col-lg-6">
             <div class="header__top__right">
-              <div class="header__top__right__social">
+              <!-- <div class="header__top__right__social">
                 <a href="#"><i class="fa fa-facebook"></i></a>
                 <a href="#"><i class="fa fa-twitter"></i></a>
                 <a href="#"><i class="fa fa-linkedin"></i></a>
                 <a href="#"><i class="fa fa-pinterest-p"></i></a>
-              </div>
+              </div> -->
               <div class="header__top__right__language">
                 <div class="header__top__right__auth">
                   <a href="<?= base_url('auth') ?>"><i class="fa fa-user"></i> Login</a>
@@ -140,17 +137,10 @@
               <span>All Jasa elektronik</span>
             </div>
             <ul>
-              <li><a href="#">Fresh Meat</a></li>
-              <li><a href="#">Vegetables</a></li>
-              <li><a href="#">Fruit & Nut Gifts</a></li>
-              <li><a href="#">Fresh Berries</a></li>
-              <li><a href="#">Ocean Foods</a></li>
-              <li><a href="#">Butter & Eggs</a></li>
-              <li><a href="#">Fastfood</a></li>
-              <li><a href="#">Fresh Onion</a></li>
-              <li><a href="#">Papayaya & Crisps</a></li>
-              <li><a href="#">Oatmeal</a></li>
-              <li><a href="#">Fresh Bananas</a></li>
+              <li><a href="<?= base_url('home') ?>">Home</a></li>
+              <li><a href="<?= base_url('home/jasa') ?>">Jasa</a></li>
+              <li><a href="<?= base_url('home/help') ?>">Help</a></li>
+              <li><a href="<?= base_url('home/contact') ?>">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -159,10 +149,10 @@
             <div class="hero__search__form">
               <form action="#">
                 <div class="hero__search__categories">
-                  All Jasa elektronik
+                  Search
                   <span class="arrow_carrot-down"></span>
                 </div>
-                <input type="text" placeholder="Jasa elektronik apa?">
+                <input type="text" placeholder="Jasa elektronik. . .">
                 <button type="submit" class="site-btn">SEARCH</button>
               </form>
             </div>
@@ -171,8 +161,8 @@
                 <i class="fa fa-phone"></i>
               </div>
               <div class="hero__search__phone__text">
-                <h5>+65 11.188.888</h5>
-                <span>Support 24/7 Admin</span>
+                <h5>+628 1212 1313</h5>
+                <span>Support</span>
               </div>
             </div>
           </div>
