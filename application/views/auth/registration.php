@@ -41,7 +41,7 @@
                 <hr>
                 <div class="featured__item__text">
                   <h6><a href="<?= base_url('auth'); ?>">Login</a></h6>
-                  <h6><a href="<?= base_url('auth/forgotpassword'); ?>">Forgot Password?</a></h6>
+                  <!-- <h6><a href="<?= base_url('auth/forgotpassword'); ?>">Forgot Password?</a></h6> -->
                 </div>
               </div>
             </div>

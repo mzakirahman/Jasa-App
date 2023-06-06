@@ -4,9 +4,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
   <title><?= $title; ?></title>
-
+  <!-- icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="<?= base_url('assets/icon'); ?>/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="<?= base_url('assets/icon'); ?>/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url('assets/icon'); ?>/favicon-16x16.png">
+  <link rel="manifest" href="<?= base_url('assets/icon'); ?>/site.webmanifest">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
 
@@ -26,7 +31,7 @@
   <div class="humberger__menu__overlay"></div>
   <div class="humberger__menu__wrapper">
     <div class="humberger__menu__logo">
-      <a href="<?= base_url('user') ?>"><img src="<?= base_url('assets/'); ?>logo.png"></a>
+      <a href="<?= base_url('jasa/alljasa') ?>"><img src="<?= base_url('assets/'); ?>logo.png"></a>
     </div>
     <div class="humberger__menu__cart">
     </div>
@@ -50,12 +55,12 @@
       </ul>
     </nav>
     <div id="mobile-menu-wrap"></div>
-    <div class="header__top__right__social">
+    <!-- <div class="header__top__right__social">
       <a href="#"><i class="fa fa-email"></i></a>
       <a href="#"><i class="fa fa-twitter"></i></a>
       <a href="#"><i class="fa fa-linkedin"></i></a>
       <a href="#"><i class="fa fa-pinterest-p"></i></a>
-    </div>
+    </div> -->
     <div class="humberger__menu__contact">
       <ul>
         <li><i class="fa fa-envelope"></i> jasaelektronik407@gmail.com</li>
@@ -80,12 +85,12 @@
           </div>
           <div class="col-lg-6 col-md-6">
             <div class="header__top__right">
-              <div class="header__top__right__social">
+              <!-- <div class="header__top__right__social">
                 <a href="#"><i class="fa fa-facebook"></i></a>
                 <a href="#"><i class="fa fa-twitter"></i></a>
                 <a href="#"><i class="fa fa-linkedin"></i></a>
                 <a href="#"><i class="fa fa-pinterest-p"></i></a>
-              </div>
+              </div> -->
 
 
               <div class="header__top__right__language">
@@ -105,7 +110,7 @@
       <div class="row">
         <div class="col-lg-3">
           <div class="header__logo">
-            <a href="<?= base_url('user') ?>"><img src="<?= base_url('assets/logo.png'); ?>" alt=""></a>
+            <a href="<?= base_url('jasa/alljasa') ?>"><img src="<?= base_url('assets/logo.png'); ?>" alt=""></a>
           </div>
         </div>
         <div class="col-lg-6">
@@ -137,20 +142,13 @@
           <div class="hero__categories">
             <div class="hero__categories__all">
               <i class="fa fa-bars"></i>
-              <span>All Jasa elektronik</span>
+              <span>Menu</span>
             </div>
             <ul>
-              <li><a href="#">Fresh Meat</a></li>
-              <li><a href="#">Vegetables</a></li>
-              <li><a href="#">Fruit & Nut Gifts</a></li>
-              <li><a href="#">Fresh Berries</a></li>
-              <li><a href="#">Ocean Foods</a></li>
-              <li><a href="#">Butter & Eggs</a></li>
-              <li><a href="#">Fastfood</a></li>
-              <li><a href="#">Fresh Onion</a></li>
-              <li><a href="#">Papayaya & Crisps</a></li>
-              <li><a href="#">Oatmeal</a></li>
-              <li><a href="#">Fresh Bananas</a></li>
+              <li><a href="<?= base_url('jasa/alljasa'); ?>">Home</a></li>
+              <li><a href="<?= base_url('user/jasa'); ?>">Jasa</a></li>
+              <li><a href="<?= base_url('user/help'); ?>">Help</a></li>
+              <li><a href="<?= base_url('user/contact'); ?>">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -159,10 +157,10 @@
             <div class="hero__search__form">
               <form action="#">
                 <div class="hero__search__categories">
-                  All Jasa elektronik
+                  Cari
                   <span class="arrow_carrot-down"></span>
                 </div>
-                <input type="text" placeholder="Jasa elektronik apa ?">
+                <input type="text" placeholder="Jasa elektronik...">
                 <button type="submit" class="site-btn">SEARCH</button>
               </form>
             </div>
@@ -171,8 +169,8 @@
                 <i class="fa fa-phone"></i>
               </div>
               <div class="hero__search__phone__text">
-                <h5>+65 11.188.888</h5>
-                <span>Admin 24/7 time</span>
+                <h5>+628 1212 1313</h5>
+                <span>Support</span>
               </div>
             </div>
           </div>

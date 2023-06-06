@@ -14,8 +14,7 @@
             <h5 class="card-title">Rp. <?= $sm['harga']; ?></h5>
             <p class="card-text"><?= $sm['nama']; ?></p>
 
-
-            <a href="<?= base_url('jasaku/jasasayaedit/') . $sm['juduljasa']; ?>" class="badge badge-warning">Edit</a>
+            <a href="<?= base_url('jasaku/jasasayaedit/') . $sm['user_id']; ?>" class="badge badge-warning">Edit</a>
             <a href="#" class="badge badge-danger" data-toggle="modal" data-target="#exampleModal">Hapus</a>
 
 

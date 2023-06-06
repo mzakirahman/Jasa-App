@@ -146,7 +146,7 @@
                   <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                     Managemnt Submenu</div>
                   <div class="h5 mb-0 font-weight-bold text-gray-800">Submenu</div>
-                  <a href="<?= base_url(); ?>menu/pesan" class="badge badge-success">Managemnt Submenu <i class="fa fa-hand-o-down" aria-hidden="true"></i></a>
+                  <a href="<?= base_url(); ?>menu/submenu" class="badge badge-success">Managemnt Submenu <i class="fa fa-hand-o-down" aria-hidden="true"></i></a>
                 </div>
                 <div class="col-auto">
                   <i class="fa fa-fw fa-folder-open fa-2x text-success-300"></i>

@@ -1,20 +1,20 @@
     <!-- Breadcrumb Section Begin -->
     <div class="container">
-      <?php if( $this->session->flashdata('pesan')) :?>
+      <?php if ($this->session->flashdata('pesan')) : ?>
         <div class="alert alert-success alert-dismissible fade show" role="alert">
-          <strong>Berhasil </strong><?= $this->session->flashdata('pesan');?>
+          <strong>Berhasil </strong><?= $this->session->flashdata('pesan'); ?>
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <?php endif; ?>
-      </div>
+      <?php endif; ?>
+    </div>
 
     <!-- end flash data -->
     <section class="breadcrumb-section set-bg" data-setbg="https://4.bp.blogspot.com/-aFNmnv6CXlI/WwcPNu8o2jI/AAAAAAAACp4/j8-YK2ou49YcMvz0GP95JedViOfdrUg1QCLcBGAs/s1600/se4.jpg">
       <div class="container">
 
-        
+
 
         <div class="row">
           <div class="col-lg-12 text-center">
@@ -29,12 +29,42 @@
         </div>
       </div>
     </section>
-    
+    <!-- Contact Form Begin -->
+    <div class="contact-form spad">
+      <div class="container ">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="contact__form__title">
+              <h2>Pesan</h2>
+            </div>
+          </div>
+        </div>
+        <form action="" method="post">
+          <div class="row">
+
+            <div class="col-lg-6 col-md-6">
+              <?= form_error('nama', '<small class="text-danger ">', '</small>'); ?>
+              <input type="text" placeholder="Nama" name="nama">
+            </div>
+            <div class="col-lg-6 col-md-6">
+              <?= form_error('email', '<small class="text-danger ">', '</small>'); ?>
+              <input type="text" placeholder="Email" name="email">
+            </div>
+            <div class="col-lg-12 ">
+              <?= form_error('pesan', '<small class="text-danger mt-1 ">', '</small>'); ?>
+              <textarea placeholder="Pesan" name="pesan"></textarea>
+              <button type="simpan" class="site-btn float-right">Kirim</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- Contact Form End -->
     <!-- contact -->
     <!-- Contact Section Begin -->
     <section class="contact spad">
       <div class="container">
-      
+
         <div class="row">
           <div class="col-lg-3 col-md-3 col-sm-6 text-center">
             <div class="contact__widget">
@@ -84,37 +114,3 @@
       </div>
     </div>
     <!-- Map End -->
-
-
-
-    <!-- Contact Form Begin -->
-    <div class="contact-form spad">
-      <div class="container ">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="contact__form__title">
-              <h2>Pesan</h2>
-            </div>
-          </div>
-        </div>
-        <form action="" method="post">
-          <div class="row">
-            
-              <div class="col-lg-6 col-md-6">
-              <?= form_error('nama', '<small class="text-danger ">', '</small>'); ?>
-                <input type="text" placeholder="Nama" name="nama">
-              </div>
-              <div class="col-lg-6 col-md-6">
-              <?= form_error('email', '<small class="text-danger ">', '</small>'); ?>
-                <input type="text" placeholder="Email" name="email">
-              </div>
-              <div class="col-lg-12 ">
-                <?= form_error('pesan', '<small class="text-danger mt-1 ">', '</small>'); ?>
-                <textarea placeholder="Pesan" name="pesan"></textarea>
-                <button type="simpan" class="site-btn float-right">Kirim</button>
-              </div>
-          </div>
-        </form>
-      </div>
-    </div>
-    <!-- Contact Form End -->

@@ -6,8 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title><?= $title; ?></title>
   <!-- icon -->
-  <link href="<?= base_url('assets/'); ?>icon/favicon.ico" rel="icon">
-  <link href="<?= base_url('assets/'); ?>icon/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="<?= base_url('assets/icon'); ?>/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="<?= base_url('assets/icon'); ?>/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url('assets/icon'); ?>/favicon-16x16.png">
+  <link rel="manifest" href="<?= base_url('assets/icon'); ?>/site.webmanifest">
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
 
@@ -134,7 +136,7 @@
           <div class="hero__categories">
             <div class="hero__categories__all">
               <i class="fa fa-bars"></i>
-              <span>All Jasa elektronik</span>
+              <span>Menu</span>
             </div>
             <ul>
               <li><a href="<?= base_url('home') ?>">Home</a></li>
@@ -149,7 +151,7 @@
             <div class="hero__search__form">
               <form action="#">
                 <div class="hero__search__categories">
-                  Search
+                  Cari
                   <span class="arrow_carrot-down"></span>
                 </div>
                 <input type="text" placeholder="Jasa elektronik. . .">

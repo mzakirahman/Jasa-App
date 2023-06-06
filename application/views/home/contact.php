@@ -25,8 +25,40 @@
         </div>
       </div>
     </section>
-    <!-- contact -->
+
+
+
+    <div class="contact-form spad">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="contact__form__title">
+              <h2>Pesan</h2>
+            </div>
+          </div>
+        </div>
+        <form action="" method="post">
+          <div class="row">
+            <div class="col-lg-6 col-md-6">
+              <?= form_error('nama', '<small class="text-danger ">', '</small>'); ?>
+              <input type="text" placeholder="Nama" name="nama">
+            </div>
+            <div class="col-lg-6 col-md-6">
+              <?= form_error('email', '<small class="text-danger ">', '</small>'); ?>
+              <input type="text" placeholder="Email" name="email">
+            </div>
+            <div class="col-lg-12 ">
+              <?= form_error('pesan', '<small class="text-danger mt-1 ">', '</small>'); ?>
+              <textarea placeholder="Pesan" name="pesan"></textarea>
+              <button type="simpan" class="site-btn float-right">Kirim</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
     <!-- Contact Section Begin -->
+
+    <!-- contact -->
     <section class="contact spad">
       <div class="container">
         <div class="row">
@@ -78,32 +110,5 @@
     </div>
     <!-- Map End -->
     <!-- Contact Form Begin -->
-    <div class="contact-form spad">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="contact__form__title">
-              <h2>Pesan</h2>
-            </div>
-          </div>
-        </div>
-        <form action="" method="post">
-          <div class="row">
-            <div class="col-lg-6 col-md-6">
-              <?= form_error('nama', '<small class="text-danger ">', '</small>'); ?>
-              <input type="text" placeholder="Nama" name="nama">
-            </div>
-            <div class="col-lg-6 col-md-6">
-              <?= form_error('email', '<small class="text-danger ">', '</small>'); ?>
-              <input type="text" placeholder="Email" name="email">
-            </div>
-            <div class="col-lg-12 ">
-              <?= form_error('pesan', '<small class="text-danger mt-1 ">', '</small>'); ?>
-              <textarea placeholder="Pesan" name="pesan"></textarea>
-              <button type="simpan" class="site-btn float-right">Kirim</button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
+
     <!-- Contact Form End -->

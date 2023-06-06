@@ -43,6 +43,8 @@ class User extends CI_Controller
     $data['user'] = $this->db->get_where('user', ['email' =>
     $this->session->userdata('email')])->row_array();
     $this->load->view('tamplates/ui_header.php', $data);
+    // $this->load->view('tamplates/ui_sidebar.php', $data);
+
     $this->load->view('user/help', $data);
     $this->load->view('tamplates/ui_footer.php', $data);
   }
@@ -58,18 +60,15 @@ class User extends CI_Controller
     $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
     $this->form_validation->set_rules('pesan', 'Pesan', 'required');
 
-    if ($this->form_validation->run() == FALSE)
-      {
-        $this->load->view('tamplates/ui_header.php', $data);
-        $this->load->view('user/contact', $data);
-        $this->load->view('tamplates/ui_footer.php');
-      }
-      else
-      {
-        $this->Home_model->Contact();
-        $this->session->set_flashdata('pesan','Dikirim');
-        redirect('user/contact');
-      }
+    if ($this->form_validation->run() == FALSE) {
+      $this->load->view('tamplates/ui_header.php', $data);
+      $this->load->view('user/contact', $data);
+      $this->load->view('tamplates/ui_footer.php');
+    } else {
+      $this->Home_model->Contact();
+      $this->session->set_flashdata('pesan', 'Dikirim');
+      redirect('user/contact');
+    }
   }
 
 
