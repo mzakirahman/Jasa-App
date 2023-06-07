@@ -66,7 +66,7 @@
             <div class="contact__widget">
               <span class="icon_phone"></span>
               <h4>Kontak</h4>
-              <p>+62822-8888-1111</p>
+              <p>+628 1212 1313</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-3 col-sm-6 text-center">
@@ -102,7 +102,7 @@
         <div class="inside-widget">
           <h4>Bengkalis</h4>
           <ul>
-            <li>Kontak: +62822-8888-1111</li>
+            <li>Kontak: +628 1212 1313</li>
             <li>Lokasi: Bengkalis</li>
           </ul>
         </div>

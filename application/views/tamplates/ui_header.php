@@ -158,7 +158,7 @@
               <form action="#">
                 <div class="hero__search__categories">
                   Cari
-                  <span class="arrow_carrot-down"></span>
+                  <span class="fa fa-search"></span>
                 </div>
                 <input type="text" placeholder="Jasa elektronik...">
                 <button type="submit" class="site-btn">SEARCH</button>

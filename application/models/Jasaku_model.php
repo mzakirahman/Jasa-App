@@ -48,5 +48,33 @@ class Jasaku_model extends CI_Model
 
   }
 
+  public function hapusjasasaya($no)
+  {
+    $this->db->where('no' , $no);
+    $this->db->delete('jasa');
+  }
+
+  public function getjasabyid ($no)
+  {
+    return $this->db->get_where('jasa', ['no' => $no])->row_array();
+  }
+
+  public function jasaedit($no)
+  {
+    $foto = $this->upload->data();
+    $data = [
+    "juduljasa" => $this->input->post('juduljasa', true),
+    "nama" => $this->input->post('nama', true),
+    "no" => $this->input->post('no', true),
+    "harga" => $this->input->post('harga', true),
+    "alamat" => $this->input->post('alamat', true),
+    "deskripsi" => $this->input->post('deskripsi', true),
+    "foto" => $foto['file_name']
+    ];
+
+    $this->db->where('no', $this->input->post('no'));
+    return $this->db->update('jasa', $data);
+  }
+
 
 }

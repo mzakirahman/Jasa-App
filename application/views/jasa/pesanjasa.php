@@ -33,11 +33,11 @@
     <div class="col">
         <label for="basic-url">Nama</label>
         <div class="input-group ">
-          <input type="text" name="namapemesan" placeholder="Alamat detail" class="form-control" required >
+          <input type="text" name="namapemesan" placeholder="Nama" class="form-control" required >
         </div>
         <label for="basic-url">No Handphone</label>
         <div class="input-group ">
-          <input type="number" name="nohp" placeholder="Alamat detail" class="form-control" required>
+          <input type="number" name="nohp" placeholder="No Hp / Whatsapp" class="form-control" required>
         </div>
     </div>
     <div class="col ">

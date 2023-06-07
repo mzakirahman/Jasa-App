@@ -35,7 +35,7 @@
         <div class="footer__widget">
           <h6>Pesan</h6>
           <p>Sampaikan saran | Kritik dari sistem informasi</p>
-          <form action="<?= base_url('home/contact');  ?>" method="post">
+          <form action="<?= base_url('user/contact');  ?>" method="post">
             <input type="text" placeholder="Saran...">
             <button type="submit" class="site-btn">Kirim</button>
           </form>

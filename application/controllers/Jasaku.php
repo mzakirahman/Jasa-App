@@ -11,22 +11,34 @@ class Jasaku extends CI_Controller
     $this->load->helper(array('form', 'url'));
     $this->load->model('Jasaku_model');
     $this->load->library('session');
-
   }
-  public function jasasayaedit($juduljasa)
+
+  public function jasaedit($no)
   {
     $data['title'] = 'Jasa App | Edit Jasa';
-    $data['judul'] = 'Edit Jasa';
+    $data['judul'] = 'Edit My Jasa';
     // memanggil session user 
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
     // memanggil model jasa
+
     $this->load->model('Jasaku_model', 'jasaku');
-    $data['edit'] = $this->jasaku->jasasayaedit($juduljasa);
+    $data['edit'] = $this->jasaku->getjasabyid($no);
 
     $this->load->view('tamplates/ui_header.php', $data);
     $this->load->view('tamplates/ui_sidebar.php', $data);
-    $this->load->view('jasaku/jasasayaedit', $data);
+    $this->load->view('jasaku/jasaedit', $data);
     $this->load->view('tamplates/ui_footer.php', $data);
+  }
+
+  public function hapusjasasaya($no)
+  {
+    $this->load->model('Jasaku_model', 'jasaku');
+    $data['jasaSaya'] = $this->jasaku->hapusjasasaya($no);
+    $this->session->set_flashdata('jasa', '<div class="alert alert-success" role="alert">Selamat anda berhasil menghapus data!</div>');
+    redirect('jasaku/jasasaya');
+
+    // memanggil model jasaku 
+    // $this->load->model('Jasaku_model', 'jasaku');
   }
 
 
@@ -46,7 +58,7 @@ class Jasaku extends CI_Controller
   public function jasasaya()
   {
     $data['title'] = 'Jasa App | My Jasa';
-    $data['judul'] = 'Jasa elektronik saya';
+    $data['judul'] = 'My Jasa elektronik';
     // memanggil session user 
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
     // memanggil model jasaku 
@@ -76,7 +88,7 @@ class Jasaku extends CI_Controller
   public function insertdata()
   {
     $id = $this->session->userdata('id');
-    
+
     $user_id = $this->input->post($id);
     $juduljasa = $this->input->post('juduljasa');
     $nama = $this->input->post('nama');
@@ -109,14 +121,14 @@ class Jasaku extends CI_Controller
         );
         $this->Jasaku_model->insert($data);
         $this->session->set_flashdata('jasa', '<div class="alert alert-success" role="alert">Selamat! Anda Berhasil Membuat Jasa elektronik</div>');
-        redirect('jasaku/create');
+        redirect('jasaku/jasasaya');
       } else {
         $this->session->set_flashdata('jasa', '<div class="alert alert-danger" role="alert">Ops! Terjadi Kesalahan, Mohon cek kembali data anda</div>');
-      redirect('jasaku/create');
+        redirect('jasaku/create');
       }
     } else {
-      $this->session->set_flashdata('jasa', '<div class="alert alert-danger" role="alert">Ops! Terjadi Kesalahan, Mohon cek kembali data anda</div>');
-      redirect('jasaku/create');
+      $this->session->set_flashdata('jasa', '<div class="alert alert-success" role="alert">Selamat! Anda Berhasil Membuat Jasa elektronik</div>');
+        redirect('jasaku/jasasaya');
     }
   }
 
@@ -136,6 +148,54 @@ class Jasaku extends CI_Controller
     $this->load->view('tamplates/ui_sidebar.php', $data);
     $this->load->view('jasaku/pemesanjasa', $data);
     $this->load->view('tamplates/ui_footer.php', $data);
+  }
+  
+  public function edittdata()
+  {
+    $id = $this->session->userdata('id');
 
+    $user_id = $this->input->post($id);
+    $juduljasa = $this->input->post('juduljasa');
+    $nama = $this->input->post('nama');
+    $no = $this->input->post('no');
+    $harga = $this->input->post('harga');
+    $alamat = $this->input->post('alamat');
+    $deskripsi = $this->input->post('deskripsi');
+
+    // get gambar 
+    $config['upload_path'] = './assets/picture';
+    $config['allowed_types'] = 'jpg|png|jpeg|gif';
+    $config['max_size'] = '2048';  //2MB max
+    $config['max_width'] = '4480'; // pixel
+    $config['max_height'] = '4480'; // pixel
+    $config['file_name'] = $_FILES['fotopost']['name'];
+
+    $this->load->library('upload', $config);
+    if (!empty($_FILES['fotopost']['name'])) {
+      unlink(FCPATH . 'assets/picture/' . $old_image);
+      if ($this->upload->do_upload('fotopost')) {
+        unlink(FCPATH . 'assets/picture/' . $old_image);
+        $foto = $this->upload->data();
+        $data = array(
+          'user_id' => $id,
+          'juduljasa' => $juduljasa,
+          'nama'      => $nama,
+          'no'        => $no,
+          'harga'      => $harga,
+          'alamat'      => $alamat,
+          'deskripsi' => $deskripsi,
+          'foto'      => $foto['file_name'],
+        );
+        $this->Jasaku_model->jasaedit($data);
+        $this->session->set_flashdata('jasa', '<div class="alert alert-success" role="alert">Selamat! Anda berhasil edit jasa elektronik</div>');
+        redirect('jasaku/jasasaya');
+      } else {
+        $this->session->set_flashdata('jasa', '<div class="alert alert-danger" role="alert">Gagal merubah data, masukkan gambar ulang!</div>');
+        redirect('jasaku/jasasaya');
+      }
+    } else {
+      $this->session->set_flashdata('jasa', '<div class="alert alert-danger" role="alert">Gagal merubah data, masukkan gambar ulang!</div>');
+        redirect('jasaku/jasasaya');
+    }
   }
 }
