@@ -4,7 +4,7 @@
   <h1 class="h3 text-gray-800 mt-2 mb-2"><?= $judul; ?></h1>
 
   <?php if($this->session->flashdata() ): ?>
-  <?= $this->session->flashdata('jasa'); ?>
+      <?= $this->session->flashdata('jasa'); ?>
     <?php endif; ?>
 
   <!-- content  -->

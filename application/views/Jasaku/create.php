@@ -48,7 +48,12 @@
         </div>
         <div class="form-group">
           <label for="exampleFormControlFile1">Gambar Jasa elektronik</label>
-          <input type="file" class="form-control-file" name="fotopost">
+          <!-- <input type="file" class="form-control-file" name="fotopost"> -->
+          <!-- new -->
+          <div class="custom-file">
+            <input type="file" name="fotopost" class="custom-file-input" id="validatedCustomFile" required>
+            <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+          </div>
         </div>
         <div class="form-group align-items-end">
           <button class="site-btn">Create</button>
