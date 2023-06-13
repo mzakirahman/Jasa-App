@@ -15,7 +15,7 @@ class User extends CI_Controller
 
   public function index()
   {
-    $data['title'] = 'Jasa App';
+    $data['title'] = 'Jasa elektronik';
     $data['user'] = $this->db->get_where('user', ['email' =>
     $this->session->userdata('email')])->row_array();
     $this->load->view('tamplates/ui_header.php', $data);
@@ -26,8 +26,8 @@ class User extends CI_Controller
 
   public function jasa()
   {
-    $data['title'] = 'Jasa App';
-    $data['judul'] = 'Jasa App';
+    $data['title'] = 'Jasa elektronik';
+    $data['judul'] = 'Jasa elektronik';
     $data['user'] = $this->db->get_where('user', ['email' =>
     $this->session->userdata('email')])->row_array();
     $data['jasa'] = $this->Jasa_model->getAlljasa();
@@ -39,7 +39,7 @@ class User extends CI_Controller
 
   public function help()
   {
-    $data['title'] = 'Jasa App';
+    $data['title'] = 'Jasa elektronik';
     $data['user'] = $this->db->get_where('user', ['email' =>
     $this->session->userdata('email')])->row_array();
     $this->load->view('tamplates/ui_header.php', $data);
@@ -53,7 +53,7 @@ class User extends CI_Controller
   {
     $data['user'] = $this->db->get_where('user', ['email' =>
     $this->session->userdata('email')])->row_array();
-    $data['title'] = 'Jasa App | Contact';
+    $data['title'] = 'Jasa elektronik | Contact';
     $this->load->library('form_validation');
 
     $this->form_validation->set_rules('nama', 'Nama', 'required');
@@ -74,7 +74,7 @@ class User extends CI_Controller
 
   public function edit()
   {
-    $data['title'] = 'Jasa App | Edit Profile';
+    $data['title'] = 'Jasa elektronik | Edit Profile';
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
     $data['judul'] = 'Edit Profile';
     $this->form_validation->set_rules('name', 'Full Name', 'required|trim');
@@ -121,7 +121,7 @@ class User extends CI_Controller
   }
   public function gantipassword()
   {
-    $data['title'] = 'App Jasa | Password';
+    $data['title'] = 'Jasa elektronik | Password';
     $data['judul'] = 'Ganti Password';
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 

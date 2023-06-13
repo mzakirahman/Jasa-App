@@ -22,7 +22,7 @@ class Jasa extends CI_Controller
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
     // model 
     $data['jasa'] = $this->Jasa_model->getAlljasa();
-    $data['title'] = 'App Jasa | All Jasa';
+    $data['title'] = 'Jasa elektronik | All Jasa';
     $data['judul'] = 'Silahkan Pilih Jasa elektronik';
     $this->load->view('tamplates/ui_header.php', $data);
     $this->load->view('tamplates/ui_sidebar.php', $data);
@@ -32,7 +32,7 @@ class Jasa extends CI_Controller
 
   public function pesanjasa($id)
   {
-    $data['title'] = 'Jasa | Pesan';
+    $data['title'] = 'Jasa elektronik | Pesan';
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
     // model 
     $data['jasa'] = $this->Jasa_model->getJasaById($id);

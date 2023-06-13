@@ -19,7 +19,7 @@ class Auth extends CI_Controller
     $this->form_validation->set_rules('password', 'Password', 'trim|required');
 
     if ($this->form_validation->run() == false) {
-      $data['title'] = 'Jasa App | Login';
+      $data['title'] = 'Jasa elektronik | Login';
       $this->load->view('guest/guest_header.php', $data);
       $this->load->view('auth/login.php', $data);
       $this->load->view('guest/guest_footer.php');
@@ -78,7 +78,7 @@ class Auth extends CI_Controller
     ]);
     $this->form_validation->set_rules('password2', 'Password', 'required|trim|matches[password1]');
     if ($this->form_validation->run() == false) {
-      $data['title'] = 'Jasa App | Registration';
+      $data['title'] = 'Jasa elektronik | Registration';
       $this->load->view('guest/guest_header.php', $data);
       $this->load->view('auth/registration.php');
       $this->load->view('guest/guest_footer.php');
@@ -90,7 +90,7 @@ class Auth extends CI_Controller
         'image' => 'default.jpg',
         'password' => password_hash($this->input->post('password1'), PASSWORD_DEFAULT),
         'role_id' => 2,
-        'is_active' => 1,
+        'is_active' => 0,
         'date_created' => time()
       ];
       $this->db->insert('user', $data);

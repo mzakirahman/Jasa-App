@@ -15,7 +15,7 @@ class Jasaku extends CI_Controller
 
   public function jasaedit($no)
   {
-    $data['title'] = 'Jasa App | Edit Jasa';
+    $data['title'] = 'Jasa elektronik | Edit Jasa';
     $data['judul'] = 'Edit My Jasa';
     // memanggil session user 
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
@@ -44,7 +44,7 @@ class Jasaku extends CI_Controller
 
   public function create()
   {
-    $data['title'] = 'Jasa App | My Jasa';
+    $data['title'] = 'Jasa elektronik | My Jasa';
     $data['judul'] = 'Create Jasa elektronik';
     // memanggil session user 
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
@@ -57,7 +57,7 @@ class Jasaku extends CI_Controller
 
   public function jasasaya()
   {
-    $data['title'] = 'Jasa App | My Jasa';
+    $data['title'] = 'Jasa elektronik | My Jasa';
     $data['judul'] = 'My Jasa elektronik';
     // memanggil session user 
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
@@ -72,7 +72,7 @@ class Jasaku extends CI_Controller
   }
   public function transaksi()
   {
-    $data['title'] = 'Jasa App | Transaksi';
+    $data['title'] = 'Jasa elektronik | Transaksi';
     $data['judul'] = 'Data Pembayaran';
     // memanggil session user 
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();

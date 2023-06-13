@@ -17,7 +17,7 @@ class Home extends CI_Controller
   public function index()
   {
     $data['jasa'] = $this->Home_model->AllDataJasa();
-    $data['title'] = 'Jasa App | Home';
+    $data['title'] = 'Jasa elektronik | Home';
     $this->load->view('guest/guest_header.php', $data);
     $this->load->view('home/index', $data);
     $this->load->view('guest/guest_footer.php');
@@ -27,7 +27,7 @@ class Home extends CI_Controller
     if ($this->session->userdata('email')) {
       redirect('user');
     }
-    $data['title'] = 'Jasa App | Jasa';
+    $data['title'] = 'Jasa elektronik | Jasa';
     $data['jasa'] = $this->Home_model->AllDataJasa();
 
     $this->load->view('guest/guest_header.php', $data);
@@ -39,7 +39,7 @@ class Home extends CI_Controller
     if ($this->session->userdata('email')) {
       redirect('user');
     }
-    $data['title'] = 'Jasa App | Blog';
+    $data['title'] = 'Jasa elektronik | Help';
 
     $this->load->view('guest/guest_header.php', $data);
     $this->load->view('home/help', $data);
@@ -48,7 +48,7 @@ class Home extends CI_Controller
 
   public function contact()
   {
-    $data['title'] = 'Jasa App | Contact';
+    $data['title'] = 'Jasa elektronik | Contact';
     $this->load->library('form_validation');
 
     $this->form_validation->set_rules('nama', 'Nama', 'required');

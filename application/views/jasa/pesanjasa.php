@@ -13,7 +13,7 @@
     <input type="hidden" name="harga" id="harga" value="<?= $jasa['harga']; ?>">
     <input type="hidden" name="nama" id="nama" value="<?= $jasa['nama']; ?>">
     <input type="hidden" name="jasa_id" id="jasa_id" value="<?= $jasa['user_id']; ?>">
-  <p><a href="#" class="text-dark">jasa elektronik > </a><a href="#" class="text-primary">Detail Jasa</a>
+  <p><a href="<?= base_url('user/jasa'); ?>" class="text-dark">jasa elektronik > </a><a href="#" class="text-primary">Pesan </a>
   <div class="row row-cols-2">
     <div class="col">
       <img class="img-fluid" width="100%" height="80%" src="<?= base_url('assets/picture/') . $jasa['foto']; ?>">
@@ -22,9 +22,10 @@
       <h3><b><?= $jasa['juduljasa']; ?></b></h3>
       <h5 class="mt-3"> Rp. <?= $jasa['harga']; ?></h5>
       <h5 class="mt-3"> <?= $jasa['nama']; ?></h5>
-      <a href="#" class="badge badge-success"><i class="fa fa-whatsapp" aria-hidden="true"> <?= $jasa['no']; ?></i></a>
-      <h5 class="mt-3"> <i class="fa fa-thumb-tack" aria-hidden="true"></i> <?= $jasa['alamat']; ?></h5>
-      <p class="text-secondary"><?= $jasa['deskripsi']; ?></p>
+      <h5 class="fa fa-phone mt-3" aria-hidden="true"> No-Hp : <?= $jasa['no']; ?></h5><br>
+      <h5 class="fa fa-question-circle mt-3" aria-hidden="true"> Deskripsi : <?= $jasa['deskripsi']; ?></h5><br>
+      <h5 class="fa fa-map-marker mt-3" aria-hidden="true"> Lokasi : <?= $jasa['alamat']; ?></h5>
+      <p class="text-secondary"></p>
       <!-- <p class="text-secondary">user_id <?= $jasa['user_id']; ?></p> -->
 
     </div>

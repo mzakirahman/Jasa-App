@@ -10,7 +10,7 @@
           <ul>
             <li>Alamat: Bengkalis 28711</li>
             <li>Kontak: +628 1212 1313</li>
-            <li>Email: jasaelektronik407@gmail.com</li>
+            <li>Email: my@jasa-elektronik.site</li>
           </ul>
         </div>
       </div>
@@ -24,10 +24,12 @@
             <li><a href="<?= base_url('user/contact') ?>">Contact</a></li>
           </ul>
           <ul>
-            <li><a href="<?= base_url('jasa/alljasa') ?>">Home</a></li>
-            <li><a href="<?= base_url('user/jasa') ?>">Jasa</a></li>
-            <li><a href="<?= base_url('user/help') ?>">Help</a></li>
-            <li><a href="<?= base_url('user/contact') ?>">Contact</a></li>
+            <li><a href="<?= base_url('jasaku/create') ?>">Daftar Jasa Elektronik</a></li>
+            <li><a href="<?= base_url('jasaku/jasasaya') ?>">My Jasa</a></li>
+            <li><a href="<?= base_url('user') ?>">Profile</a></li>
+            <li><a href="<?= base_url('jasaku/transaksi') ?>">Transaksi</a></li>
+            <li><a href="<?= base_url('jasaku/pemesanjasa') ?>">Pemesan My Jasa Elektronik</a></li>
+            <li><a target="_blank" href="<?= base_url('api/users') ?>">API</a></li>
           </ul>
         </div>
       </div>
@@ -40,10 +42,9 @@
             <button type="submit" class="site-btn">Kirim</button>
           </form>
           <div class="footer__widget__social">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-pinterest"></i></a>
+          <a href="mailto:my@jasa-elektronik.site"><i class="fa fa-envelope"></i></a>
+            <a href=""><i class="fa fa-ban"></i></a>
+            <a href=""><i class="fa fa-ban"></i></a>
           </div>
         </div>
       </div>
@@ -57,7 +58,7 @@
               Copyright &copy;
               <script>
                 document.write(new Date().getFullYear());
-              </script> All rights reserved | Jasa Kuy
+              </script> All rights reserved | Jasa elektronik </strong> | Time rendered in {elapsed_time} seconds.
               <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
           </div>

@@ -63,7 +63,7 @@
     </div> -->
     <div class="humberger__menu__contact">
       <ul>
-        <li><i class="fa fa-envelope"></i> jasaelektronik407@gmail.com</li>
+        <li><i class="fa fa-envelope"></i> my@jasa-elektronik.site</li>
         <li>Jasa Layanan Perbaikan Alat Elektronik</li>
       </ul>
     </div>
@@ -78,7 +78,7 @@
           <div class="col-lg-6 col-md-6">
             <div class="header__top__left">
               <ul>
-                <li><i class="fa fa-envelope"></i> jasaelektronik407@gmail.com</li>
+                <li><i class="fa fa-envelope"></i> my@jasa-elektronik.site</li>
                 <li>Jasa Layanan Perbaikan Alat Elektronik</li>
               </ul>
             </div>

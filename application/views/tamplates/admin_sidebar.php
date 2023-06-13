@@ -4,9 +4,9 @@
           <!-- Sidebar - Brand -->
           <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url(); ?>admin">
             <div class="sidebar-brand-icon">
-              <i class="fa fa-admin"></i>
+              <i class="fa fa-cog"></i>
             </div>
-            <div class="sidebar-brand-text mx-1">Admin Jasa App </div>
+            <div class="sidebar-brand-text mx-2">Administrator</div>
           </a>
 
           <!-- Divider -->
