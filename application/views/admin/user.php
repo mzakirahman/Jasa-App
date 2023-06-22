@@ -1,7 +1,7 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
   <h1 class="h3 mb-4 text-gray-800"><?= $title; ?></h1>
-  <table class="table table-hover">
+  <table id="example" class="table table-striped table-bordered">
     <thead>
       <tr>
         <th scope="col">No</th>
@@ -9,8 +9,6 @@
         <th scope="col">Email</th>
         <th scope="col">Profile</th>
         <th scope="col">Role</th>
-        <th scope="col">Password</th>
-        <!-- <th scope="col">Aktif | Non</th> -->
         <th scope="col">Action</th>
       </tr>
     </thead>
@@ -31,19 +29,6 @@
             }
             ?>
           </td>
-          <!-- <td>
-                <?php
-                if ($user['is_active'] == 1) {
-                  echo 'Aktif';
-                } else {
-                  echo 'Non Aktif';
-                }
-                ?>
-              </td> -->
-          <td>
-            <span class="d-inline-block text-truncate" style="max-width: 150px;">
-              <?= $user['password']; ?>
-            </span>
           <td>
             <a href="" class="badge badge-success">edit</a>
             <a href="" class="badge badge-danger">delete</a>
@@ -52,7 +37,7 @@
         <?php $i++; ?>
       <?php endforeach; ?>
     </tbody>
-  </table>s
+  </table>
 </div>
 </div>
 <!-- End of Main Content -->

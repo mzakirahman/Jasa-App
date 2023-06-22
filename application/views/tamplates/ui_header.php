@@ -24,6 +24,10 @@
   <link rel="stylesheet" href="<?= base_url('ui_assets/'); ?>css/owl.carousel.min.css" type="text/css">
   <link rel="stylesheet" href="<?= base_url('ui_assets/'); ?>css/slicknav.min.css" type="text/css">
   <link rel="stylesheet" href="<?= base_url('ui_assets/'); ?>css/style.css" type="text/css">
+
+  <!-- link css Data tables -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css"> -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap4.min.css">
 </head>
 
 <body>

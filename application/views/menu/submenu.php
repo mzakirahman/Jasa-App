@@ -17,10 +17,10 @@
 
 			<a href="" class="btn btn-primary mb-3" data-toggle="modal" data-target="#newSubMenuModal">Add New Submenu</a>
 
-			<table class="table table-hover">
+			<table id="example" class="table table-striped table-bordered">
 				<thead>
 					<tr>
-						<th scope="col">#</th>
+						<th scope="col">No</th>
 						<th scope="col">Title</th>
 						<th scope="col">Menu</th>
 						<th scope="col">Url</th>

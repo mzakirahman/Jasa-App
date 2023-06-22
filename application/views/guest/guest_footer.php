@@ -40,8 +40,6 @@
           </form>
           <div class="footer__widget__social">
             <a href="mailto:my@jasa-elektronik.site"><i class="fa fa-envelope"></i></a>
-            <a href=""><i class="fa fa-ban"></i></a>
-            <a href=""><i class="fa fa-ban"></i></a>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
 <h1 class="h3 mb-4 text-gray-800"><?= $title; ?></h1>
-<div class="row">
+<div class="row" >
     <?php foreach ($alljasa as $jasa) : ?>
     <div class="card m-3" style="width: 18rem;">
       <img height="200" src="<?= base_url('assets/picture/') . $jasa['foto']; ?>" class="card-img-top" alt="...">

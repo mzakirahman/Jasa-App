@@ -33,7 +33,7 @@
           <div class="col">
             <div class="form-group">
               <label for="exampleFormControlInput1">Harga</label>
-              <input value="<?= $edit['no'] ?>" type="number" class="form-control" name="harga" id="nama" placeholder="Harga" required>
+              <input value="<?= $edit['harga'] ?>" type="number" class="form-control" name="harga" id="nama" placeholder="Harga" required>
             </div>
           </div>
         </div>

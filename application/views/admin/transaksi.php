@@ -1,7 +1,7 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
   <h1 class="h3 mb-4 text-gray-800"><?= $title; ?></h1>
-  <table class="table table-hover">
+  <table id="example" class="table table-striped table-bordered">
     <thead class="thead-light">
       <tr>
         <th scope="col">Order Id</th>

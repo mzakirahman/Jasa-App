@@ -4,7 +4,7 @@
 
   <div class="table-responsive">
 
-    <table class="table table-hover">
+    <table id="example" class="table table-striped table-bordered">
       <thead class="thead-light">
 
         <tr>

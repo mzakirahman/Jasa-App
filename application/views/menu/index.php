@@ -9,7 +9,7 @@
 
 	<div class="row">
 		<div class=" col-lg-6">
-			<table class="table table-hover">
+			<table id="example" class="table table-striped table-bordered">
 				<thead>
 					<tr>
 						<th scope="col">No</th>

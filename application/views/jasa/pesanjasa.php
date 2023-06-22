@@ -34,7 +34,7 @@
     <div class="col">
         <label for="basic-url">Nama</label>
         <div class="input-group ">
-          <input type="text" name="namapemesan" placeholder="Nama" class="form-control" required >
+          <input required type="text" name="namapemesan" placeholder="Nama" class="form-control"  >
         </div>
         <label for="basic-url">No Handphone</label>
         <div class="input-group ">
@@ -48,7 +48,7 @@
       </div>
       <label for="basic-url">Alamat</label>
       <div class="input-group ">
-        <input type="text" name="alamat" placeholder="Alamat detail" class="form-control" >
+        <input type="text" name="alamat" placeholder="Alamat detail" class="form-control" required >
       </div>
     </div>
   </div>
