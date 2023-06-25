@@ -13,8 +13,6 @@ class Snap extends CI_Controller
 
     // panggil model
     $this->load->model('Jasaku_model');
-
-
   }
 
   public function index()
@@ -63,7 +61,7 @@ class Snap extends CI_Controller
       'start_time' => date("Y-m-d H:i:s O", $time),
       'unit' => 'minute',
       'duration'  => 1440
-      
+
     );
 
     $transaction_data = array(
@@ -82,7 +80,7 @@ class Snap extends CI_Controller
 
   // public function finish()
   // {
-    
+
   //   $result = json_decode($this->input->post('result_data'));
   //   echo 'RESULT <br><pre>';
   //   var_dump($result);

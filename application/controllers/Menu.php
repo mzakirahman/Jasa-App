@@ -38,7 +38,7 @@ class Menu extends CI_Controller
     $this->load->model('Menu_model', 'menu');
 
     $data['subMenu'] = $this->menu->getSubMenu();
-// 1
+    // 1
     $data['menu'] = $this->db->get('user_menu')->result_array();
 
     $this->form_validation->set_rules('title', 'Title', 'required');

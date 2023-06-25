@@ -11,9 +11,11 @@
     <input type="hidden" name="result_data" id="result-data" value="">
     <!-- GET DARI API -->
     <input type="hidden" name="harga" id="harga" value="<?= $jasa['harga']; ?>">
+    <input type="hidden" name="unikjasa" id="unikjasa" value="<?= $jasa['id']; ?>">
     <input type="hidden" name="nama" id="nama" value="<?= $jasa['nama']; ?>">
     <input type="hidden" name="jasa_id" id="jasa_id" value="<?= $jasa['user_id']; ?>">
-  <p><a href="<?= base_url('user/jasa'); ?>" class="text-dark">jasa elektronik > </a><a href="#" class="text-primary">Pesan </a>
+    <h1 class="h3 mb-4 text-gray-800">Pesan jasa elektronik</h1>
+
   <div class="row row-cols-2">
     <div class="col">
       <img class="img-fluid" width="100%" height="80%" src="<?= base_url('assets/picture/') . $jasa['foto']; ?>">

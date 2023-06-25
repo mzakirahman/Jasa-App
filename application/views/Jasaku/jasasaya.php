@@ -3,12 +3,12 @@
   <a class="primary-btn" href="<?= base_url(); ?>jasaku/create">Tambah Jasa</a>
   <h1 class="h3 text-gray-800 mt-2 mb-2"><?= $judul; ?></h1>
 
-  <!-- <?php if($this->session->flashdata() ): ?> -->
-    <!-- <?php endif; ?> -->
+  <!-- <?php if ($this->session->flashdata()) : ?> -->
+  <!-- <?php endif; ?> -->
 
 
-    
-    <?= $this->session->flashdata('jasa'); ?>
+
+  <?= $this->session->flashdata('jasa'); ?>
   <!-- content  -->
   <div class="row row-cols-1 row-cols-md-3">
     <?php foreach ($jasaSaya as $sm) : ?>

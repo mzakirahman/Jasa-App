@@ -8,6 +8,7 @@
       <thead class="thead-light">
 
         <tr>
+          <th scope="col">No</th>
           <th scope="col">Nama Pemesan</th>
           <th scope="col">Kontak Pemesan</th>
           <th scope="col">Jenis Kerusakan</th>
@@ -16,8 +17,10 @@
         </tr>
       </thead>
       <tbody>
+        <?php $i = 1; ?>
         <?php foreach ($pesanjasa as $ts) : ?>
           <tr>
+            <td><?= $i; ?></td>
             <td><?= $ts['namapemesan']; ?></td>
             <td><?= $ts['nohp']; ?></td>
             <td><?= $ts['jeniskerusakan']; ?></td>
@@ -33,6 +36,8 @@
             </td>
 
           </tr>
+          <?php $i++; ?>
+
         <?php endforeach; ?>
       </tbody>
     </table>

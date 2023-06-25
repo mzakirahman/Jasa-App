@@ -27,7 +27,7 @@ class User extends CI_Controller
   public function jasa()
   {
     $data['title'] = 'Jasa elektronik';
-    $data['judul'] = 'Jasa elektronik';
+    $data['judul'] = 'Silahkan Pilih Jasa elektronik';
     $data['user'] = $this->db->get_where('user', ['email' =>
     $this->session->userdata('email')])->row_array();
     $data['jasa'] = $this->Jasa_model->getAlljasa();

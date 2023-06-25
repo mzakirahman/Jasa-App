@@ -1,7 +1,7 @@
 <!-- CONTENT START -->
 <div class="col-lg-9 col-md-7">
 
-  
+
   <form action="<?= base_url() ?>Jasaku/edittdata" method="post" enctype="multipart/form-data">
     <div class="card">
       <div class="card-header">
@@ -50,9 +50,9 @@
           <!-- <input type="file" class="form-control-file" name="fotopost"> -->
           <!-- new -->
           <div class="custom-file">
-          <!-- <img src="<?= base_url('assets/picture/') . $edit['foto']; ?>" class="img-thumbnail"> -->
+            <!-- <img src="<?= base_url('assets/picture/') . $edit['foto']; ?>" class="img-thumbnail"> -->
             <input type="file" name="fotopost" class="custom-file-input" required>
-            <label class="custom-file-label" >Choose file...</label>
+            <label class="custom-file-label">Choose file...</label>
           </div>
         </div>
         <div class="form-group align-items-end">

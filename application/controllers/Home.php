@@ -55,18 +55,15 @@ class Home extends CI_Controller
     $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
     $this->form_validation->set_rules('pesan', 'Pesan', 'required');
 
-    if ($this->form_validation->run() == FALSE)
-      {
-        $this->load->view('guest/guest_header.php', $data);
-        $this->load->view('home/contact', $data);
-        $this->load->view('guest/guest_footer.php');
-      }
-      else
-      {
-        $this->Home_model->Contact();
-        $this->session->set_flashdata('pesan','Dikirim');
-        redirect('home/contact');
-      } 
+    if ($this->form_validation->run() == FALSE) {
+      $this->load->view('guest/guest_header.php', $data);
+      $this->load->view('home/contact', $data);
+      $this->load->view('guest/guest_footer.php');
+    } else {
+      $this->Home_model->Contact();
+      $this->session->set_flashdata('pesan', 'Dikirim');
+      redirect('home/contact');
+    }
   }
 
 

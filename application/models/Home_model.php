@@ -8,12 +8,11 @@ class Home_model extends CI_Model
   public function Contact()
   {
     $data = [
-    'nama' => $this->input->post('nama' , true),
-    'email' => $this->input->post('email', true),
-    'pesan' => $this->input->post('pesan', true)
+      'nama' => $this->input->post('nama', true),
+      'email' => $this->input->post('email', true),
+      'pesan' => $this->input->post('pesan', true)
     ];
 
     $this->db->insert('kontakpesan', $data);
   }
-
 }

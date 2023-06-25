@@ -45,7 +45,7 @@ class Jasaku extends CI_Controller
   public function create()
   {
     $data['title'] = 'Jasa elektronik | My Jasa';
-    $data['judul'] = 'Create Jasa elektronik';
+    $data['judul'] = 'Daftar Jasa elektronik';
     // memanggil session user 
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
     $this->load->view('tamplates/ui_header.php', $data);
@@ -58,7 +58,7 @@ class Jasaku extends CI_Controller
   public function jasasaya()
   {
     $data['title'] = 'Jasa elektronik | My Jasa';
-    $data['judul'] = 'My Jasa elektronik';
+    $data['judul'] = 'Jasa elektronik saya';
     // memanggil session user 
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
     // memanggil model jasaku 
@@ -73,7 +73,7 @@ class Jasaku extends CI_Controller
   public function transaksi()
   {
     $data['title'] = 'Jasa elektronik | Transaksi';
-    $data['judul'] = 'Data Pembayaran';
+    $data['judul'] = 'Transaksi';
     // memanggil session user 
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
     // get all data Transaksi
@@ -128,7 +128,7 @@ class Jasaku extends CI_Controller
       }
     } else {
       $this->session->set_flashdata('jasa', '<div class="alert alert-success" role="alert">Selamat! Anda Berhasil Membuat Jasa elektronik</div>');
-        redirect('jasaku/jasasaya');
+      redirect('jasaku/jasasaya');
     }
   }
 
@@ -141,7 +141,7 @@ class Jasaku extends CI_Controller
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
     $data['title'] = 'Jasa App | Pemesan Jasa';
-    $data['judul'] = 'Pemesan Jasa elektronik saya';
+    $data['judul'] = 'Pemesan Jasa elektronik';
 
 
     $this->load->view('tamplates/ui_header.php', $data);
@@ -149,7 +149,7 @@ class Jasaku extends CI_Controller
     $this->load->view('jasaku/pemesanjasa', $data);
     $this->load->view('tamplates/ui_footer.php', $data);
   }
-  
+
   public function edittdata()
   {
     $id = $this->session->userdata('id');
@@ -195,7 +195,7 @@ class Jasaku extends CI_Controller
       }
     } else {
       $this->session->set_flashdata('jasa', '<div class="alert alert-danger" role="alert">Gagal merubah data, masukkan gambar ulang!</div>');
-        redirect('jasaku/jasasaya');
+      redirect('jasaku/jasasaya');
     }
   }
 }

@@ -17,7 +17,7 @@ class Admin extends CI_Controller
 
     $data['title'] = 'Dashboard Jasa Elektronik Kuy';
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-    
+
 
     $this->load->view('tamplates/admin_header.php', $data);
     $this->load->view('tamplates/admin_sidebar.php', $data);
@@ -33,7 +33,7 @@ class Admin extends CI_Controller
 
     $data['title'] = 'Data Pesanan Jasa';
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-    
+
 
     $this->load->view('tamplates/admin_header.php', $data);
     $this->load->view('tamplates/admin_sidebar.php', $data);
@@ -151,6 +151,4 @@ class Admin extends CI_Controller
     $this->load->view('admin/pesan', $data);
     $this->load->view('tamplates/admin_footer.php');
   }
-
-  
 }

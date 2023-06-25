@@ -8,24 +8,28 @@
     <table id="example" class="table table-striped table-bordered">
       <thead class="thead-light">
         <tr>
-          <th scope="col">Nama</th>
-          <th scope="col">Order ID</th>
+          <th scope="col">No</th>
+          <th scope="col">Nama Pemesan</th>
           <th scope="col">Biaya</th>
-          <th scope="col">Bank</th>
-          <th scope="col">Number</th>
+          <th scope="col">Nama Penjasa</th>
+          <th scope="col">Type Transfer</th>
+          <th scope="col">Number Transfer</th>
           <th scope="col">Status</th>
-          <th scope="col">Download</th>
+          <th scope="col">Struk Transfer</th>
+          <th scope="col">Detail Penjasa</th>
         </tr>
       </thead>
       <tbody>
+        <?php $i = 1; ?>
         <?php foreach ($transaksi as $ts) : ?>
           <tr>
-            <td><?= $ts['nama']; ?></td>
-            <td><?= $ts['order_id']; ?></td>
+            <td><?= $i; ?></td>
+            <td><?= $ts['namapemesan']; ?></td>
             <td>Rp. <?= $ts['gross_amount']; ?></td>
-            <!-- <td><?= $ts['payment_type']; ?></td> -->
-            <!-- <td><?= $ts['transaction_time']; ?></td> -->
-            <td><?= $ts['bank']; ?></td>
+            <td><?= $ts['nama']; ?></td>
+            <td>
+              <p class="text-uppercase"><?= $ts['bank']; ?></p>
+            </td>
             <td><?= $ts['va_number']; ?></td>
             <td>
               <?php
@@ -37,7 +41,10 @@
               ?>
             </td>
             <td><a href="<?= $ts['pdf_url'];  ?>" target="_blank" class="badge badge-success">Download</a></td>
+            <td><a href="<?= base_url('jasa/pesanjasa/') . $ts['unikjasa'];  ?>"><span class="badge badge-info">Detail</span></a></td>
           </tr>
+          <?php $i++; ?>
+
         <?php endforeach; ?>
       </tbody>
     </table>

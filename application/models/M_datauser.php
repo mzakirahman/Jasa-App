@@ -12,6 +12,5 @@ class M_datauser extends CI_Model
   public function getAllMitrans()
   {
     return $this->db->get('transaksi_mitrans')->result_array();
-    
   }
 }

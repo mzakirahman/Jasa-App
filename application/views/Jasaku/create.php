@@ -56,7 +56,7 @@
           </div>
         </div>
         <div class="form-group align-items-end">
-          <button class="site-btn">Create</button>
+          <button class="site-btn">Daftar</button>
         </div>
 
       </div>

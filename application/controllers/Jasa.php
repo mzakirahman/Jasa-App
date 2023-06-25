@@ -48,7 +48,7 @@ class Jasa extends CI_Controller
     $harga = $this->input->post('harga');
     $transaction_details = array(
       'order_id' => rand(),
-      'gross_amount' => $harga, 
+      'gross_amount' => $harga,
     );
 
     $item1_details = array(
@@ -103,9 +103,10 @@ class Jasa extends CI_Controller
     $alamat = $this->input->post('alamat');
     $id = $this->session->userdata('id');
     $jasa_id = $this->input->post('jasa_id');
-  
+    $unikjasa = $this->input->post('unikjasa');
+
     $result = json_decode($this->input->post('result_data'), true);
-    // var_dump ($jasa_id );
+    // var_dump ($unikjasa );
     // die;
     $data = [
       'user_id' => $id,
@@ -122,8 +123,11 @@ class Jasa extends CI_Controller
       'bank' => $result['va_numbers'][0]["bank"],
       'va_number' => $result['va_numbers'][0]["va_number"],
       'pdf_url' => $result['pdf_url'],
-      'status_code' => $result['status_code']
+      'status_code' => $result['status_code'],
+      'unikjasa' => $unikjasa
     ];
+    // var_dump ($unikjasa );
+    // die;
     $simpan =  $this->db->insert('transaksi_mitrans', $data);
 
     if ($simpan) {
