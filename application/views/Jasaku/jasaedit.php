@@ -1,3 +1,8 @@
+<!-- Loading screen -->
+<div id="preloder">
+  <div class="loader"></div>
+</div>
+
 <!-- CONTENT START -->
 <div class="col-lg-9 col-md-7">
 

@@ -1,4 +1,11 @@
 <!-- Hero Section Begin -->
+
+<!-- Loading screen -->
+<div id="preloder">
+  <div class="loader"></div>
+</div>
+
+
 <section class="hero">
   <div class="container">
     <div class="row">
@@ -71,6 +78,3 @@
   </div>
 </section>
 <!-- Featured Section End -->
-
-
-

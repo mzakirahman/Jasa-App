@@ -1,3 +1,7 @@
+    <!-- Loading screen -->
+    <div id="preloder">
+      <div class="loader"></div>
+    </div>
     <!-- Breadcrumb Section Begin -->
     <section class="breadcrumb-section set-bg" data-setbg="https://4.bp.blogspot.com/-aFNmnv6CXlI/WwcPNu8o2jI/AAAAAAAACp4/j8-YK2ou49YcMvz0GP95JedViOfdrUg1QCLcBGAs/s1600/se4.jpg">
       <div class="container">
@@ -28,7 +32,7 @@
 
           <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
             <div class="card-body">
-             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam libero atque fuga eius corrupti laborum? Quasi, ullam? Aliquam, obcaecati quae voluptatum facere provident odit! Quaerat nemo aperiam laboriosam libero ad, maxime voluptatibus nisi maiores velit ipsam delectus porro blanditiis sunt, minima, saepe provident vel beatae magnam reiciendis obcaecati magni fuga esse excepturi dolore. Autem voluptatem nam modi inventore. Sequi saepe perferendis aspernatur non suscipit eius ratione animi obcaecati? Ipsum, quo?
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam libero atque fuga eius corrupti laborum? Quasi, ullam? Aliquam, obcaecati quae voluptatum facere provident odit! Quaerat nemo aperiam laboriosam libero ad, maxime voluptatibus nisi maiores velit ipsam delectus porro blanditiis sunt, minima, saepe provident vel beatae magnam reiciendis obcaecati magni fuga esse excepturi dolore. Autem voluptatem nam modi inventore. Sequi saepe perferendis aspernatur non suscipit eius ratione animi obcaecati? Ipsum, quo?
             </div>
           </div>
         </div>
@@ -42,7 +46,7 @@
           </div>
           <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
             <div class="card-body">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam libero atque fuga eius corrupti laborum? Quasi, ullam? Aliquam, obcaecati quae voluptatum facere provident odit! Quaerat nemo aperiam laboriosam libero ad, maxime voluptatibus nisi maiores velit ipsam delectus porro blanditiis sunt, minima, saepe provident vel beatae magnam reiciendis obcaecati magni fuga esse excepturi dolore. Autem voluptatem nam modi inventore. Sequi saepe perferendis aspernatur non suscipit eius ratione animi obcaecati? Ipsum, quo?
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam libero atque fuga eius corrupti laborum? Quasi, ullam? Aliquam, obcaecati quae voluptatum facere provident odit! Quaerat nemo aperiam laboriosam libero ad, maxime voluptatibus nisi maiores velit ipsam delectus porro blanditiis sunt, minima, saepe provident vel beatae magnam reiciendis obcaecati magni fuga esse excepturi dolore. Autem voluptatem nam modi inventore. Sequi saepe perferendis aspernatur non suscipit eius ratione animi obcaecati? Ipsum, quo?
             </div>
           </div>
         </div>
@@ -56,7 +60,7 @@
           </div>
           <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
             <div class="card-body">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam libero atque fuga eius corrupti laborum? Quasi, ullam? Aliquam, obcaecati quae voluptatum facere provident odit! Quaerat nemo aperiam laboriosam libero ad, maxime voluptatibus nisi maiores velit ipsam delectus porro blanditiis sunt, minima, saepe provident vel beatae magnam reiciendis obcaecati magni fuga esse excepturi dolore. Autem voluptatem nam modi inventore. Sequi saepe perferendis aspernatur non suscipit eius ratione animi obcaecati? Ipsum, quo?
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam libero atque fuga eius corrupti laborum? Quasi, ullam? Aliquam, obcaecati quae voluptatum facere provident odit! Quaerat nemo aperiam laboriosam libero ad, maxime voluptatibus nisi maiores velit ipsam delectus porro blanditiis sunt, minima, saepe provident vel beatae magnam reiciendis obcaecati magni fuga esse excepturi dolore. Autem voluptatem nam modi inventore. Sequi saepe perferendis aspernatur non suscipit eius ratione animi obcaecati? Ipsum, quo?
             </div>
           </div>
         </div>

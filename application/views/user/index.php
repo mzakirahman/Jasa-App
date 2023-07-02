@@ -1,3 +1,7 @@
+<!-- Loading screen -->
+<div id="preloder">
+  <div class="loader"></div>
+</div>
 <!-- CONTENT START -->
 <div class="col-lg-9 col-md-7">
   <div class="card mb-3 col-lg-8">

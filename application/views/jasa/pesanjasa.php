@@ -1,3 +1,8 @@
+<!-- Loading screen -->
+<div id="preloder">
+  <div class="loader"></div>
+</div>
+
 <!-- CONTENT START -->
 <!-- SCRIPT MITRANS -->
 <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="SB-Mid-client-zNogHI4yBCDTjR0x"></script>
@@ -16,50 +21,50 @@
     <input type="hidden" name="jasa_id" id="jasa_id" value="<?= $jasa['user_id']; ?>">
     <h1 class="h3 mb-4 text-gray-800">Pesan jasa elektronik</h1>
 
-  <div class="row row-cols-2">
-    <div class="col">
-      <img class="img-fluid" width="100%" height="80%" src="<?= base_url('assets/picture/') . $jasa['foto']; ?>">
-    </div>
-    <div class="col">
-      <h3><b><?= $jasa['juduljasa']; ?></b></h3>
-      <h5 class="mt-3"> Rp. <?= $jasa['harga']; ?></h5>
-      <h5 class="mt-3"> <?= $jasa['nama']; ?></h5>
-      <h5 class="fa fa-phone mt-3" aria-hidden="true"> No-Hp : <?= $jasa['no']; ?></h5><br>
-      <h5 class="fa fa-question-circle mt-3" aria-hidden="true"> Deskripsi : <?= $jasa['deskripsi']; ?></h5><br>
-      <h5 class="fa fa-map-marker mt-3" aria-hidden="true"> Lokasi : <?= $jasa['alamat']; ?></h5>
-      <p class="text-secondary"></p>
-      <!-- <p class="text-secondary">user_id <?= $jasa['user_id']; ?></p> -->
+    <div class="row row-cols-2">
+      <div class="col">
+        <img class="img-fluid" width="100%" height="80%" src="<?= base_url('assets/picture/') . $jasa['foto']; ?>">
+      </div>
+      <div class="col">
+        <h3><b><?= $jasa['juduljasa']; ?></b></h3>
+        <h5 class="mt-3"> Rp. <?= $jasa['harga']; ?></h5>
+        <h5 class="mt-3"> <?= $jasa['nama']; ?></h5>
+        <h5 class="fa fa-phone mt-3" aria-hidden="true"> No-Hp : <?= $jasa['no']; ?></h5><br>
+        <h5 class="fa fa-question-circle mt-3" aria-hidden="true"> Deskripsi : <?= $jasa['deskripsi']; ?></h5><br>
+        <h5 class="fa fa-map-marker mt-3" aria-hidden="true"> Lokasi : <?= $jasa['alamat']; ?></h5>
+        <p class="text-secondary"></p>
+        <!-- <p class="text-secondary">user_id <?= $jasa['user_id']; ?></p> -->
 
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col">
+    <div class="row">
+      <div class="col">
         <label for="basic-url">Nama</label>
         <div class="input-group ">
-          <input required type="text" name="namapemesan" placeholder="Nama" class="form-control"  >
+          <input required type="text" name="namapemesan" placeholder="Nama" class="form-control">
         </div>
         <label for="basic-url">No Handphone</label>
         <div class="input-group ">
           <input type="number" name="nohp" placeholder="No Hp / Whatsapp" class="form-control" required>
         </div>
-    </div>
-    <div class="col ">
-      <label  for="basic-url">Jenis Kerusakan</label>
-      <div class="input-group">
-        <input type="text" name="jeniskerusakan" placeholder="Jenis Kerusakan" class="form-control" required>
       </div>
-      <label for="basic-url">Alamat</label>
-      <div class="input-group ">
-        <input type="text" name="alamat" placeholder="Alamat detail" class="form-control" required >
+      <div class="col ">
+        <label for="basic-url">Jenis Kerusakan</label>
+        <div class="input-group">
+          <input type="text" name="jeniskerusakan" placeholder="Jenis Kerusakan" class="form-control" required>
+        </div>
+        <label for="basic-url">Alamat</label>
+        <div class="input-group ">
+          <input type="text" name="alamat" placeholder="Alamat detail" class="form-control" required>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- end form -->
-  <button type="submit" id="pay-button" class="site-btn mt-3">Pesan Jasa</button>
-</form>
+    <!-- end form -->
+    <button type="submit" id="pay-button" class="site-btn mt-3">Pesan Jasa</button>
+  </form>
 
-      <!-- AKHIR SCRIPT MITRANS -->
-      <script type="text/javascript">
+  <!-- AKHIR SCRIPT MITRANS -->
+  <script type="text/javascript">
     $('#pay-button').click(function(event) {
       event.preventDefault();
       $(this).attr("disabled", "disabled");
@@ -80,6 +85,7 @@
           console.log('token = ' + data);
           var resultType = document.getElementById('result-type');
           var resultData = document.getElementById('result-data');
+
           function changeResult(type, data) {
             $("#result-type").val(type);
             $("#result-data").val(JSON.stringify(data));
@@ -113,4 +119,3 @@
 </div>
 </div>
 </section>
-

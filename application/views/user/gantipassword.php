@@ -1,3 +1,7 @@
+<!-- Loading screen -->
+<div id="preloder">
+  <div class="loader"></div>
+</div>
 <!-- CONTENT START -->
 <div class="col-lg-6">
   <!-- <?= $this->session->flashdata('message'); ?> -->

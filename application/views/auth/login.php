@@ -1,3 +1,8 @@
+<!-- Loading screen -->
+<div id="preloder">
+  <div class="loader"></div>
+</div>
+
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-lg-6">

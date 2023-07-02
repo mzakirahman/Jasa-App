@@ -1,3 +1,8 @@
+    <!-- Loading screen -->
+    <div id="preloder">
+      <div class="loader"></div>
+    </div>
+
     <!-- Breadcrumb Section Begin -->
     <section class="breadcrumb-section set-bg" data-setbg="https://4.bp.blogspot.com/-aFNmnv6CXlI/WwcPNu8o2jI/AAAAAAAACp4/j8-YK2ou49YcMvz0GP95JedViOfdrUg1QCLcBGAs/s1600/se4.jpg">
       <div class="container">
@@ -52,5 +57,3 @@
       </div>
     </section>
     <!--content -->
-
-

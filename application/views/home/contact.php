@@ -1,3 +1,8 @@
+    <!-- Loading screen -->
+    <div id="preloder">
+      <div class="loader"></div>
+    </div>
+
     <!-- Breadcrumb Section Begin -->
     <div class="container">
       <?php if ($this->session->flashdata('pesan')) : ?>

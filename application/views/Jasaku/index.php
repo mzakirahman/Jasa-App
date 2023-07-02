@@ -1,3 +1,8 @@
+<!-- Loading screen -->
+<div id="preloder">
+  <div class="loader"></div>
+</div>
+
 <!-- CONTENT START -->
 <div class="col-lg-9 col-md-7">
   <h1 class="h3 mb-4 text-gray-800"><?= $judul; ?></h1>
