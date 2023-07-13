@@ -35,10 +35,7 @@ class Auth extends CI_Controller
     // jika email dan passwordnya benar 
     $email = $this->input->post('email');
     $password = $this->input->post('password');
-
     $user = $this->db->get_where('user', ['email' => $email])->row_array();
-
-
     // jika usernya ada
     if ($user) {
       // jika usernya aktif
@@ -68,8 +65,6 @@ class Auth extends CI_Controller
       redirect('auth');
     }
   }
-
-
 
   public function registration()
   {
@@ -104,6 +99,7 @@ class Auth extends CI_Controller
       redirect('auth');
     }
   }
+
   public function logout()
   {
     $this->session->unset_userdata('email');

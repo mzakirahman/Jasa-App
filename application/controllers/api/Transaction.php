@@ -5,31 +5,31 @@ require APPPATH . '/libraries/REST_Controller.php';
 
 use Restserver\Libraries\REST_Controller;
 
-class Jasa extends REST_Controller
+class Transaction extends REST_Controller
 {
   public function __construct()
   {
     parent::__construct();
-    $this->load->model('Jasa_api_model');
+    $this->load->model('Transaction_model');
   }
   public function index_get()
   {
     $id = $this->get('id');
     if ($id === null) {
-      $jasa = $this->Jasa_api_model->getJasa();
+      $Transaction = $this->Transaction_model->getTransaction();
     } else {
-      $jasa = $this->Jasa_api_model->getJasa($id);
+      $Transaction = $this->Transaction_model->getTransaction($id);
     }
 
-    if ($jasa) {
+    if ($Transaction) {
       $this->response([
         'status' => true,
-        'jasa' => $jasa
+        'Transaction' => $Transaction
       ], REST_Controller::HTTP_OK);
     } else {
       $this->response([
         'status' => false,
-        'massage' => 'jasa elektronik tidak di temukan'
+        'massage' => 'Transaction tidak di temukan'
       ], REST_Controller::HTTP_OK);
     }
   }
