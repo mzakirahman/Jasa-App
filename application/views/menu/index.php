@@ -9,26 +9,19 @@
 
   <div class="row">
     <div class=" col-lg-6">
-      <table id="example" class="table table-striped table-bordered">
+      <table id="example" class="table table-striped table-bordered ">
         <thead>
           <tr>
-            <th scope="col">No</th>
-            <th scope="col">Menu</th>
-            <th scope="col">Action</th>
+            <th scope="col" class="text-center">
+              Menu
+            </th>
           </tr>
         </thead>
         <tbody>
-          <?php $i = 1; ?>
           <?php foreach ($menu as $m) : ?>
             <tr>
-              <th scope="row"><?= $i; ?></th>
-              <td><?= $m['menu']; ?></td>
-              <td>
-                <a href="" class="badge badge-success">edit</a>
-                <a href="" class="badge badge-danger">delete</a>
-              </td>
+              <td class="text-center"><?= $m['menu']; ?></td>
             </tr>
-            <?php $i++; ?>
           <?php endforeach; ?>
         </tbody>
       </table>

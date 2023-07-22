@@ -11,6 +11,7 @@
             <th scope="col">Nama</th>
             <th scope="col">Email</th>
             <th scope="col">Pesan</th>
+            <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
@@ -21,6 +22,8 @@
               <td><?= $r['nama']; ?></td>
               <td><?= $r['email']; ?></td>
               <td><?= $r['pesan']; ?></td>
+              <td> <a href="hapuspesan/<?= $r['id']; ?>" class="badge badge-danger" onclick="return confirm('Yakin menghapus <?= $r['nama']; ?>?');">Delete</a>
+              </td>
             </tr>
             <?php $i++; ?>
           <?php endforeach; ?>

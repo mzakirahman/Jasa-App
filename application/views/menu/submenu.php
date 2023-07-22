@@ -26,7 +26,6 @@
             <th scope="col">Url</th>
             <th scope="col">Icon</th>
             <th scope="col">Active</th>
-            <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
@@ -37,11 +36,17 @@
               <td><?= $sm['title']; ?></td>
               <td><?= $sm['menu']; ?></td>
               <td><?= $sm['url']; ?></td>
-              <td><?= $sm['icon']; ?></td>
-              <td><?= $sm['is_active']; ?></td>
+              <td><i class="<?= $sm['icon']; ?>"></i></td>
               <td>
-                <a href="" class="badge badge-success">edit</a>
-                <a href="" class="badge badge-danger">delete</a>
+                <?php
+                if ($sm['is_active'] == 1) {
+                  echo '<span class="badge badge-success">Active</span>
+                  ';
+                } else {
+                  echo '<span class="badge badge-danger">Non active</span>
+                  ';
+                }
+                ?>
               </td>
             </tr>
             <?php $i++; ?>

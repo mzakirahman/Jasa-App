@@ -12,6 +12,7 @@
         <th scope="col">Number</th>
         <th scope="col">Status</th>
         <th scope="col">Download</th>
+        <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
@@ -33,6 +34,7 @@
             ?>
           </td>
           <td><a href="<?= $ts['pdf_url'];  ?>" target="_blank" class="badge badge-success">Download</a></td>
+          <td><a href="hapustransaksi/<?= $ts['id']; ?>" class="badge badge-danger justify-content-end" onclick="return confirm('Yakin menghapus Transaksi?');">Delete</a></td>
         </tr>
       <?php endforeach; ?>
     </tbody>

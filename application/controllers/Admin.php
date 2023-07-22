@@ -9,13 +9,14 @@ class Admin extends CI_Controller
   {
     parent::__construct();
     is_logged_in();
+    $this->load->model('Admin_model');
     $this->load->model('M_datauser');
   }
 
   public function index()
   {
 
-    $data['title'] = 'Dashboard Jasa Elektronik Kuy';
+    $data['title'] = 'Dashboard';
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
 
@@ -31,7 +32,7 @@ class Admin extends CI_Controller
     $this->load->model('M_datauser', 'transaksi');
     $data['alltransaksi'] = $this->transaksi->getAllMitrans();
 
-    $data['title'] = 'Data Pesanan Jasa';
+    $data['title'] = 'Pemesan Jasa';
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
 
@@ -43,7 +44,7 @@ class Admin extends CI_Controller
   }
   public function role()
   {
-    $data['title'] = 'Managament Access Menu';
+    $data['title'] = 'Role';
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
     $data['role'] = $this->db->get('user_role')->result_array();
@@ -96,7 +97,7 @@ class Admin extends CI_Controller
     $this->load->model('M_datauser', 'jasa');
     $data['alljasa'] = $this->jasa->getAllJasa();
 
-    $data['title'] = 'Data Jasa Elektronik';
+    $data['title'] = 'jasa';
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
     $this->load->view('tamplates/admin_header.php', $data);
@@ -111,7 +112,7 @@ class Admin extends CI_Controller
     $this->load->model('M_datauser', 'transaksi');
     $data['alltransaksi'] = $this->transaksi->getAllMitrans();
 
-    $data['title'] = 'Data Transaksi';
+    $data['title'] = 'Transaksi';
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
     $this->load->view('tamplates/admin_header.php', $data);
@@ -124,7 +125,7 @@ class Admin extends CI_Controller
   {
     // panggil models - nama table - nama models - nama function
     $datauser['user'] = $this->M_datauser->getAlluser();
-    $data['title'] = 'Data user';
+    $data['title'] = 'User';
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
     $this->load->view('tamplates/admin_header.php', $data);
@@ -135,9 +136,8 @@ class Admin extends CI_Controller
   }
   public function pesan()
   {
-
     // session
-    $data['title'] = 'Managament Pesan Saran';
+    $data['title'] = 'Pesan Saran';
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
     // model 
@@ -150,5 +150,26 @@ class Admin extends CI_Controller
     $this->load->view('tamplates/admin_topbar.php', $data);
     $this->load->view('admin/pesan', $data);
     $this->load->view('tamplates/admin_footer.php');
+  }
+
+  public function hapusjasa($id)
+  {
+    $this->Admin_model->deletejasa($id);
+    redirect('admin/jasa');
+  }
+  public function hapustransaksi($id)
+  {
+    $this->Admin_model->deletetransaksi($id);
+    redirect('admin/transaksi');
+  }
+  public function hapususer($id)
+  {
+    $this->Admin_model->deleteuser($id);
+    redirect('admin/user');
+  }
+  public function hapuspesan($id)
+  {
+    $this->Admin_model->deletepesan($id);
+    redirect('admin/pesan');
   }
 }

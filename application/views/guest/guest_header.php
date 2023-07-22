@@ -5,8 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title><?= $title; ?></title>
+  <meta name="description" content="Implementasi RESTFUL API Pada Aplikasi
+  Layanan Jasa Perbaikan Alat Elektronik">
+  <meta name="keywords" content="Implementasi REST API & Jasa Elektronik">
   <!-- icon -->
   <link rel="apple-touch-icon" sizes="180x180" href="<?= base_url('assets/icon'); ?>/apple-touch-icon.png">
+  <link rel="apple-touch-icon" href="<?= base_url('assets/newicon'); ?>apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="<?= base_url('assets/icon'); ?>/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url('assets/icon'); ?>/favicon-16x16.png">
   <link rel="manifest" href="<?= base_url('assets/icon'); ?>/site.webmanifest">

@@ -30,8 +30,7 @@
             ?>
           </td>
           <td>
-            <a href="" class="badge badge-success">edit</a>
-            <a href="" class="badge badge-danger">delete</a>
+            <a href="hapususer/<?= $user['id']; ?>" class="badge badge-danger" onclick="return confirm('Yakin menghapus <?= $user['name']; ?>?');">Delete</a>
           </td>
         </tr>
         <?php $i++; ?>

@@ -18,9 +18,6 @@
                     Managemnt User</div>
                   <div class="h5 mb-0 font-weight-bold text-gray-800">User</div>
                   <a href="<?= base_url(); ?>admin/user" class="badge badge-primary">Managemnt User <i class="fa fa-hand-o-down" aria-hidden="true"></i></a>
-
-
-
                 </div>
                 <div class="col-auto">
                   <i class="fa fa-users fa-2x text-success-300"></i>
@@ -73,7 +70,7 @@
                 <div class="col mr-2">
                   <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                     Managemnt Pesan Saran</div>
-                  <div class="h5 mb-0 font-weight-bold text-gray-800">Saran</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">Pesan Saran</div>
                   <a href="<?= base_url(); ?>admin/pesan" class="badge badge-success">Managemnt Saran <i class="fa fa-hand-o-down" aria-hidden="true"></i></a>
                 </div>
                 <div class="col-auto">
@@ -109,7 +106,7 @@
                 <div class="col mr-2">
                   <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                     Managemnt Acces Menu</div>
-                  <div class="h5 mb-0 font-weight-bold text-gray-800">Access</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">Role</div>
                   <a href="<?= base_url(); ?>admin/role" class="badge badge-warning">Managemnt Access <i class="fa fa-hand-o-down" aria-hidden="true"></i></a>
                 </div>
                 <div class="col-auto">
@@ -127,7 +124,8 @@
                 <div class="col mr-2">
                   <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
                     Managemnt Menu</div>
-                  <div class="h5 mb-0 font-weight-bold text-gray-800">Menu</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">Menu Management
+                  </div>
                   <a href="<?= base_url(); ?>menu" class="badge badge-danger">Managemnt Menu <i class="fa fa-hand-o-down" aria-hidden="true"></i></a>
                 </div>
                 <div class="col-auto">
@@ -145,7 +143,8 @@
                 <div class="col mr-2">
                   <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                     Managemnt Submenu</div>
-                  <div class="h5 mb-0 font-weight-bold text-gray-800">Submenu</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">Submenu Management
+                  </div>
                   <a href="<?= base_url(); ?>menu/submenu" class="badge badge-success">Managemnt Submenu <i class="fa fa-hand-o-down" aria-hidden="true"></i></a>
                 </div>
                 <div class="col-auto">
