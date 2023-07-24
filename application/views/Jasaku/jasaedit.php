@@ -56,7 +56,7 @@
           <!-- new -->
           <div class="custom-file">
             <!-- <img src="<?= base_url('assets/picture/') . $edit['foto']; ?>" class="img-thumbnail"> -->
-            <input type="file" name="fotopost" class="custom-file-input" required>
+            <input type="file" id="image" name="fotopost" class="custom-file-input">
             <label class="custom-file-label">Choose file...</label>
           </div>
         </div>

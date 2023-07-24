@@ -22,9 +22,9 @@
               <a href="<?= base_url('jasa/pesanjasa/') . $j['id']; ?>"><button type="button" class="btn btn-success">Pesan</button></a>
             </td>
           </div>
-          <div class="card-footer">
+          <!-- <div class="card-footer">
             <small class="text-muted">Update <?= $j['date']; ?></small>
-          </div>
+          </div> -->
         </div>
       </div>
     <?php endforeach; ?>

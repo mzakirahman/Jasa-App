@@ -21,17 +21,17 @@
     <input type="hidden" name="jasa_id" id="jasa_id" value="<?= $jasa['user_id']; ?>">
     <h1 class="h3 mb-4 text-gray-800">Pesan jasa elektronik</h1>
 
-    <div class="row row-cols-2">
-      <div class="col">
+    <div class="row">
+      <div class="col-lg-6">
         <img class="img-fluid" width="100%" height="80%" src="<?= base_url('assets/picture/') . $jasa['foto']; ?>">
       </div>
-      <div class="col">
+      <div class="col-lg-6">
         <h3><b><?= $jasa['juduljasa']; ?></b></h3>
         <h5 class="mt-3"> Rp. <?= $jasa['harga']; ?></h5>
         <h5 class="mt-3"> <?= $jasa['nama']; ?></h5>
-        <h5 class="fa fa-phone mt-3" aria-hidden="true"> No-Hp : <?= $jasa['no']; ?></h5><br>
-        <h5 class="fa fa-question-circle mt-3" aria-hidden="true"> Deskripsi : <?= $jasa['deskripsi']; ?></h5><br>
-        <h5 class="fa fa-map-marker mt-3" aria-hidden="true"> Lokasi : <?= $jasa['alamat']; ?></h5>
+        <h5 class="fa fa-phone mt-3" aria-hidden="true"> <?= $jasa['no']; ?></h5><br>
+        <h5 class="fa fa fa-book mt-3" aria-hidden="true"> <?= $jasa['deskripsi']; ?></h5><br>
+        <h5 class="fa fa-map-marker mt-3" aria-hidden="true"> <?= $jasa['alamat']; ?></h5>
         <p class="text-secondary"></p>
         <!-- <p class="text-secondary">user_id <?= $jasa['user_id']; ?></p> -->
 
@@ -40,7 +40,7 @@
     <div class="row">
       <div class="col">
         <label for="basic-url">Nama</label>
-        <div class="input-group ">
+        <div class="input-group">
           <input required type="text" name="namapemesan" placeholder="Nama" class="form-control">
         </div>
         <label for="basic-url">No Handphone</label>
