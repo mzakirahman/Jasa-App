@@ -15,4 +15,16 @@ class Home_model extends CI_Model
 
     $this->db->insert('kontakpesan', $data);
   }
+  public function pagdatajasa($limit, $start, $keyword = null)
+  {
+    if ($keyword){
+      $this->db->like('juduljasa', $keyword);
+    }
+    return $this->db->get('jasa', $limit, $start)->result_array();
+  }
+
+  public function CountAllJasa()
+  {
+    return $this->db->get('jasa')->num_rows();
+  }
 }

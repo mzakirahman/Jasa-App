@@ -54,6 +54,9 @@
 
 
         </div>
+        
+        <?=  $this->pagination->create_links(); ?>
+
       </div>
     </section>
     <!--content -->

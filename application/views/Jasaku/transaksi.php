@@ -7,20 +7,20 @@
   <h1 class="h3 text-gray-800"><?= $judul; ?></h1>
   <?php if ($this->session->flashdata('bayar')) : ?>
   <?php endif; ?>
-  <div class="table-responsive">
+  <div class="table-responsive ">
 
     <table id="example" class="table table-striped table-bordered">
       <thead class="thead-light">
         <tr>
           <th scope="col">No</th>
-          <th scope="col">Nama Pemesan</th>
+          <th scope="col">Pemesan</th>
           <th scope="col">Biaya</th>
-          <th scope="col">Nama Penjasa</th>
-          <th scope="col">Type Transfer</th>
-          <th scope="col">Number Transfer</th>
+          <th scope="col">Penjasa</th>
+          <th scope="col">Bank</th>
+          <th scope="col">VA number</th>
           <th scope="col">Status</th>
-          <th scope="col">Struk Transfer</th>
-          <th scope="col">Detail Penjasa</th>
+          <th scope="col">Download</th>
+          <th scope="col">Detail</th>
         </tr>
       </thead>
       <tbody>
@@ -38,9 +38,9 @@
             <td>
               <?php
               if ($ts['status_code'] == 200) {
-                echo '<span class="badge badge-pill badge-success">Oke</span>';
+                echo '<span class="badge badge-pill badge-success">Success</span>';
               } else {
-                echo '<span class="badge badge-pill badge-warning">Belum Bayar</span>';
+                echo '<span class="badge badge-pill badge-warning">Pending</span>';
               }
               ?>
             </td>

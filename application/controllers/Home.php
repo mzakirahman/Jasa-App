@@ -16,7 +16,25 @@ class Home extends CI_Controller
   }
   public function index()
   {
-    $data['jasa'] = $this->Home_model->AllDataJasa();
+    $this->load->model('Home_model', 'AllDataJasa');
+
+    // ambil data keyword
+    if ($this->input->post('ksubmit')){
+      $data['keyword'] = $this->input->post('keyword');
+    } else{
+      $data['keyword'] = null;
+    }
+    // load library
+    $this->load->library('pagination');
+    // config pagination
+    $config['total_rows'] = $this->Home_model->CountAllJasa();
+    $config['per_page'] = 6;
+    $config['attributes'] = array('class' => 'page-link');
+    // initialize
+    $this->pagination->initialize($config);
+    $data ['start'] = $this->uri->segment(3);
+    $data['jasa'] = $this->Home_model->pagdatajasa($config['per_page'],$data ['start'],$data['keyword']);
+
     $data['title'] = 'Jasa elektronik | Home';
     $this->load->view('guest/guest_header.php', $data);
     $this->load->view('home/index', $data);
@@ -24,11 +42,25 @@ class Home extends CI_Controller
   }
   public function jasa()
   {
-    if ($this->session->userdata('email')) {
-      redirect('user');
-    }
-    $data['title'] = 'Jasa elektronik | Jasa';
     $data['jasa'] = $this->Home_model->AllDataJasa();
+
+    // ambil data keyword
+    if ($this->input->post('ksubmit')){
+      $data['keyword'] = $this->input->post('keyword');
+    } else{
+      $data['keyword'] = null;
+    }
+    // load library
+    $this->load->library('pagination');
+    // config pagination
+    $config['total_rows'] = $this->Home_model->CountAllJasa();
+    $config['per_page'] = 6;
+    $config['attributes'] = array('class' => 'page-link');
+    // initialize
+    $this->pagination->initialize($config);
+    $data ['start'] = $this->uri->segment(3);
+    $data['jasa'] = $this->Home_model->pagdatajasa($config['per_page'],$data ['start'],$data['keyword']);
+    $data['title'] = 'Jasa elektronik | Jasa';
 
     $this->load->view('guest/guest_header.php', $data);
     $this->load->view('home/jasa', $data);
@@ -65,8 +97,6 @@ class Home extends CI_Controller
       redirect('home/contact');
     }
   }
-
-
   public function notification()
   {
 
@@ -83,41 +113,5 @@ class Home extends CI_Controller
     if ($result['status_code'] == 200) {
       $this->db->update('transaksi_mitrans', $data, array('order_id' => $order_id));
     }
-
-
-    //notification handler sample
-
-    /*
-		$transaction = $notif->transaction_status;
-		$type = $notif->payment_type;
-		$order_id = $notif->order_id;
-		$fraud = $notif->fraud_status;
-
-		if ($transaction == 'capture') {
-		  // For credit card transaction, we need to check whether transaction is challenge by FDS or not
-		  if ($type == 'credit_card'){
-		    if($fraud == 'challenge'){
-		      // TODO set payment status in merchant's database to 'Challenge by FDS'
-		      // TODO merchant should decide whether this transaction is authorized or not in MAP
-		      echo "Transaction order_id: " . $order_id ." is challenged by FDS";
-		      } 
-		      else {
-		      // TODO set payment status in merchant's database to 'Success'
-		      echo "Transaction order_id: " . $order_id ." successfully captured using " . $type;
-		      }
-		    }
-		  }
-		else if ($transaction == 'settlement'){
-		  // TODO set payment status in merchant's database to 'Settlement'
-		  echo "Transaction order_id: " . $order_id ." successfully transfered using " . $type;
-		  } 
-		  else if($transaction == 'pending'){
-		  // TODO set payment status in merchant's database to 'Pending'
-		  echo "Waiting customer to finish transaction order_id: " . $order_id . " using " . $type;
-		  } 
-		  else if ($transaction == 'deny') {
-		  // TODO set payment status in merchant's database to 'Denied'
-		  echo "Payment using " . $type . " for transaction order_id: " . $order_id . " is denied.";
-		}*/
   }
 }

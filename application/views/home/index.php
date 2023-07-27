@@ -22,24 +22,6 @@
 </section>
 <!-- Hero Section End -->
 
-<!-- Categories Section Begin -->
-<section class="categories">
-  <div class="container">
-    <div class="row">
-      <div class="categories__slider owl-carousel">
-        <?php foreach ($jasa  as $j) : ?>
-          <div class="col-lg-3">
-            <div class="categories__item set-bg" data-setbg="<?= base_url('assets/picture/') . $j['foto']; ?>">
-              <h5><a href="<?= base_url('auth'); ?>"><?= $j['juduljasa']; ?></a></h5>
-            </div>
-          </div>
-        <?php endforeach; ?>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Categories Section End -->
-
 <!-- Featured Section Begin -->
 <section class="featured spad">
   <div class="container">
@@ -66,7 +48,7 @@
             <div class="card-body">
               <h5 class="card-title mt-2"><?= $j['juduljasa']; ?></h5>
               <h5 class="card-title mt-1">Rp. <?= $j['harga']; ?></h5>
-              <p class="card-text mt-1"><?= $j['nama']; ?></p>
+              <p class="card-text mt-1"><?= $j['alamat']; ?></p>
               <a href="<?= base_url('auth'); ?>" class="primary-btn mt-1">Pesan</a>
             </div>
           </div>
@@ -75,6 +57,10 @@
 
 
     </div>
+
+
+    <?=  $this->pagination->create_links(); ?>
+
   </div>
 </section>
 <!-- Featured Section End -->

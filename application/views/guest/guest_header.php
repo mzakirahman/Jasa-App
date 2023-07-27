@@ -153,13 +153,14 @@
         <div class="col-lg-9">
           <div class="hero__search">
             <div class="hero__search__form">
-              <form action="#">
+              
+              <form action="<?= base_url('home/jasa');?>" method="post">
                 <div class="hero__search__categories">
                   Cari
                   <span class="fa fa-search"></span>
                 </div>
-                <input type="text" placeholder="Jasa elektronik. . .">
-                <button type="submit" class="site-btn">SEARCH</button>
+                <input name="keyword" type="text" placeholder="Jasa elektronik. . ." autocomplate="off" >
+                <button name="ksubmit" type="submit" class="site-btn">SEARCH</button>
               </form>
             </div>
             <div class="hero__search__phone">

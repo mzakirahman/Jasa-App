@@ -559,9 +559,10 @@ ol {
   Hero
 -----------------------*/
 
-.hero {
+
+/* .hero {
     padding-bottom: 50px;
-}
+} */
 
 .hero.hero-normal {
     padding-bottom: 30px;
@@ -812,7 +813,7 @@ ol {
 -----------------------*/
 
 .featured {
-    padding-top: 80px;
+    padding-top: 40px;
     padding-bottom: 40px;
 }
 
