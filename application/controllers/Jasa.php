@@ -22,6 +22,17 @@ class Jasa extends CI_Controller
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
     // model 
     $data['jasa'] = $this->Jasa_model->getAlljasa();
+
+    
+
+
+
+
+
+
+
+
+
     $data['title'] = 'Jasa elektronik | All Jasa';
     $data['judul'] = 'Silahkan Pilih Jasa elektronik';
     $this->load->view('tamplates/ui_header.php', $data);

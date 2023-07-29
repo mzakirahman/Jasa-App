@@ -6,9 +6,9 @@
 <div class="col-lg-9 col-md-7">
   <h1 class="h3 mb-4 text-gray-800"><?= $judul; ?></h1>
 
-  <div class="row row-cols-1 row-cols-md-3">
+  <div class="row row-cols-1 row-cols-md-3 ">
     <?php foreach ($jasa as $j) : ?>
-      <div class="col mb-4">
+      <div class="col mb-4 ">
         <div class="card h-100" style="width: 18rem;">
           <img src="<?= base_url('assets/picture/') . $j['foto']; ?>" class="card-img-top" style="height:180px">
           <div class="card-body">

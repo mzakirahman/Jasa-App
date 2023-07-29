@@ -52,8 +52,8 @@
     </div>
     <nav class="humberger__menu__nav mobile-menu">
       <ul>
-        <li><a href="<?= base_url('alljasa'); ?>">Home</a></li>
-        <li><a href="<?= base_url('user/jasa'); ?>">Jasa</a></li>
+        <li><a href="<?= base_url('jasa/alljasa'); ?>">Home</a></li>
+        <li><a href="<?= base_url('jasa/alljasa'); ?>">Jasa</a></li>
         <li><a href="<?= base_url('user/help'); ?>">Help</a></li>
         <li><a href="<?= base_url('user/contact'); ?>">Contact</a></li>
       </ul>
@@ -121,7 +121,7 @@
           <nav class="header__menu">
             <ul>
               <li><a href="<?= base_url('jasa/alljasa'); ?>">Home</a></li>
-              <li><a href="<?= base_url('user/jasa'); ?>">Jasa</a></li>
+              <li><a href="<?= base_url('jasa/alljasa'); ?>">Jasa</a></li>
               <li><a href="<?= base_url('user/help'); ?>">Help</a></li>
               <li><a href="<?= base_url('user/contact'); ?>">Contact</a></li>
             </ul>
@@ -150,7 +150,7 @@
             </div>
             <ul>
               <li><a href="<?= base_url('jasa/alljasa'); ?>">Home</a></li>
-              <li><a href="<?= base_url('user/jasa'); ?>">Jasa</a></li>
+              <li><a href="<?= base_url('jasa/alljasa'); ?>">Jasa</a></li>
               <li><a href="<?= base_url('user/help'); ?>">Help</a></li>
               <li><a href="<?= base_url('user/contact'); ?>">Contact</a></li>
             </ul>
