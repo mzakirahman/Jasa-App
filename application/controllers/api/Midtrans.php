@@ -5,26 +5,26 @@ require APPPATH . '/libraries/REST_Controller.php';
 
 use Restserver\Libraries\REST_Controller;
 
-class Transaction extends REST_Controller
+class Midtrans extends REST_Controller
 {
   public function __construct()
   {
     parent::__construct();
-    $this->load->model('Transaction_model');
+    $this->load->model('Midtrans_model');
   }
   public function index_get()
   {
     $id = $this->get('id');
     if ($id === null) {
-      $Transaction = $this->Transaction_model->getTransaction();
+      $Midtrans = $this->Midtrans_model->getmidtrans();
     } else {
-      $Transaction = $this->Transaction_model->getTransaction($id);
+      $Midtrans = $this->Midtrans_model->getmidtrans($id);
     }
 
-    if ($Transaction) {
+    if ($Midtrans) {
       $this->response([
         'status' => true,
-        'Transaction' => $Transaction
+        'Midtrans client' => $Midtrans
       ], REST_Controller::HTTP_OK);
     } else {
       $this->response([
