@@ -1,16 +1,20 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
-  <h1 class="h3 mb-4 text-gray-800"><?= $title; ?></h1>
+  <h1 class="h3 mb-4 text-gray-800">Jasa elektronik</h1>
   <div class="row">
     <?php foreach ($alljasa as $jasa) : ?>
-      <div class="card m-3" style="width: 18rem;">
-        <img height="200" src="<?= base_url('assets/picture/') . $jasa['foto']; ?>" class="card-img-top">
-        <div class="card-body">
-          <p class="card-text font-weight-bold"><?= $jasa['juduljasa']; ?></p>
-          <p class="card-text"> Pemilik : <?= $jasa['nama']; ?></p>
-          <p class="card-text"> Kontak : <?= $jasa['no']; ?></p>
-          <p class="card-text"> Lokasi : <?= $jasa['alamat']; ?></p>
-          <a href="hapusjasa/<?= $jasa['id']; ?>" class="badge badge-danger text-right" onclick="return confirm('Yakin menghapus jasa?');">Delete</a>
+      <div class="col-lg-3 mb-3">
+
+      
+        <div class="card">
+          <img height="200" src="<?= base_url('assets/picture/') . $jasa['foto']; ?>" class="card-img-top">
+          <div class="card-body">
+            <p class="card-text font-weight-bold"><?= $jasa['juduljasa']; ?></p>
+            <p class="card-text"> Pemilik : <?= $jasa['nama']; ?></p>
+            <p class="card-text"> Kontak : <?= $jasa['no']; ?></p>
+            <p class="card-text"> Lokasi : <?= $jasa['alamat']; ?></p>
+            <a href="hapusjasa/<?= $jasa['id']; ?>" class="badge badge-danger text-right" onclick="return confirm('Yakin menghapus jasa?');">Delete</a>
+          </div>
         </div>
       </div>
     <?php endforeach; ?>

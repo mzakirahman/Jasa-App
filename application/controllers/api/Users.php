@@ -3,6 +3,7 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 require APPPATH . '/libraries/REST_Controller.php';
 
+
 use Restserver\Libraries\REST_Controller;
 
 class Users extends REST_Controller
@@ -11,6 +12,8 @@ class Users extends REST_Controller
   {
     parent::__construct();
     $this->load->model('Users_model');
+    // limits
+    $this->methods['index_get']['limit'] = 3;
   }
   //GET 
   public function index_get()
