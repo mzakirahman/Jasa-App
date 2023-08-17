@@ -13,7 +13,7 @@ class Users extends REST_Controller
     parent::__construct();
     $this->load->model('Users_model');
     // limits
-    $this->methods['index_get']['limit'] = 3;
+    $this->methods['index_get']['limit'] = 100;
   }
   //GET 
   public function index_get()
